@@ -1,0 +1,34 @@
+sudo: false
+language: node_js
+node_js:
+  - 16 # use nodejs v10 LTS
+
+install:
+  - pnpm install
+script:
+  - pnpm run docs:build
+
+# after_success:
+#   - cd ./dist
+#   - git init
+#   - git config --global user.name "LAINE001"
+#   - git config --global user.email "laine001@163.com"
+#   - git add .
+#   - git commit -m "updated for travis-ci"
+#   - git push --quiet --force ""
+notifications:
+  email: false
+# cache: npm
+# branches:
+#   only:
+#     - master # build master branch only
+# script:
+#   - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: docs/.vitepress/dist
