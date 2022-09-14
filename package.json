@@ -1,0 +1,25 @@
+{
+  "name": "ik-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "sass": "^1.54.9",
+    "unplugin-vue-setup-extend-plus": "^0.3.2",
+    "vite": "^3.1.0",
+    "vitepress": "1.0.0-alpha.13",
+    "vue": "^3.2.39"
+  }
+}

@@ -1,0 +1,20 @@
+.ik-button {
+  background-color: antiquewhite;
+  padding: 4px 16px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.ik-button:hover {
+  opacity: .9;
+}
+.ik-button:active {
+  background-color: yellowgreen;
+}
+.ik-button-primary {
+  background-color: rgb(194, 155, 26);
+}
+.ik-button-disabled {
+  cursor: not-allowed;
+}
