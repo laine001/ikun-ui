@@ -1,6 +1,6 @@
 // import { demoBlockPlugin } from 'vitepress-theme-demoblock';
 export default {
-  base: '/ik-ui/',
+  // base: '/ik-ui/',
   title: 'IKUI',
   description: '组件库',
   themeConfig: {
