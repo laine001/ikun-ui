@@ -15,13 +15,13 @@ hero:
   actions:
     - theme: brand
       text: 开 始
-      link: guide
+      link: /guide/
     # - theme: alt
     #   text: 为什么选IKUI
     #   link: /guide/why
     - theme: alt
       text: 在 GitHub 上查看
-      link: https://github.com/vitejs/vite
+      link: https://github.com/LAINE001/ik-ui
 
 features:
   - icon: 🎵
