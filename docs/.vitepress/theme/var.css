@@ -3,16 +3,16 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #444849 20%,
-    #eee5f3
+    #cd8025 40%,
+    #eccd90
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #353236 50%,
-    #d5e6cd 50%
+    #cd8025 50%,
+    #eccd90 50%
   );
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-image-filter: blur(60px);
 }
 
 /**
@@ -20,12 +20,12 @@
  * -------------------------------------------------------------------------- */
 
  :root {
-  --vp-c-brand: #333333;
-  --vp-c-brand-light: #62636d;
+  --vp-c-brand: #cd8025;
+  --vp-c-brand-light: #cd8025;
   --vp-c-brand-lighter: #505058;
   --vp-c-brand-lightest: #1a1a20;
-  --vp-c-brand-dark: #535bf2;
-  --vp-c-brand-darker: #454ce1;
+  --vp-c-brand-dark: #a55b03;
+  --vp-c-brand-darker: #a55b03;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
 }
 
@@ -43,4 +43,22 @@
   --vp-button-brand-active-border: var(--vp-c-brand-light);
   --vp-button-brand-active-text: var(--vp-c-text-dark-1);
   --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+.VPNavBarTitle .title {
+  padding-left: 10px;
+}
+.VPSidebarGroup .title {
+  padding-left: 10px;
+}
+.VPSidebarGroup .items  .link {
+  padding: 5px 0 5px 10px;
+}
+.VPSidebarGroup .items  .link.active {
+  transition: all .2s;
+  background-color: #ebad604a;
+  border-radius: 4px;
+}
+
+.flex {
+  display: flex;
 }

@@ -27,6 +27,15 @@
       <ik-button type="primary">禁用状态</ik-button>
       <ik-loading :visible="fullscreenLoading"></ik-loading>
     </div>
+    <div>
+      <ik-button>普通按钮</ik-button>
+      <ik-button type="primary">主要按钮</ik-button>
+      <ik-button type="info">信息按钮</ik-button>
+      <ik-button type="success">成功按钮</ik-button>
+      <ik-button type="warning">警告按钮</ik-button>
+      <ik-button type="danger">危险按钮</ik-button>
+      <ik-button type="primary" disabled>主要按钮禁用</ik-button>
+    </div>
     <IkInput />
     <div v-loading="loading1">
       这里是loading测试1

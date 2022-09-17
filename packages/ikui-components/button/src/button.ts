@@ -18,6 +18,13 @@ export const buttonProps = {
   disabled: {
     type: Boolean,
     default: () => false
+  },
+  icon: {
+    type: String
+  },
+  loading: {
+    type: Boolean,
+    default: (): boolean => false
   }
 } as const
 

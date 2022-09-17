@@ -2,22 +2,23 @@
 layout: home
 
 title: IKUI
-titleTemplate: 有趣的UI库
+titleTemplate: 一个组件库
 
 hero:
   name: IKUI
-  text: 有趣的UI库
-  tagline: 为开发... 不建议用于实际开发
+  text: 一个组件库
+  tagline: 以学习为目的...
   image:
-    src: /logo-with-shadow.png
+    # src: /logo-with-shadow.png
+    src: /logo2.png
     alt: IKUNUI
   actions:
     - theme: brand
-      text: 开始
+      text: 开 始
       link: /guide/
-    - theme: alt
-      text: 为什么选IKUI
-      link: /guide/why
+    # - theme: alt
+    #   text: 为什么选IKUI
+    #   link: /guide/why
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/vitejs/vite

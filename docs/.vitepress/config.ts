@@ -66,6 +66,10 @@ export default {
               link: '/components/button'
             },
             {
+              text: '图标',
+              link: '/components/icon'
+            },
+            {
               text: '输入框',
               link: '/components/input'
             },
