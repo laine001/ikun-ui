@@ -1,34 +1,16 @@
-sudo: false
 language: node_js
 node_js:
-  - 16 # use nodejs v10 LTS
-
+  - lts/*
 install:
-  - pnpm install
+  - yarn install # npm ci
 script:
-  - pnpm run docs:build
-
-# after_success:
-#   - cd ./dist
-#   - git init
-#   - git config --global user.name "LAINE001"
-#   - git config --global user.email "laine001@163.com"
-#   - git add .
-#   - git commit -m "updated for travis-ci"
-#   - git push --quiet --force ""
-notifications:
-  email: false
-# cache: npm
-# branches:
-#   only:
-#     - master # build master branch only
-# script:
-#   - hexo generate # generate static files
+  - yarn docs:build # npm run docs:build
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
+  skip_cleanup: true
+  local_dir: docs/.vitepress/dist
+  # 在 GitHub 中生成，用于允许 Travis 向你的仓库推送代码。在 Travis 的项目设置页面进行配置，设置为 secure variable
+  github_token: $GITHUB_TOKEN
+  keep_history: true
   on:
     branch: master
-  local-dir: docs/.vitepress/dist

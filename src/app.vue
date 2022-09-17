@@ -37,6 +37,26 @@
       <ik-button type="primary" disabled>主要按钮禁用</ik-button>
     </div>
     <IkInput />
+    <div>
+      <ik-button>普通按钮</ik-button>
+      <ik-button type="primary">主要按钮</ik-button>
+      <ik-button type="info">信息按钮</ik-button>
+      <ik-button type="success">成功按钮</ik-button>
+      <ik-button type="warning">警告按钮</ik-button>
+      <ik-button type="danger">危险按钮</ik-button>
+      <ik-button type="primary" disabled>主要按钮禁用</ik-button>
+    </div>
+    <ik-button icon="add">按钮</ik-button>
+    <ik-button loading>加载中</ik-button>
+    <ik-button type="primary" loading>请稍后</ik-button>
+    <ik-button>
+      <ik-icon name="user" />
+      按钮
+    </ik-button>
+    <ik-button type="primary">
+      按钮
+      <ik-icon color="#ffffff" name="main" />
+    </ik-button>
     <div v-loading="loading1">
       这里是loading测试1
     </div>
