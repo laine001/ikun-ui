@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://laine001.github.io/ik-ui/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
