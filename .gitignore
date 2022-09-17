@@ -1,2 +1,4 @@
 node_modules
-dsit
+/node_modules
+dist
+/docs/.vitepree/dist

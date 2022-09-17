@@ -1,8 +1,11 @@
-# 普通按钮
-
+# 按钮
+> 用于操作
 ```javascript
 import { IkButton } from 'ik-ui'
 ```
+
+## 普通按钮
+
 <div class="flex">
   <ik-button>普通按钮</ik-button>
   <ik-button type="primary">主要按钮</ik-button>
@@ -31,7 +34,7 @@ import { IkButton } from 'ik-ui'
 ```
 :::
 
-# 带图标
+## 带图标
 
 <div class="flex">
   <ik-button icon="add">按钮</ik-button>
@@ -59,7 +62,7 @@ import { IkButton } from 'ik-ui'
 ```
 :::
 
-# 加载中按钮
+## 加载中按钮
 
 <div>
   <ik-button loading>加载中</ik-button>
