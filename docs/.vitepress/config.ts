@@ -4,6 +4,10 @@ export default {
   title: 'IKUI',
   lang: 'en-US',
   description: '组件库',
+  head: [
+    ['link', { rel: 'icon', href: '/logo2.png', type: 'image/png' }],
+    ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '16x16' }],
+  ],
   themeConfig: {
     footer: {
       copyright: '本文档仅供个人娱乐学习使用，切勿私自分享'
