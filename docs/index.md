@@ -37,12 +37,3 @@ features:
     title: play
     details: 基于Vite开发
 ---
-
-<!-- <script setup>
-import { onMounted } from 'vue'
-import { fetchReleaseTag } from './.vitepress/utils/fetchReleaseTag.js'
-
-onMounted(() => {
-  fetchReleaseTag()
-})
-</script> -->

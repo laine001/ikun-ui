@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["ES2015"],
     "declaration": true,
     "declarationDir": "./dist/types",
     "jsx": "preserve",

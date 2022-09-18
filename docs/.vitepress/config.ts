@@ -2,6 +2,7 @@
 export default {
   base: '/ik-ui/',
   title: 'IKUI',
+  lang: 'en-US',
   description: '组件库',
   themeConfig: {
     footer: {
@@ -18,25 +19,29 @@ export default {
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://laine001.github.io'
+        link: 'https://github.com/LAINE001/ik-ui'
       }
     ],
     nav: [
       {
         text: '组件',
-        link: '/components/',
+        link: '/components/button',
         activeMatch: '/components/'
       },
       {
         text: '相关链接',
         items: [
+          // {
+          //   text: '团队',
+          //   link: 'https://vitepress.vuejs.org/'
+          // },
           {
-            text: '团队',
+            text: 'vitejs',
             link: 'https://vitepress.vuejs.org/'
           },
           {
-            text: 'vite官方文档',
-            link: 'https://vitepress.vuejs.org/'
+            text: 'vue3',
+            link: 'https://vuejs.org/'
           }
         ]
       }
@@ -45,6 +50,7 @@ export default {
       '/guide/': [
         {
           text: '指引',
+          collapsible: true,
           items: [
             {
               text: '概览',
@@ -59,7 +65,8 @@ export default {
       ],
       '/components/': [
         {
-          text: '组件',
+          text: '基础组件',
+          collapsible: true,
           items: [
             {
               text: '按钮',
@@ -70,21 +77,42 @@ export default {
               link: '/components/icon'
             },
             {
-              text: '输入框',
-              link: '/components/input'
-            },
-            {
               text: '加载状态',
               link: '/components/loading'
+            }
+          ]
+        },
+        {
+          text: '内容展示',
+          collapsible: true,
+          items: [
+            {
+              text: '输入框',
+              link: '/components/input'
             }
           ]
         }
       ]
     }
   },
-  // markdown: {
-  //   config: (md) => {
-  //     md.use(demoBlockPlugin);
-  //   }
-  // }
+  async transformHead(ctx) {
+    console.log(ctx)
+    // return Promise.reject()
+    // return {
+    //   title: 'hellokitty'
+    // }
+    return new Promise((res) => {
+      res({
+        title: 'hellokitty'
+      })
+    })
+  },
+  async transformHtml(code, id, context) {
+  },
+  markdown: {
+    theme: 'material-palenight'
+    // config: (md) => {
+    //   md.use(demoBlockPlugin);
+    // }
+  }
 }
