@@ -63,6 +63,10 @@ export default {
             {
               text: '快速上手',
               link: '/guide/quickstart'
+            },
+            {
+              text: '节点与规划',
+              link: '/guide/timeline'
             }
           ]
         }

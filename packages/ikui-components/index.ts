@@ -2,7 +2,7 @@ import { App } from 'vue'
 import IkButton from './button'
 import IkInput from './input'
 import IkIcon from './icon'
-import { vLoading } from './loading/src/directive'
+import { vLoading, loadingService } from './loading'
 // import { withInstall } from '../utils/install'
 // // const IkButton = withInstall(Button)
 export {
@@ -20,5 +20,6 @@ export default {
     app.component(IkInput.name || 'IkInput', IkInput)
     app.component(IkIcon.name || 'IkIcon', IkIcon)
     app.directive('loading', vLoading)
+    app.config.globalProperties.IkLoading = loadingService
   }
 }
