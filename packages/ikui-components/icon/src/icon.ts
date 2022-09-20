@@ -3,7 +3,8 @@ export const iconProps = {
     type: String,
   },
   size: {
-    type: Number,
+    type: Number || String,
+    default: (): number => 22
   },
   class: {
     type: String

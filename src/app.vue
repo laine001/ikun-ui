@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { IkButton, IkInput } from '../packages/ikui-components';
+  import { IkButton, IkInput, IkIcon } from '../packages/ikui-components';
   import IkLoading from '../packages/ikui-components/loading/src/mask.vue'
   import { ref } from 'vue'
 
@@ -25,7 +25,7 @@
       <ik-button type="warning" @click="loading3 = !loading3">警告按钮</ik-button>
       <ik-button type="danger" @click="onClick">危险按钮</ik-button>
       <ik-button type="primary">禁用状态</ik-button>
-      <ik-loading :visible="fullscreenLoading"></ik-loading>
+      <!-- <ik-loading :visible="fullscreenLoading"></ik-loading> -->
     </div>
     <div>
       <ik-button>普通按钮</ik-button>
@@ -68,6 +68,7 @@
     <div v-loading="loading3" class="loading-demo3">
       品萨福克垃圾啊康师傅
     </div>
+    <ik-icon color="red" size="38" name="star-fill" />
   </div>
 </template>
 <style>

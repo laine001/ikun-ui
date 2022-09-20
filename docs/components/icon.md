@@ -2,6 +2,47 @@
 ```javascript
 import { IkIcon } from 'ik-ui'
 ```
+
+## 不同颜色
+<div class="flex">
+  <div class="icon-demo-box"><ik-icon name="star-fill" color="pink" /></div>
+  <div class="icon-demo-box"><ik-icon name="star-fill" color="orange" /></div>
+  <div class="icon-demo-box"><ik-icon name="star-fill" color="deepskyblue" /></div>
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" /></div>
+  <div class="icon-demo-box"><ik-icon name="camera" /></div>
+  <div class="icon-demo-box"><ik-icon name="camera" color="deeppink" /></div>
+</div>
+
+:::details 点击展开
+```html
+<ik-icon name="star-fill" color="pink" />
+<ik-icon name="star-fill" color="orange" />
+<ik-icon name="star-fill" color="deepskyblue" />
+<ik-icon name="heart-fill" color="red" />
+<ik-icon name="camera" />
+<ik-icon name="camera" color="deeppink" />
+```
+:::
+
+
+## 不同大小
+<div class="flex">
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" /></div>
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" size="28" /></div>
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="34" /></div>
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="42" /></div>
+</div>
+
+::: details 点击展开
+```html
+<ik-icon name="heart-fill" color="red" />
+<ik-icon name="heart-fill" color="red" size="28" />
+<ik-icon name="heart-fill" color="red" :size="34" />
+<ik-icon name="heart-fill" color="red" :size="42" />
+```
+:::
+
+## 部分展示
 <div class="flex">
 <div class="icon-demo-box"><ik-icon name="bell" /></div>
 <div class="icon-demo-box"><ik-icon name="email" /></div>
@@ -29,6 +70,8 @@ import { IkIcon } from 'ik-ui'
   <ik-icon name="chart" />
 ```
 :::
+
+## attrs
 
 <style lang="scss">
   .flex {
