@@ -1,5 +1,7 @@
 <script lang="ts" setup name="IkInput">
-// import { computed } from 'vue';
+defineOptions({
+  name: 'IkInput'
+})
 </script>
 <template>
   <div class="ik-input-wrapper">

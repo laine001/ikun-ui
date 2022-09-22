@@ -1,7 +1,9 @@
-<script lang="ts" setup name="IkButton">
+<script lang="ts" setup>
 import { computed } from 'vue';
 import { buttonProps } from './button'
-// import Icon from '../../icon/src/icon.vue';
+defineOptions({
+  name: 'IkButton'
+})
 
 const props = defineProps(buttonProps)
 const emits = defineEmits(['click'])

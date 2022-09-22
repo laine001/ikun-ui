@@ -4,7 +4,9 @@
   
   import { iconProps } from './icon'
   import { computed, onMounted } from 'vue';
-
+  defineOptions({
+    name: 'IkIcon'
+  })
   const props = defineProps(iconProps)
   onMounted(() => {
     import('https:////at.alicdn.com/t/c/font_3653999_v9boqzux0j.js')

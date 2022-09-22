@@ -6,6 +6,7 @@ specifiers:
   '@vue/test-utils': ^2.0.2
   jsdom: ^20.0.0
   sass: ^1.54.9
+  unplugin-vue-define-options: ^0.11.2
   unplugin-vue-setup-extend-plus: ^0.3.2
   vite: ^3.1.0
   vitepress: 1.0.0-alpha.13
@@ -17,6 +18,7 @@ dependencies:
   '@vitejs/plugin-vue-jsx': registry.npmmirror.com/@vitejs/plugin-vue-jsx/2.0.1_vite@3.1.0+vue@3.2.39
   jsdom: registry.npmmirror.com/jsdom/20.0.0
   sass: registry.npmmirror.com/sass/1.54.9
+  unplugin-vue-define-options: registry.npmmirror.com/unplugin-vue-define-options/0.11.2
   unplugin-vue-setup-extend-plus: registry.npmmirror.com/unplugin-vue-setup-extend-plus/0.3.2_vite@3.1.0
   vite: registry.npmmirror.com/vite/3.1.0_sass@1.54.9
   vitepress: registry.npmmirror.com/vitepress/1.0.0-alpha.13_sass@1.54.9
@@ -644,6 +646,16 @@ packages:
       '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec/1.4.14
     dev: false
 
+  registry.npmmirror.com/@rollup/pluginutils/4.2.1:
+    resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz}
+    name: '@rollup/pluginutils'
+    version: 4.2.1
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      estree-walker: registry.npmmirror.com/estree-walker/2.0.2
+      picomatch: registry.npmmirror.com/picomatch/2.3.1
+    dev: false
+
   registry.npmmirror.com/@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tootallnate/once/-/once-2.0.0.tgz}
     name: '@tootallnate/once'
@@ -708,6 +720,17 @@ packages:
     dependencies:
       vite: registry.npmmirror.com/vite/3.1.0_sass@1.54.9
       vue: registry.npmmirror.com/vue/3.2.39
+    dev: false
+
+  registry.npmmirror.com/@vue-macros/common/0.11.2:
+    resolution: {integrity: sha512-z6yKvUL45Sb29QzEDNTwt8mMgcA/ErEZA+BUr6VGiGC0eTXMvkP8E8nwER1q/bVg/R+Xa/m3A6vcJHSUZFodRw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue-macros/common/-/common-0.11.2.tgz}
+    name: '@vue-macros/common'
+    version: 0.11.2
+    engines: {node: '>=14.19.0'}
+    dependencies:
+      '@babel/types': registry.npmmirror.com/@babel/types/7.19.0
+      '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc/3.2.39
+      magic-string: registry.npmmirror.com/magic-string/0.26.3
     dev: false
 
   registry.npmmirror.com/@vue/babel-helper-vue-transform-on/1.0.2:
@@ -967,6 +990,16 @@ packages:
     name: assertion-error
     version: 1.1.0
     dev: true
+
+  registry.npmmirror.com/ast-walker-scope/0.2.3:
+    resolution: {integrity: sha512-9reB+iYF6jCCDqKDNNQI8iA2MJcy0jCLvEjfya72F7Zai5i2CB8hk9K/kzkZhagja9othQCFPEvQW11LhPKjmg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ast-walker-scope/-/ast-walker-scope-0.2.3.tgz}
+    name: ast-walker-scope
+    version: 0.2.3
+    engines: {node: '>=14.19.0'}
+    dependencies:
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.19.0
+      '@babel/types': registry.npmmirror.com/@babel/types/7.19.0
+    dev: false
 
   registry.npmmirror.com/asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/asynckit/-/asynckit-0.4.0.tgz}
@@ -2084,6 +2117,18 @@ packages:
     version: 0.2.0
     engines: {node: '>= 4.0.0'}
 
+  registry.npmmirror.com/unplugin-vue-define-options/0.11.2:
+    resolution: {integrity: sha512-Eql/lAih50HLdg6eOGNjPZhLCTW7B297FvKdpfibRMtnlhhrZsRFUs5DyS3tcNBc7Zkc6GcS8mt6HKGNGhaXKg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unplugin-vue-define-options/-/unplugin-vue-define-options-0.11.2.tgz}
+    name: unplugin-vue-define-options
+    version: 0.11.2
+    engines: {node: '>=14.19.0'}
+    dependencies:
+      '@rollup/pluginutils': registry.npmmirror.com/@rollup/pluginutils/4.2.1
+      '@vue-macros/common': registry.npmmirror.com/@vue-macros/common/0.11.2
+      ast-walker-scope: registry.npmmirror.com/ast-walker-scope/0.2.3
+      unplugin: registry.npmmirror.com/unplugin/0.9.6
+    dev: false
+
   registry.npmmirror.com/unplugin-vue-setup-extend-plus/0.3.2_vite@3.1.0:
     resolution: {integrity: sha512-wvX/mgVriD6wviBEUSmX1S9uEcd4P3XWR5L6M++TFUS1rU/j0vvyld1D56FXWl7CT41Dll5S5WbD6sQNaMNNUA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unplugin-vue-setup-extend-plus/-/unplugin-vue-setup-extend-plus-0.3.2.tgz}
     id: registry.npmmirror.com/unplugin-vue-setup-extend-plus/0.3.2
@@ -2124,6 +2169,17 @@ packages:
       vite: registry.npmmirror.com/vite/3.1.0_sass@1.54.9
       webpack-sources: registry.npmmirror.com/webpack-sources/3.2.3
       webpack-virtual-modules: registry.npmmirror.com/webpack-virtual-modules/0.4.4
+    dev: false
+
+  registry.npmmirror.com/unplugin/0.9.6:
+    resolution: {integrity: sha512-YYLtfoNiie/lxswy1GOsKXgnLJTE27la/PeCGznSItk+8METYZErO+zzV9KQ/hXhPwzIJsfJ4s0m1Rl7ZCWZ4Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unplugin/-/unplugin-0.9.6.tgz}
+    name: unplugin
+    version: 0.9.6
+    dependencies:
+      acorn: registry.npmmirror.com/acorn/8.8.0
+      chokidar: registry.npmmirror.com/chokidar/3.5.3
+      webpack-sources: registry.npmmirror.com/webpack-sources/3.2.3
+      webpack-virtual-modules: registry.npmmirror.com/webpack-virtual-modules/0.4.5
     dev: false
 
   registry.npmmirror.com/update-browserslist-db/1.0.7_browserslist@4.21.3:
@@ -2324,6 +2380,12 @@ packages:
     resolution: {integrity: sha512-h9atBP/bsZohWpHnr+2sic8Iecb60GxftXsWNLLLSqewgIsGzByd2gcIID4nXcG+3tNe4GQG3dLcff3kXupdRA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.4.tgz}
     name: webpack-virtual-modules
     version: 0.4.4
+    dev: false
+
+  registry.npmmirror.com/webpack-virtual-modules/0.4.5:
+    resolution: {integrity: sha512-8bWq0Iluiv9lVf9YaqWQ9+liNgXSHICm+rg544yRgGYaR8yXZTVBaHZkINZSB2yZSWo4b0F6MIxqJezVfOEAlg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webpack-virtual-modules/-/webpack-virtual-modules-0.4.5.tgz}
+    name: webpack-virtual-modules
+    version: 0.4.5
     dev: false
 
   registry.npmmirror.com/whatwg-encoding/2.0.0:

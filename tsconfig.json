@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
+
     "lib": ["ES2015", "DOM.Iterable", "DOM"],
     "declaration": true,
     "declarationDir": "./dist/types",
     "jsx": "preserve",
-    "types": ["unplugin-vue-define-options"]
+    "types": ["unplugin-vue-define-options/macros-global"]
   },
   "include": [
     "./**/*.*",

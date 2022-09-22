@@ -9,6 +9,7 @@ import IkUI from '../../../packages/ikui-components';
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
+    console.log(IkUI, 'IkUI')
     app.use(IkUI);
     // app.component('Demo', Demo);
     // app.component('DemoBlock', DemoBlock);

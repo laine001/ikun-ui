@@ -16,9 +16,9 @@ import * as types from './button'
 export { types }
 export default {
   install(app: App): void {
-    app.component(IkButton.name || 'IkButton', IkButton)
-    app.component(IkInput.name || 'IkInput', IkInput)
-    app.component(IkIcon.name || 'IkIcon', IkIcon)
+    app.component(IkButton.name, IkButton)
+    app.component(IkInput.name, IkInput)
+    app.component(IkIcon.name, IkIcon)
     app.directive('loading', vLoading)
     app.config.globalProperties.IkLoading = loadingService
   }
