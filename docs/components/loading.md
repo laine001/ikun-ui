@@ -71,7 +71,6 @@ app.config.$globalProp.....
   const loading2 = ref(false)
   const toggleLoading = () => {
     loading.value = !loading.value
-    console.log(loading.value)
   }
   const toggleLoading2 = () => {
     loading2.value = true

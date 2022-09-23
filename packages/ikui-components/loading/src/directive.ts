@@ -29,7 +29,7 @@ const insertDom = (el: LoadingElType, binding: DirectiveBinding): void => {
   el.appendChild(loadingIns.$el)
 }
 
-export const vLoading: Directive = {
+export const IkLoading: Directive = {
   mounted(el: LoadingElType, binding: DirectiveBinding) {
     const originPosition = window.getComputedStyle(el)['position']
     el.originPosition = originPosition

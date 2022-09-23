@@ -1,0 +1,87 @@
+<script lang="ts" setup>
+  import { ref } from 'vue'
+
+  const loading1 = ref(false)
+  const loading2 = ref(false)
+  const loading3 = ref(false)
+  const fullscreenLoading = ref(false)
+
+  const toggle1 = () => {
+    loading1.value = !loading1.value
+  }
+  const onClick = () => {
+    fullscreenLoading.value = !fullscreenLoading.value
+    setTimeout(() => {
+      fullscreenLoading.value = !fullscreenLoading.value
+    }, 2000);
+  }
+</script>
+<template>
+  <div>
+    <div class="examples-box">
+      <h1>按钮</h1>
+      <ik-button>普通按钮</ik-button>
+      <ik-button type="primary">主题按钮</ik-button>
+      <ik-button type="success">成功按钮</ik-button>
+      <ik-button type="warning">警告按钮</ik-button>
+      <ik-button type="danger">危险按钮</ik-button>
+      <ik-button type="primary" disabled>禁用状态</ik-button>
+      <br>
+      <br>
+      <ik-button icon="add">按钮</ik-button>
+      <ik-button loading>加载中</ik-button>
+      <ik-button type="primary" loading>请稍后</ik-button>
+      <ik-button>
+        <ik-icon name="user" />
+        按钮
+      </ik-button>
+      <ik-button type="primary">
+        按钮
+        <ik-icon color="#ffffff" name="main" />
+      </ik-button>
+    </div>
+
+    <div class="examples-box">
+      <h1>loading</h1>
+      <ik-button type="primary" @click="toggle1">loading1</ik-button>
+      <ik-button type="primary" @click="loading2 = !loading2">loading2</ik-button>
+      <ik-button type="primary" @click="loading3 = !loading3">loading3</ik-button>
+      <ik-button type="primary" @click="onClick">全屏按钮</ik-button>
+      <ik-button type="primary">全屏按钮方法调用</ik-button>
+      <div v-loading="loading1">
+        这里是loading测试1
+      </div>
+      <div v-loading="loading2" class="loading-demo2">
+        <p>寒蝉凄切</p>
+        <p>对账听完</p>
+        <p>骤雨初歇，可降低哦</p>
+      </div>
+      <div v-loading="loading3" class="loading-demo3">
+        品萨福克垃圾啊康师傅
+      </div>
+      <div v-loading.fullscreen="fullscreenLoading" class="loading-demo3"></div>
+    </div>
+    <div class="examples-box">
+      <h1>输入框</h1>
+      <ik-input />
+    </div>
+    <div class="examples-box">
+      <h1>图标</h1>
+      <ik-icon color="red" size="38" name="star-fill" />
+    </div>
+  </div>
+</template>
+<style>
+  .examples-box {
+    border: 1px solid orange;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .loading-demo2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid saddlebrown;
+  }
+</style>

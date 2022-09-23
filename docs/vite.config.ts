@@ -7,4 +7,7 @@ export default defineConfig({
     vueJsx(),
     setupNamePlugin()
   ],
+  server: {
+    port: 9527
+  }
 })

@@ -35,5 +35,8 @@ export default defineConfig({
       fileName: 'ikui',
       formats: ['esm', 'umd', 'iife']
     }
+  },
+  server: {
+    port: 9526
   }
 })

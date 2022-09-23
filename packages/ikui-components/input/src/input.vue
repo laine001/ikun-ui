@@ -1,5 +1,8 @@
 <script lang="ts" setup name="IkInput">
-
+defineExpose({
+  /** @description input ph */
+  ph: '',
+})
 </script>
 <template>
   <div class="ik-input-wrapper">

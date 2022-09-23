@@ -1,7 +1,7 @@
-import type { Plugin } from 'vite'
 import MagicString from 'magic-string'
 import { parse, compileScript } from '@vue/compiler-sfc'
 import { basename } from 'path'
+import type { Plugin } from 'vite'
 
 export default (): Plugin => {
   return {
@@ -14,7 +14,9 @@ export default (): Plugin => {
         const { descriptor } = parse(source)
 
         if (
-          !descriptor.script && descriptor.scriptSetup && !descriptor.scriptSetup.attrs?.extendIgnore
+          !descriptor.script
+          && descriptor.scriptSetup
+          && !descriptor.scriptSetup.attrs?.extendIgnore
         ) {
           const result = compileScript(descriptor, { id })
           const { name = '', lang, inheritAttrs } = result.attrs

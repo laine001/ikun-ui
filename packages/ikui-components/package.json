@@ -1,0 +1,12 @@
+{
+  "name": "@ikui/components",
+  "version": "0.0.1",
+  "description": "vue3+ts components",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "laine001",
+  "license": "ISC",
+  "homepage": "https://github.com/LAINE001/ik-ui#readme"
+}
