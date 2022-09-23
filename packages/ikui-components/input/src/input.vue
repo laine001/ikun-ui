@@ -1,7 +1,5 @@
 <script lang="ts" setup name="IkInput">
-defineOptions({
-  name: 'IkInput'
-})
+
 </script>
 <template>
   <div class="ik-input-wrapper">

@@ -1,8 +1,6 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="mask">
 import { computed, inject } from 'vue';
-defineOptions({
-  name: 'Mask'
-})
+
 const fullscreen = inject('fullscreen')
 const computedClses = computed(() => {
   return [

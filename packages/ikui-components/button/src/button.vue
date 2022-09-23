@@ -1,9 +1,6 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="IkButton">
 import { computed } from 'vue';
 import { buttonProps } from './button'
-defineOptions({
-  name: 'IkButton'
-})
 
 const props = defineProps(buttonProps)
 const emits = defineEmits(['click'])

@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme';
 import './var.css';
+import './style.css';
 import IkUI from '../../../packages/ikui-components';
 // import '../../../packages/ikui-components'
 

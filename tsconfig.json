@@ -5,7 +5,7 @@
     "declaration": true,
     "declarationDir": "./dist/types",
     "jsx": "preserve",
-    "types": ["unplugin-vue-define-options/macros-global"]
+    "types": ["unplugin-vue-macros/macros-global"]
   },
   "include": [
     "./**/*.*",

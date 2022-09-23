@@ -18,10 +18,11 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "@vue/compiler-sfc": "^3.2.39",
     "jsdom": "^20.0.0",
+    "magic-string": "^0.26.4",
+    "packages": "^0.0.8",
     "sass": "^1.54.9",
-    "unplugin-vue-define-options": "^0.11.2",
-    "unplugin-vue-setup-extend-plus": "^0.3.2",
     "vite": "^3.1.0",
     "vitepress": "1.0.0-alpha.13",
     "vue": "^3.2.39"

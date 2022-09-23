@@ -1,0 +1,21 @@
+.VPNavBarTitle .title {
+  padding-left: 10px;
+}
+.VPSidebarGroup .title {
+  padding-left: 10px;
+}
+.VPSidebarGroup .items  .link {
+  padding: 5px 0 5px 10px;
+}
+.VPSidebarGroup .items  .link.active {
+  transition: all .2s;
+  background-color: #ebad604a;
+  border-radius: 4px;
+}
+
+.flex {
+  display: flex;
+}
+.summary {
+  cursor: pointer;
+}

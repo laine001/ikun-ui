@@ -1,10 +1,8 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
-// import Unocss from './config/unocss';
-import DefineOptions from 'unplugin-vue-define-options/vite';
-// import vueSetupExtend from 'unplugin-vue-setup-extend-plus/vite'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import setupNamePlugin from './vite-plugin-setup-name'
 
 const rollupOptions = {
   external: ['vue', 'vue-router'],
@@ -19,9 +17,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    DefineOptions()
-    // vueSetupExtend()
-    // Unocss()
+    setupNamePlugin()
   ],
   // css: {
   //   preprocessorOptions: {
