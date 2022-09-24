@@ -9,15 +9,34 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: yarn
-      - run: yarn install --frozen-lockfile
 
-      - name: Build
-        run: yarn docs:build
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Generate common locale
+        run: pnpm docs:gen-locale
+
+      - name: Build Ik UI
+        run: pnpm build
+        env:
+          FORCE_COLOR: 2
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      - name: Build website
+        run: pnpm docs:build
+        env:
+          DOC_ENV: preview
+          NODE_OPTIONS: --max-old-space-size=4096
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
