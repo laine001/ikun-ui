@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -22,9 +22,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
-
-      - name: Generate common locale
-        run: pnpm docs:gen-locale
 
       - name: Build Ik UI
         run: pnpm build
