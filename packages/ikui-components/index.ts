@@ -2,6 +2,7 @@ import { App } from 'vue'
 import IkButton from './button'
 import IkInput from './input'
 import IkIcon from './icon'
+import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 // import { withInstall } from '../utils/install'
 // // const IkButton = withInstall(Button)
@@ -10,7 +11,8 @@ export {
   IkInput,
   IkLoading,
   loadingService,
-  IkIcon
+  IkIcon,
+  message
 }
 
 import * as types from './button'
@@ -23,5 +25,6 @@ export default {
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
+    app.config.globalProperties.$message = message
   }
 }

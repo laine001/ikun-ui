@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-  import { ref } from 'vue'
-
+  import { ref, getCurrentInstance } from 'vue'
+  const _global = getCurrentInstance()
+  let id = 1;
   const loading1 = ref(false)
   const loading2 = ref(false)
   const loading3 = ref(false)
@@ -14,6 +15,13 @@
     setTimeout(() => {
       fullscreenLoading.value = !fullscreenLoading.value
     }, 2000);
+  }
+
+  const openMessage = () => {
+    // config.globalProperties
+    console.log(_global, '_global')
+    _global?.appContext.config.globalProperties.$message('哈哈' + id)
+    id++
   }
 </script>
 <template>
@@ -67,7 +75,11 @@
     </div>
     <div class="examples-box">
       <h1>图标</h1>
-      <ik-icon color="red" size="38" name="star-fill" />
+      <ik-icon color="red" :size="38" name="star-fill" />
+    </div>
+    <div class="examples-box">
+      <h1>message提示</h1>
+      <ik-button @click="openMessage">显示提示</ik-button>
     </div>
   </div>
 </template>
