@@ -19,6 +19,11 @@ export const messageProps = {
   }
 } as const
 
+export const messageEmits = {
+  destroy: () => true,
+  close: () => true
+}
+
 export const MessageProps = messageProps
 
 export const messageTypes =

@@ -28,7 +28,7 @@ import { IkIcon } from 'ik-ui'
 ## 不同大小
 <div class="flex">
   <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" /></div>
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" size="28" /></div>
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="28" /></div>
   <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="34" /></div>
   <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="42" /></div>
 </div>

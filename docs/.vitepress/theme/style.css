@@ -16,6 +16,11 @@
 .flex {
   display: flex;
 }
-.summary {
+summary {
   cursor: pointer;
+}
+.is-home {
+  background: url(/home-bg.jpg);
+  background-size: 100% 100%;
+  backdrop-filter: blur(2px);
 }

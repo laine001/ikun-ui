@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
-import IkUI, { loadingService } from '@ikui/components'
+import IkUI, { message } from '@ikui/components'
 import './var.css';
 import './style.css';
 // console.log(IkUI, loadingService, 'ikui')
@@ -10,7 +10,7 @@ export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
     app.use(IkUI);
-    // app.config.globalProperties.$loading = loadingService
+    app.config.globalProperties.$message = message
     // app.component('Demo', Demo);
     // app.component('DemoBlock', DemoBlock);
   }

@@ -1,9 +1,9 @@
 <script lang="ts" setup name="IkMessage">
   import { ref, onMounted, computed, ComputedRef, CSSProperties } from 'vue'
-  import { messageProps } from './message'
+  import { messageProps, messageEmits } from './message'
   import { getLastOffset } from './service'
   const props = defineProps(messageProps)
-  defineEmits(['destroy'])
+  defineEmits(messageEmits)
   
   const visible = ref(false)
   onMounted(() => {
@@ -21,7 +21,7 @@
     return v
   })
   const bottom = computed(() => {
-    return offset.value + 40
+    return offset.value + 50
   })
 
   const computedStyle: ComputedRef = computed<CSSProperties>(() => {
@@ -31,13 +31,15 @@
   })
 
   defineExpose({
-    bottom
+    bottom,
+    visible
   })
 </script>
 <template>
   <transition
-    name="msg-fade"
-    @after-leave="$emit('destroy');props.onDestory()"
+    name="f-msg-fade"
+    @before-leave="$emit('close')"
+    @after-leave="$emit('destroy')"
   >
     <div class="ik-message" v-show="visible" :style="computedStyle">
       {{message}}
@@ -46,30 +48,22 @@
 </template>
 <style lang="scss">
   .ik-message {
-    background-color: salmon;
-    padding: 5px 15px;
+    background-color: #ffffff;
+    padding: 8px 18px;
     position: fixed;
-    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    margin: 0 auto;
+    margin: 20px auto 0;
+    transition: all .32s;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #222222;
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
   }
-  .msg-fade-enter-active {
-    animation: msgbox-fade .36s ease;
-  }
-  .msg-fade-leave-active {
-    animation: msgbox-fade .36s ease reverse;
-  }
-
-  @keyframes msgbox-fade {
-    0% {
-      transform: translate3d(-50%, -20px, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate3d(-50%, 0, 0);
-      opacity: 1;
-    }
+  .f-msg-fade-enter-from,
+  .f-msg-fade-leave-to {
+    opacity: 0;
+    transform: translate(-50%, -100%);
   }
 </style>

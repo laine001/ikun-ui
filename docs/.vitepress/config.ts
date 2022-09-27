@@ -97,6 +97,10 @@ export default {
             {
               text: '输入框',
               link: '/components/input'
+            },
+            {
+              text: '提示',
+              link: '/components/message'
             }
           ]
         }

@@ -28,9 +28,8 @@ const createMessage = (options: MessageServiceOptions) => {
     onClose() {
       closeMessage(instance)
     },
-    onDestory() {
+    onDestroy() {
       render(null, container)
-      getLastOffset(id)
     }
   }
   const vnode = createVNode(Message, props)
@@ -42,8 +41,11 @@ const createMessage = (options: MessageServiceOptions) => {
     vnode,
     id,
     vm,
-    closeIt() {
-      console.log(vm, 'vm-handler')
+    props,
+    handler: {
+      close() {
+        vm.exposed!.visible.value = false
+      }
     }
   }
   return instance
@@ -53,7 +55,7 @@ const closeMessage = (instance: any) => {
   const i = instanceList.indexOf(instance)
   if (i === -1) return
   instanceList.splice(i, 1)
-  instance.closeIt()
+  instance.handler.close()
 }
 
 const messageService = (messageParams: MessageServiceOptions = {}) => {
@@ -74,7 +76,6 @@ messageTypes.forEach((type) => {
 
 export const getLastOffset = (id: string): number => {
   const i = instanceList.findIndex((instance) => instance.id === id)
-  // const currentInstance = instanceList[i]
 
   let prevInstance
   if (i > 0) {
