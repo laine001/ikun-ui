@@ -1,12 +1,19 @@
 import Message from './message.vue'
 
+export const messageIconNameList = {
+  success: 'success-filling',
+  warning: 'warning',
+  info: 'prompt'
+}
+
 export const messageProps = {
   message: {
     type: String,
     default: (): string => ''
   },
   type: {
-    type: String
+    type: String,
+    default: (): string => ''
   },
   zIndex: {
     type: Number || String
@@ -16,6 +23,10 @@ export const messageProps = {
   },
   onDestory: {
     type: Function
+  },
+  duration: {
+    type: Number,
+    default: (): number => 3000
   }
 } as const
 

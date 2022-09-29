@@ -1,6 +1,7 @@
 <script lang="ts" setup name="IkMessage">
+  import IkIcon from '../../icon'
   import { ref, onMounted, computed, ComputedRef, CSSProperties } from 'vue'
-  import { messageProps, messageEmits } from './message'
+  import { messageProps, messageEmits, messageIconNameList } from './message'
   import { getLastOffset } from './service'
   const props = defineProps(messageProps)
   defineEmits(messageEmits)
@@ -13,7 +14,7 @@
   const startTimer = () => {
     setTimeout(() => {
       visible.value = false
-    }, 3000)
+    }, props.duration)
   }
 
   const offset: ComputedRef = computed((): number => {
@@ -30,6 +31,18 @@
     }
   })
 
+  const computedIconColor: ComputedRef = computed(() => {
+    const { type } = props
+    switch (type) {
+      case 'warning':
+        return '#fbD26a'
+      case 'info':
+        return '#cd8025'
+      case 'success':
+        return '#01847f'
+    }
+  })
+
   defineExpose({
     bottom,
     visible
@@ -42,6 +55,11 @@
     @after-leave="$emit('destroy')"
   >
     <div class="ik-message" v-show="visible" :style="computedStyle">
+      <ik-icon
+        v-if="props.type"
+        :name="messageIconNameList[props.type]"
+        :color="computedIconColor"
+      />
       {{message}}
     </div>
   </transition>
@@ -60,6 +78,11 @@
     font-size: 14px;
     color: #222222;
     box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+    display: flex;
+    .ik-icon {
+      vertical-align: text-bottom;
+      margin-right: 4px;
+    }
   }
   .f-msg-fade-enter-from,
   .f-msg-fade-leave-to {

@@ -52,7 +52,7 @@ summary {
   bottom: 120px;
   right: -40px;
 
-  animation: slide-ani 10s 200ms linear alternate infinite;
+  animation: slide-ani2 9s 200ms linear alternate infinite;
   animation-delay: 600ms;
 }
 
@@ -68,6 +68,24 @@ summary {
   }
   75% {
     transform: translate(-20px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slide-ani2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-15px, 0);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  75% {
+    transform: translate(-10px, 10px);
   }
   100% {
     transform: translate(0, 0);

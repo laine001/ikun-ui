@@ -59,6 +59,7 @@ const closeMessage = (instance: any) => {
 }
 
 const messageService = (messageParams: MessageServiceOptions = {}) => {
+  console.log('msgmessageParams', messageParams)
   const options = typeof messageParams === 'string'
     ? { message: messageParams }
     : messageParams
@@ -69,10 +70,22 @@ const messageService = (messageParams: MessageServiceOptions = {}) => {
 }
 
 messageTypes.forEach((type) => {
-  messageService[type] = () => {
-    return messageService(type)
+  messageService[type] = (messageParams) => {
+    console.log(type, 'message-type', messageParams)
+    const options = typeof messageParams === 'string'
+      ? { message: messageParams }
+      : { ...messageParams }
+    const params = {
+      type,
+      ...options
+    }
+    return messageService(params)
   }
 })
+
+const formatOptions = (opts) => {
+
+}
 
 export const getLastOffset = (id: string): number => {
   const i = instanceList.findIndex((instance) => instance.id === id)

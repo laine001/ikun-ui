@@ -3,4 +3,4 @@
 import IkIcon from './src/icon.vue'
 
 export default IkIcon
-// export type { ButtonInstance, ButtonType } from './src/button'
+export type { IconInstance, iconProps } from './src/icon'

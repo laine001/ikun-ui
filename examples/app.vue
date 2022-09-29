@@ -18,9 +18,25 @@
   }
 
   const openMessage = () => {
-    // config.globalProperties
-    console.log(_global, '_global')
     _global?.appContext.config.globalProperties.$message('哈哈' + id)
+    id++
+  }
+  const openMessage2 = () => {
+    _global?.appContext.config.globalProperties.$message({
+      type: 'warning',
+      message: 'hahahha'
+    })
+    id++
+  }
+  const openMessage3 = () => {
+    _global?.appContext.config.globalProperties.$message.success({
+      type: 'warning',
+      message: 'hahahha'
+    })
+    id++
+  }
+  const openMessage4 = () => {
+    _global?.appContext.config.globalProperties.$message.success('这是成功提示')
     id++
   }
 </script>
@@ -79,7 +95,10 @@
     </div>
     <div class="examples-box">
       <h1>message提示</h1>
-      <ik-button @click="openMessage">显示提示</ik-button>
+      <ik-button @click="openMessage">普通提示</ik-button>
+      <ik-button @click="openMessage2">传入对象</ik-button>
+      <ik-button @click="openMessage3">点type调用</ik-button>
+      <ik-button @click="openMessage4">点type调用</ik-button>
     </div>
   </div>
 </template>

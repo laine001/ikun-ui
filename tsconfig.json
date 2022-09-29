@@ -4,8 +4,7 @@
     "lib": ["ES2015", "DOM.Iterable", "DOM"],
     "declaration": true,
     "declarationDir": "./dist/types",
-    "jsx": "preserve",
-    "types": ["unplugin-vue-macros/macros-global"]
+    "jsx": "preserve"
   },
   "include": [
     "./**/*.*",

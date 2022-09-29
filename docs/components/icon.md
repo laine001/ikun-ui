@@ -73,6 +73,12 @@ import { IkIcon } from 'ik-ui'
 
 ## attrs
 
+|   参数   |  说明   |  类型   |  可选值   |  默认值  |
+|----------|:-------:|:------:|:---------:|--------:|
+| name     | 名称 | string    |           |         |
+| size     | 大小 | string    |    -       | -      |
+| color    | 颜色 | string<`CSSProperties`> | - | / |
+
 <style lang="scss">
   .flex {
     display: flex;

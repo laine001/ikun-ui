@@ -1,3 +1,5 @@
+import type icon from './icon.vue'
+
 export const iconProps = {
   name: {
     type: String,
@@ -13,3 +15,5 @@ export const iconProps = {
     type: String
   }
 } as const
+
+export type IconInstance = InstanceType<typeof icon>

@@ -76,7 +76,13 @@ import { IkButton } from 'ik-ui'
 ```
 :::
 
-## Attributes
+## attrs
 |   参数   |  说明   |  类型   |  可选值   |  默认值  |
 |----------|:-------:|:------:|:---------:|--------:|
-| type     | 按钮类型 | string | primary/warning | '' |
+| type     | 按钮类型 | string | primary/warning | - |
+
+## events
+
+|   参数   |  说明   |  返回参数   |  默认值  |
+|----------|:-------:|:------:|--------:|
+| click     | click事件 | `(): Event => {}` | - |
