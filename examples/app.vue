@@ -1,44 +1,44 @@
 <script lang="ts" setup>
-  import { ref, getCurrentInstance } from 'vue'
-  const _global = getCurrentInstance()
-  let id = 1;
-  const loading1 = ref(false)
-  const loading2 = ref(false)
-  const loading3 = ref(false)
-  const fullscreenLoading = ref(false)
+import { ref, getCurrentInstance } from 'vue'
+const _global = getCurrentInstance()
+let id = 1
+const loading1 = ref(false)
+const loading2 = ref(false)
+const loading3 = ref(false)
+const fullscreenLoading = ref(false)
 
-  const toggle1 = () => {
-    loading1.value = !loading1.value
-  }
-  const onClick = () => {
+const toggle1 = () => {
+  loading1.value = !loading1.value
+}
+const onClick = () => {
+  fullscreenLoading.value = !fullscreenLoading.value
+  setTimeout(() => {
     fullscreenLoading.value = !fullscreenLoading.value
-    setTimeout(() => {
-      fullscreenLoading.value = !fullscreenLoading.value
-    }, 2000);
-  }
+  }, 2000)
+}
 
-  const openMessage = () => {
-    _global?.appContext.config.globalProperties.$message('哈哈' + id)
-    id++
-  }
-  const openMessage2 = () => {
-    _global?.appContext.config.globalProperties.$message({
-      type: 'warning',
-      message: 'hahahha'
-    })
-    id++
-  }
-  const openMessage3 = () => {
-    _global?.appContext.config.globalProperties.$message.success({
-      type: 'warning',
-      message: 'hahahha'
-    })
-    id++
-  }
-  const openMessage4 = () => {
-    _global?.appContext.config.globalProperties.$message.success('这是成功提示')
-    id++
-  }
+const openMessage = () => {
+  _global?.appContext.config.globalProperties.$message('哈哈' + id)
+  id++
+}
+const openMessage2 = () => {
+  _global?.appContext.config.globalProperties.$message({
+    type: 'warning',
+    message: 'hahahha'
+  })
+  id++
+}
+const openMessage3 = () => {
+  _global?.appContext.config.globalProperties.$message.success({
+    type: 'warning',
+    message: 'hahahha'
+  })
+  id++
+}
+const openMessage4 = () => {
+  _global?.appContext.config.globalProperties.$message.success('这是成功提示')
+  id++
+}
 </script>
 <template>
   <div>

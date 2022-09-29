@@ -1,5 +1,5 @@
 <script lang="ts" setup name="IkButton">
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { buttonProps } from './button'
 
 const props = defineProps(buttonProps)
@@ -29,7 +29,7 @@ const onClick = () => {
 
 defineExpose({
   /** @description button type */
-  type: props.type,
+  type: props.type
 })
 </script>
 <template>

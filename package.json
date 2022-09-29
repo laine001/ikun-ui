@@ -11,6 +11,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 --cache",
     "test": "vitest"
   },
   "keywords": [],
@@ -30,7 +31,16 @@
     "vue": "^3.2.39"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@vue/test-utils": "^2.0.2",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.5.1",
+    "prettier": "^2.7.1",
+    "typescript": "*",
     "vitest": "^0.23.4"
   }
 }

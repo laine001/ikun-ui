@@ -1,5 +1,5 @@
 <script lang="ts" setup name="mask">
-import { computed, inject } from 'vue';
+import { computed, inject } from 'vue'
 
 const fullscreen = inject('fullscreen')
 const computedClses = computed(() => {
