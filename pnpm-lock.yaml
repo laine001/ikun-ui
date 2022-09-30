@@ -16,7 +16,7 @@ importers:
       eslint-plugin-n: ^15.0.0
       eslint-plugin-promise: ^6.0.0
       eslint-plugin-vue: ^9.5.1
-      ikuiv: workspace:0.0.1-beta
+      ikuiv: workspace:0.0.2-beta
       jsdom: ^20.0.0
       magic-string: ^0.26.4
       prettier: ^2.7.1
@@ -50,6 +50,9 @@ importers:
       prettier: registry.npmmirror.com/prettier/2.7.1
       typescript: registry.npmmirror.com/typescript/4.8.4
       vitest: registry.npmmirror.com/vitest/0.23.4_jsdom@20.0.0+sass@1.55.0
+
+  packages/ikui-components:
+    specifiers: {}
 
 packages:
 
