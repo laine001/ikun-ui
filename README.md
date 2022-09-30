@@ -14,6 +14,7 @@
 
 <p>
   <img src="https://github.com/LAINE001/ik-ui/actions/workflows/pages.yml/badge.svg?branch=master" />
+  <a href="https://www.npmjs.com/package/ikuiv"><img src="https://badgen.net/npm/v/ikuiv" /></a>
 </p>
 
 ## Features
