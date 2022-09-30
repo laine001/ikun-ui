@@ -1,6 +1,6 @@
 {
-  "name": "@ikui/components",
-  "version": "0.0.1",
+  "name": "ikuiv",
+  "version": "0.0.1-beta",
   "description": "vue3+ts components",
   "main": "index.ts",
   "scripts": {
@@ -8,5 +8,11 @@
   },
   "author": "laine001",
   "license": "ISC",
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "vite"
+  ],
   "homepage": "https://github.com/LAINE001/ik-ui#readme"
 }
