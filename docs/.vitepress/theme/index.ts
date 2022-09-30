@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
-import IkUI, { message } from '@ikui/components'
+import IkUI, { message } from 'ikuiv'
 import './var.css';
 import './style.css';
 // console.log(IkUI, loadingService, 'ikui')

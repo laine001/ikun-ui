@@ -14,21 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: http://registry.npm.taobao.org/@ikui%2fcomponents: [NOT_FOUND] @ikui/components not found
-      at Request.params.callback [as _callback] (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
-      at Request.self.callback (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (node:events:513:28)
-      at Request.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (node:events:513:28)
-      at Gunzip.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (node:events:627:28)
-      at Gunzip.emit (node:events:513:28)
-      at endReadableNT (node:internal/streams/readable:1358:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v6\npm-estraverse-4.3.0-398ad3f3c5a24948be7725e83d11a7de28cdbd1d-integrity\node_modules\estraverse\gulpfile.js' -> 'D:\ik-ui\node_modules\@typescript-eslint\utils\node_modules\estraverse\gulpfile.js'
 
 npm manifest: 
   {
-    "name": "ik-ui",
+    "name": "ikuiv",
+    "packageManager": "pnpm@7.3.0",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -39,16 +30,17 @@ npm manifest:
       "docs:dev": "vitepress dev docs",
       "docs:build": "vitepress build docs",
       "docs:serve": "vitepress serve docs",
+      "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 --cache",
       "test": "vitest"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "@ikui/components": "workspace:^0.0.1",
       "@vitejs/plugin-vue": "^3.1.0",
       "@vitejs/plugin-vue-jsx": "^2.0.1",
       "@vue/compiler-sfc": "^3.2.39",
+      "ikuiv": "workspace:0.0.2-beta",
       "jsdom": "^20.0.0",
       "magic-string": "^0.26.4",
       "packages": "^0.0.8",
@@ -58,7 +50,16 @@ npm manifest:
       "vue": "^3.2.39"
     },
     "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^5.0.0",
       "@vue/test-utils": "^2.0.2",
+      "eslint": "^8.0.1",
+      "eslint-config-standard-with-typescript": "^23.0.0",
+      "eslint-plugin-import": "^2.25.2",
+      "eslint-plugin-n": "^15.0.0",
+      "eslint-plugin-promise": "^6.0.0",
+      "eslint-plugin-vue": "^9.5.1",
+      "prettier": "^2.7.1",
+      "typescript": "*",
       "vitest": "^0.23.4"
     }
   }

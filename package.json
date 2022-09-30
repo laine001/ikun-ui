@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/compiler-sfc": "^3.2.39",
-    "ikuiv": "workspace:0.0.1-beta",
+    "ikuiv": "workspace:0.0.2-beta",
     "jsdom": "^20.0.0",
     "magic-string": "^0.26.4",
     "packages": "^0.0.8",
