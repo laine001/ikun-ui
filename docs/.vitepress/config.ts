@@ -99,6 +99,10 @@ export default {
               link: '/components/input'
             },
             {
+              text: '复选框',
+              link: '/components/checkbox'
+            },
+            {
               text: '提示',
               link: '/components/message'
             }

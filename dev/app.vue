@@ -1,10 +1,14 @@
 <script lang="ts" setup>
-import { ref, getCurrentInstance } from 'vue'
+import { IkCheckbox } from 'ikuiv'
+import { ref, getCurrentInstance, watch } from 'vue'
 const _global = getCurrentInstance()
 let id = 1
 const loading1 = ref(false)
 const loading2 = ref(false)
 const loading3 = ref(false)
+const selected = ref(false)
+const selected2 = ref(true)
+const selectedList = ref(['选项111', '选项222'])
 const fullscreenLoading = ref(false)
 
 const toggle1 = () => {
@@ -39,6 +43,11 @@ const openMessage4 = () => {
   _global?.appContext.config.globalProperties.$message.success('这是成功提示')
   id++
 }
+
+watch(selectedList, (value) => {
+  console.log(value, 'selectedList')
+})
+
 </script>
 <template>
   <div>
@@ -99,6 +108,21 @@ const openMessage4 = () => {
       <ik-button @click="openMessage2">传入对象</ik-button>
       <ik-button @click="openMessage3">点type调用</ik-button>
       <ik-button @click="openMessage4">点type调用</ik-button>
+    </div>
+    <div class="examples-box">
+      <h1>checkbox</h1>
+      <div>
+        <!-- <ik-checkbox v-model="selected" label="选项一"></ik-checkbox> -->
+        <ik-checkbox v-model="selected2" label="测试1"></ik-checkbox>
+      </div>
+      <div>
+        <ik-checkbox-group v-model="selectedList">
+          <ik-checkbox label="选项111"></ik-checkbox>
+          <ik-checkbox label="选项222"></ik-checkbox>
+          <ik-checkbox label="选项333"></ik-checkbox>
+        </ik-checkbox-group>
+        {{ selectedList }}
+      </div>
     </div>
   </div>
 </template>
