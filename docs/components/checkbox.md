@@ -4,6 +4,8 @@
 绑定值为`boolean`类型
 <ik-checkbox v-model="checked1" label="选项一"></ik-checkbox>
 <ik-checkbox v-model="checked2" label="选项二"></ik-checkbox>
+<span>{{ checked1 }}</span>
+<span style="margin-left:20px;">{{ checked2 }}</span>
 
 ::: details 点击展开
 ```html
@@ -32,8 +34,6 @@
 ```vue
 <script setup>
 import { ref } from 'vue'
-const checked1 = ref(false)
-const checked2 = ref(true)
 const checkedList1 = ref([])
 </script>
 ```
@@ -42,5 +42,7 @@ const checkedList1 = ref([])
 
 <script setup>
 import { ref } from 'vue'
+const checked1 = ref(false)
+const checked2 = ref(true)
 const checkedList1 = ref([])
 </script>
