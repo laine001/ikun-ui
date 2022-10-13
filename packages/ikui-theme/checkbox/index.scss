@@ -3,7 +3,7 @@
 .ik-checkbox {
   display: inline-flex;
   cursor: pointer;
-  user-select: none;
+  color: #333;
   .ik-checkbox-inner {
     display: flex;
     justify-content: center;
@@ -26,20 +26,34 @@
     position: relative;
     margin-right: 4px;
   }
+  .ik-checkbox-label {
+    user-select: none;
+    cursor: pointer;
+  }
   &.ik-checkbox--selected {
     color: $primary;
     .ik-checkbox-icon {
       border: 1px solid $primary;
+      background-color: $primary;
     }
     .ik-checkbox-icon::after {
       content: ' ';
       width: 3px;
       height: 9px;
-      background-color: none;
       transform: rotate(45deg) scaleY(.8);
-      border: 1px solid $primary;
+      border: 1px solid #fff;
       border-left: 0;
       border-top: 0;
+      margin-top: -1px;
+      animation: scale_ani .1s ease-in;
+      @keyframes scale_ani {
+        from {
+          transform: rotate(45deg) scale(0);
+        }
+        to {
+          transform: rotate(45deg) scale(1);
+        }
+      }
     }
   }
 }

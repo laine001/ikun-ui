@@ -1,78 +1,93 @@
-<script lang="ts" setup name="IkCheckbox">
-import { computed, getCurrentInstance, inject, ref } from 'vue'
+<script lang="ts" setup name="FCheckbox">
+import { computed, inject, getCurrentInstance, ref } from 'vue'
+import type { Ref, ComponentInternalInstance, WritableComputedRef } from 'vue'
+
 import { checkboxProps, checkboxEmits } from './checkbox'
 import { checkboxGroupCtxKey } from '../../checkbox-group/src/checkbox-group'
+
+import {
+  CheckboxLabelType,
+  CheckboxGroupInterface as a
+} from '../../checkbox-group/src/interface'
+
 const props = defineProps(checkboxProps)
 const emit = defineEmits(checkboxEmits)
+// const slots = useSlots()
+// const selfModel = ref(false)
+const checkboxGroupInjectData: Ref<a | undefined> = ref()
 
-const checkboxGroupInjectData = ref(null)
-const isGroup = ref(false)
-
-const getGroupInject = () => {
-  const { parent } = getCurrentInstance()
-  if (parent.type.name && parent.type.name === 'IkCheckboxGroup') {
-    isGroup.value = true
-    checkboxGroupInjectData.value = inject(checkboxGroupCtxKey)
+const getGroupInject = (): void => {
+  const { parent } = getCurrentInstance() as ComponentInternalInstance
+  const parentName: string | undefined
+    = (parent as ComponentInternalInstance).type.name
+  if (parentName && parentName === 'IkCheckboxGroup') {
+    checkboxGroupInjectData.value = inject(checkboxGroupCtxKey) as a
   }
 }
 getGroupInject()
 
-const selfModel = computed({
+const isGroup = computed((): boolean => {
+  return !!checkboxGroupInjectData.value || false
+})
+
+const modelValue: WritableComputedRef<CheckboxLabelType> = computed({
   get () {
     if (isGroup.value) {
-      return checkboxGroupInjectData.value.modelValue
+      return (checkboxGroupInjectData.value as a)?.modelValue
     }
     return props.modelValue
   },
   set (val) {
     if (isGroup.value) {
-      checkboxGroupInjectData.value.modelValue = val
-      checkboxGroupInjectData.value.changeEvent(val)
+      !props.disabled
+      && !checkboxGroupInjectData.value?.disabled
+      && checkboxGroupInjectData.value?.changeEvent(val)
     } else {
+      if (props.disabled) return
       emit('update:modelValue', val)
-      // selfModel.value = val
     }
   }
 })
 
-const isChecked = computed(() => {
-  const val = selfModel.value
+const isChecked = computed((): boolean => {
+  const val = modelValue.value
   if (Array.isArray(val)) {
     return val.includes(props.label)
   } else if (typeof val === 'boolean') {
     return val
   }
-  return false
+  return (val === props.label) as boolean
 })
 
-const computedClses = computed(() => {
+const classList = computed(() => {
   return [
     'ik-checkbox',
+    `ik-checkbox__${checkboxGroupInjectData.value?.size}`,
     {
-      'ik-checkbox--selected': isChecked.value
+      'ik-checkbox--selected': isChecked.value,
+      'ik-checkbox--bordered': checkboxGroupInjectData.value?.border,
+      'ik-checkbox--disabled': props.disabled || checkboxGroupInjectData.value?.disabled
     }
   ]
 })
-
-const onClickRoot = () => {
-  // console.log(selfModel.value, 'click')
-}
-
 </script>
+
 <template>
-<label :class="computedClses" @click="onClickRoot">
-  <span class="ik-checkbox-inner">
-    <input
-      class="ik-checkbox-input"
-      type="checkbox"
-      :value="props.label"
-      v-model="selfModel"
-    >
-    <span class="ik-checkbox-icon"></span>
-    <span>{{label}}</span>
-    <!-- {{ selfModel }} -->
-  </span>
-</label>
+  <label :class="classList">
+    <span class="ik-checkbox-inner">
+      <input
+        v-model="modelValue"
+        type="checkbox"
+        class="ik-checkbox-input"
+        :value="label"
+      >
+      <span class="ik-checkbox-icon"></span>
+      <span class="ik-checkbox-label">
+        <slot />
+        <template v-if="!$slots.default">{{ label }}</template>
+      </span>
+    </span>
+  </label>
 </template>
 <style lang="scss">
 @import '../../../ikui-theme/checkbox/index.scss';

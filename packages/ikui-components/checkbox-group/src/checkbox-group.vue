@@ -1,33 +1,26 @@
-<script lang="ts" name="IkCheckboxGroup" setup>
-import { provide, computed, nextTick } from 'vue'
-import { checkboxGroupCtxKey, checkboxGroupProps, Emits } from './checkbox-group'
-
+<script lang="ts" setup name="IkCheckboxGroup">
+import { nextTick, provide, reactive, toRefs } from 'vue';
+import { checkboxGroupProps, checkboxGroupEmits, checkboxGroupCtxKey } from './checkbox-group'
+import { CheckboxLabelType } from './interface'
 const props = defineProps(checkboxGroupProps)
-const emit = defineEmits(Emits)
-
-const checkboxGroupValue = computed({
-  get () {
-    return props.modelValue
-  },
-  set (val) {
-    changeEvent(val)
-  }
-})
-
-const changeEvent = async (value) => {
-  emit('update:modelValue', value)
+const emit = defineEmits(checkboxGroupEmits)
+console.log(props, 'props')
+const changeEvent = async (val: CheckboxLabelType): Promise<void> => {
+  emit('update:modelValue', val)
   await nextTick()
-  emit('change', value)
+  emit('change', val)
 }
 
-provide(checkboxGroupCtxKey, {
-  modelValue: checkboxGroupValue.value,
-  changeEvent,
-  ...props
+const checkboxGroup = reactive({
+  ...toRefs(props),
+  changeEvent
 })
+
+provide(checkboxGroupCtxKey, checkboxGroup)
+
 </script>
 <template>
-  <div class="ik-checkbox-group">
+  <div class="f-checkbox-group">
     <slot />
   </div>
 </template>
