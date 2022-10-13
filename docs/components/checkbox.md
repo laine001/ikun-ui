@@ -27,15 +27,24 @@
 <ik-checkbox-group v-model="checkedList1">
   <ik-checkbox label="选项一"></ik-checkbox>
   <ik-checkbox label="选项二"></ik-checkbox>
+  <ik-checkbox label="选项三"></ik-checkbox>
 </ik-checkbox-group>
 <span>{{ checkedList1 }}</span>
 
 ::: details 点击展开
 ```vue
 <script setup>
-import { ref } from 'vue'
-const checkedList1 = ref([])
+  import { ref } from 'vue'
+  const checkedList1 = ref([])
 </script>
+<template>
+  <ik-checkbox-group v-model="checkedList1">
+    <ik-checkbox label="选项一"></ik-checkbox>
+    <ik-checkbox label="选项二"></ik-checkbox>
+    <ik-checkbox label="选项三"></ik-checkbox>
+  </ik-checkbox-group>
+  <span>{{ checkedList1 }}</span>
+</template>
 ```
 :::
 

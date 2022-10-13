@@ -1,4 +1,4 @@
-<script lang="ts" setup name="FCheckbox">
+<script lang="ts" setup name="IkCheckbox">
 import { computed, inject, getCurrentInstance, ref } from 'vue'
 import type { Ref, ComponentInternalInstance, WritableComputedRef } from 'vue'
 
