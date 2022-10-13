@@ -33,12 +33,13 @@ export default {
         activeMatch: '/components/'
       },
       {
+        text: 'CSS',
+        link: '/styles/animation',
+        activeMatch: '/styles/'
+      },
+      {
         text: '相关链接',
         items: [
-          // {
-          //   text: '团队',
-          //   link: 'https://vitepress.vuejs.org/'
-          // },
           {
             text: 'vitejs',
             link: 'https://vitepress.vuejs.org/'
@@ -105,6 +106,18 @@ export default {
             {
               text: '提示',
               link: '/components/message'
+            }
+          ]
+        }
+      ],
+      '/styles/': [
+        {
+          text: 'CSS',
+          // collapsible: true,
+          items: [
+            {
+              text: '动画',
+              link: '/styles/animation'
             }
           ]
         }
