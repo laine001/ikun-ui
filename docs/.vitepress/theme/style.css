@@ -16,6 +16,11 @@
 .flex {
   display: flex;
 }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 summary {
   cursor: pointer;
 }
@@ -90,4 +95,13 @@ summary {
   100% {
     transform: translate(0, 0);
   }
+}
+
+.animation-box {
+  width: 100%;
+  height: 220px;
+  border-radius: 4px;
+  border: 1px solid sandybrown;
+  box-sizing: border-box;
+  padding: 20px;
 }

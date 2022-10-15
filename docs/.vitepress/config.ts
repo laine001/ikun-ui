@@ -7,6 +7,7 @@ export default {
   head: [
     ['link', { rel: 'icon', href: '/logo2.png', type: 'image/png' }],
     ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '16x16' }],
+    // ['link', { rel: 'stylesheet', href: 'https://unpkg.com/nes.css/css/nes-core.min.css' }],
   ],
   themeConfig: {
     footer: {
