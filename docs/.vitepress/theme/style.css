@@ -27,6 +27,29 @@ summary {
 .VPFeature {
   opacity: .88;
 }
+.VPFooter .container {
+  display: flex;
+  justify-content: center;
+}
+.VPFooter .container::after {
+  content: '🏀';
+  font-size: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* transition: all 2s linear; */
+  animation: basketball_ani 11s linear alternate infinite;
+}
+@keyframes basketball_ani {
+  from {
+    left: 0;
+    transform: rotate(0);
+  }
+  to {
+    left: calc(100vw - 36px);
+    transform: rotate(1440deg);
+  }
+}
 .is-home::before {
   content: ' ';
   width: 400px;
