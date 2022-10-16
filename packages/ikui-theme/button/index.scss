@@ -32,6 +32,9 @@
   &:hover {
     transform: translateY(-1px);
   }
+  &:focus {
+    outline: none;
+  }
   @for $list from 1 to (length($allColors) + 1) {
     $item: nth($allColors, $list);
 
