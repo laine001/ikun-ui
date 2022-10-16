@@ -1,7 +1,7 @@
 import { ComponentInternalInstance, createVNode, render, shallowReactive, VNode } from 'vue'
 import Message from './message.vue'
 import { MessageServiceOptions, messageTypes } from './message'
-import { useZIndex } from '../../../utils/hooks/zindex'
+import { useZIndex } from '../../_utils/useZIndex'
 
 export type MessageContext = {
   id: string

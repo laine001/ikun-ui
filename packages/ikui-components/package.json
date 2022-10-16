@@ -1,18 +1,24 @@
 {
   "name": "ikuiv",
-  "version": "0.0.2-beta",
-  "description": "vue3+ts components",
+  "version": "0.0.4-beta",
+  "description": "a simple ui components built on vue3 vite",
   "main": "index.ts",
-  "scripts": {
-    "test": "npm run test"
-  },
+  "module": "es/index.ts",
+  "types": "es/index.d.ts",
   "author": "laine001",
   "license": "ISC",
   "keywords": [
     "vue",
     "vue3",
     "ui",
-    "vite"
+    "vite",
+    "components",
+    "typescript"
   ],
+  "exports": {
+    ".": {
+      "import": "./es/index.js"
+    }
+  },
   "homepage": "https://github.com/LAINE001/ik-ui#readme"
 }

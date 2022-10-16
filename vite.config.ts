@@ -1,41 +1,50 @@
-/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import setupNamePlugin from './vite-plugin-setup-name'
-
-const rollupOptions = {
-  external: ['vue', 'vue-router'],
-  output: {
-    globals: {
-      vue: 'Vue'
-    }
-  }
-}
+import dts from 'vite-plugin-dts'
+import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    setupNamePlugin()
+    setupNamePlugin(),
+    dts({
+      // insertTypesEntry: true,
+      // cleanVueFileName: true,
+      // copyDtsFiles: true,
+      include: ['./packages/ikui-components']
+    })
   ],
-  // css: {
-  //   preprocessorOptions: {
-  //     less: {
-  //       javascriptEnabled: true
-  //     }
-  //   }
-  // },
   build: {
-    rollupOptions,
-    minify: false,
+    target: 'modules',
+    minify: true,
+    outDir: resolve(__dirname, 'dist/es'),
     lib: {
-      entry: './packages/ikui-components',
+      entry: resolve(__dirname, 'packages/ikui-components/index.ts'),
       name: 'IkUI',
-      fileName: 'ikui',
-      formats: ['esm', 'umd', 'iife']
-    }
+      fileName: (format) => 'index.js',
+      // formats: ['es']
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: [
+        {
+          format: 'es',
+          // entryFileNames: '[name].js',
+          preserveModules: true,
+          dir: 'dist/es',
+          // preserveModulesRoot: 'src'
+        }
+      ]
+      // preserveModules: true,
+      // globals: {
+      //   vue: 'Vue'
+      // }
+    },
   },
+
   server: {
     port: 9526
   }
