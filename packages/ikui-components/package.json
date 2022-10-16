@@ -3,7 +3,6 @@
   "version": "0.0.6-beta",
   "description": "a simple ui components built on vue3 vite",
   "main": "index.ts",
-  "module": "es/index.ts",
   "types": "es/index.d.ts",
   "author": "laine001",
   "license": "ISC",
