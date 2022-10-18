@@ -1,5 +1,5 @@
 # 按钮
-> 用于操作
+用于操作
 ```javascript
 import { IkButton } from 'ik-ui'
 ```

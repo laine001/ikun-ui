@@ -4,21 +4,19 @@
   display: inline-flex;
   flex-wrap: wrap;
   margin-right: 12px;
-  padding: 6px 16px;
+  padding: 6px 20px;
   border-radius: 3px;
   border: none;
   outline: none;
   cursor: pointer;
   font-size: 14px;
   transition: transform .26s ease-in-out;
-  box-shadow: 0 2px 2px -1px #00000033,
-              0 1px 2px 0 #00000033,
-              0 1px 2px 0 #00000033;
+  
   .ik-button__inner {
     display: inline-flex;
   }
   .loading-icon {
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
     animation: rotating 1.6s linear infinite;
   }
   @keyframes rotating {
@@ -31,6 +29,9 @@
   }
   &:hover {
     transform: translateY(-1px);
+    // box-shadow: 0 2px 2px -1px #00000033,
+    //           0 1px 2px 0 #00000033,
+    //           0 1px 2px 0 #00000033;
   }
   &:focus {
     outline: none;

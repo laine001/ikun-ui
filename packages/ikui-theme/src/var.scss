@@ -1,9 +1,23 @@
-$default: #f0f0f0;
-$primary: #cd8025;
-$success: #01847f;
-$warning: #fbD26a;
-$danger: #470024;
-$info: #4341bd;
+// $default: #f0f0f0;
+// $primary: #cd8025;
+// $success: #01847f;
+// $warning: #fbD26a;
+// $danger: #470024;
+// $info: #4341bd;
+
+$qianyun: #eaecf1; // 浅云
+$rimu: #cd8025; // 日暮
+$tianshuibi: #5aa4ae; // 天水碧
+$zhuyantuo: #f29a76; // 朱颜砣
+$shiliuqun: #b13b2e; // 石榴裙
+$mushanzi: #a4abd6; // 暮山紫
+
+$default: $qianyun;
+$primary: $rimu;
+$success: $tianshuibi;
+$warning: $zhuyantuo;
+$danger: $shiliuqun;
+$info: $mushanzi;
 
 // button hover
 $button-lighter--default: lighten($default, 3%);
@@ -15,7 +29,7 @@ $button-lighter--danger: lighten($danger, 2%);
 
 // button active
 $button-darker--default: darken($default, 3%);
-$button-darker--primary: darken($primary, 3%);
+$button-darker--primary: darken($primary, 2%);
 $button-darker--info: darken($info, 3%);
 $button-darker--success: darken($success, 2%);
 $button-darker--warning: darken($warning, 4%);

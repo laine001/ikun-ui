@@ -6,7 +6,7 @@ IKUI（发音i kun ui），是个人兴趣爱好的产物，此库主要使用�
 
 - 🐥 基于TypeScript
 - ⚡ 基于Vite
-- 🏀 此文档基于VitePress
+- 🏀 vue3
 - ✨ monorepo风格仓库
 
 ```bash

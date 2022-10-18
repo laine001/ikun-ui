@@ -83,6 +83,10 @@ export default {
               link: '/components/button'
             },
             {
+              text: '色彩',
+              link: '/components/colors'
+            },
+            {
               text: '图标',
               link: '/components/icon'
             },
