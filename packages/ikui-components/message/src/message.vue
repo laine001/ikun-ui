@@ -35,11 +35,11 @@
     const { type } = props
     switch (type) {
       case 'warning':
-        return '#fbD26a'
+        return '#f29a76'
       case 'info':
-        return '#cd8025'
+        return '#a4abd6'
       case 'success':
-        return '#01847f'
+        return '#5aa4ae'
     }
   })
 

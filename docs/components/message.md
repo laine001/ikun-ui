@@ -5,7 +5,7 @@
 直接传入文本可快速调用
 
 <div>
-  <ik-button type="success" @click="openMessage">显示消息</ik-button>
+  <ik-button @click="openMessage">显示消息</ik-button>
 </div>
 
 ::: details 点击展开
@@ -19,7 +19,7 @@
   }
 </script>
 <template>
-  <ik-button type="success" @click="openMessage">显示消息</ik-button>
+  <ik-button @click="openMessage">显示消息</ik-button>
 </template>
   
 ```
@@ -31,8 +31,8 @@
 message有多个消息类型可用： `success`、`warning`、 `info`
 
 <div>
-  <ik-button type="primary" @click="openMessage2">成功提示</ik-button>
-  <ik-button type="primary" @click="openMessage3">警告提示</ik-button>
+  <ik-button type="success" @click="openMessage2">成功提示</ik-button>
+  <ik-button type="warning" @click="openMessage3">警告提示</ik-button>
 </div>
 
 ::: details 点击展开
