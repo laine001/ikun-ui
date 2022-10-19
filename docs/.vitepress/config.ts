@@ -6,12 +6,12 @@ export default {
   description: '组件库',
   head: [
     ['link', { rel: 'icon', href: '/logo2.png', type: 'image/png' }],
-    ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '16x16' }],
+    ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '32x32' }],
     // ['link', { rel: 'stylesheet', href: 'https://unpkg.com/nes.css/css/nes-core.min.css' }],
   ],
   themeConfig: {
     footer: {
-      copyright: '本文档仅供个人娱乐学习使用，切勿私自分享'
+      copyright: '本文档仅供个人娱乐学习使用'
     },
     algolia: {
       appId: '7H67QR5P0A',
@@ -65,6 +65,10 @@ export default {
             {
               text: '快速上手',
               link: '/guide/quickstart'
+            },
+            {
+              text: '视觉与色彩',
+              link: '/components/colors'
             },
             {
               text: '节点与规划',
@@ -123,6 +127,10 @@ export default {
             {
               text: '动画',
               link: '/styles/animation'
+            },
+            {
+              text: '阴影',
+              link: '/styles/shadow'
             }
           ]
         }

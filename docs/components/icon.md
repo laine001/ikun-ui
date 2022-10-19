@@ -5,12 +5,12 @@ import { IkIcon } from 'ik-ui'
 
 ## 不同颜色
 <div class="flex">
-  <div class="icon-demo-box"><ik-icon name="star-fill" color="pink" /></div>
-  <div class="icon-demo-box"><ik-icon name="star-fill" color="orange" /></div>
-  <div class="icon-demo-box"><ik-icon name="star-fill" color="deepskyblue" /></div>
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" /></div>
-  <div class="icon-demo-box"><ik-icon name="camera" /></div>
-  <div class="icon-demo-box"><ik-icon name="camera" color="deeppink" /></div>
+  <div class="icon-demo-box"><ik-icon name="star-fill" color="#cd8025" /></div>
+  <div class="icon-demo-box"><ik-icon name="star-fill" color="#5aa4ae" /></div>
+  <div class="icon-demo-box"><ik-icon name="star-fill" color="#f29a76" /></div>
+  <div class="icon-demo-box"><ik-icon name="heart-fill" color="#b13b2e" /></div>
+  <div class="icon-demo-box"><ik-icon name="camera" color="#5c4f55" /></div>
+  <div class="icon-demo-box"><ik-icon name="camera" color="#a4abd6" /></div>
 </div>
 
 :::details 点击展开
