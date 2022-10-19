@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as s}from"./app.2b549f02.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"styles/shadow.md"}'),a={name:"styles/shadow.md"};function o(r,c,n,d,p,_){return t(),s("div")}const m=e(a,[["render",o]]);export{l as __pageData,m as default};
