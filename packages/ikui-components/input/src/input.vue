@@ -1,8 +1,6 @@
 <script lang="ts" setup name="IkInput">
-defineExpose({
-  /** @description input ph */
-  ph: '',
-})
+import { InputProps } from './input'
+defineProps(InputProps)
 </script>
 <template>
   <div class="ik-input-wrapper">
@@ -13,24 +11,3 @@ defineExpose({
     <div v-if="false">后缀</div>
   </div>
 </template>
-
-<style lang="scss">
-  @import '../../../ikui-theme/src/var.scss';
-
-  .ik-input-wrapper {
-    .ik-input__inner {
-      .ik-input {
-        box-sizing: border-box;
-        border: 1px solid #999;
-        border-radius: 4px;
-        padding: 7px 12px;
-        outline: none;
-        width: 100%;
-        height: 100%;
-        &:focus {
-          border: 1px solid $primary;
-        }
-      }
-    }
-  }
-</style>

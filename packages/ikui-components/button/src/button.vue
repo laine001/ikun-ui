@@ -41,6 +41,3 @@ defineExpose({
     </span>
   </button>
 </template>
-<style lang="scss">
-  @import '../../../ikui-theme/button/index.scss';
-</style>

@@ -6,8 +6,6 @@ import IkCheckbox from './checkbox'
 import IkCheckboxGroup from './checkbox-group'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
-// import { withInstall } from '../utils/install'
-// // const IkButton = withInstall(Button)
 export {
   IkButton,
   IkInput,
@@ -18,7 +16,6 @@ export {
   IkCheckbox,
   IkCheckboxGroup
 }
-
 import * as types from './button'
 export { types }
 export default {

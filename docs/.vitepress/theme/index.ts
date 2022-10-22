@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme';
 import IkUI, { message } from 'ikuiv'
+import '../../../packages/ikui-theme/index.scss'
 import './var.css';
 import './style.css';
 // import 'vitepress-theme-demoblock/theme/styles/index.css';

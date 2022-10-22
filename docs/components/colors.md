@@ -50,7 +50,7 @@
 
 
 <style lang="scss">
-  @import '../../packages/ikui-theme/src/var.scss';
+  @import '../../packages/ikui-theme/mixins/config.scss';
   .colors-list {
     display: flex;
   }

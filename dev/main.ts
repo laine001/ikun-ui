@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import app from './app.vue'
 import IkUI from 'ikuiv'
+import '../packages/ikui-theme/index.scss'
 
 createApp(app)
   .use(IkUI)

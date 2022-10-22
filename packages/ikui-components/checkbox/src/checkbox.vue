@@ -89,6 +89,3 @@ const classList = computed(() => {
     </span>
   </label>
 </template>
-<style lang="scss">
-@import '../../../ikui-theme/checkbox/index.scss';
-</style>

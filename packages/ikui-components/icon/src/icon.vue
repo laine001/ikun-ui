@@ -25,6 +25,3 @@ const classes = computed(() => {
     <use :xlink:href="`#icon-${props.name}`" />
   </svg>
 </template>
-<style lang="scss">
-@import '../../../ikui-theme/icon';
-</style>
