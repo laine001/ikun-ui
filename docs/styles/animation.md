@@ -20,6 +20,10 @@
   <ik-icon name="heart-fill" color="red" :size="86" />
 </div>
 
+## 出现动画
+<div class="animation-box flex-center box5">
+  <div class="bird">🐥</div>
+</div>
 
 ## 转啊转
 [查看源代码](https://github.com/LAINE001/ik-ui/blob/master/docs/styles/animation.md)
@@ -151,6 +155,37 @@
       }
       50% {
         transform: scale(1.2, 1);
+      }
+    }
+  }
+  .box5 {
+    height: 400px;
+    font-size: 60px;
+    .bird {
+      animation: slide-in-elliptic-top-fwd 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+    }
+    @keyframes slide-in-elliptic-top-fwd {
+      0% {
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% 1400px;
+        opacity: 1;
+      }
+    }
+    @keyframes slide-in-elliptic-top-fwd {
+      0% {
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% 1400px;
+        opacity: 1;
       }
     }
   }
