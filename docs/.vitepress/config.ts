@@ -6,7 +6,7 @@ export default {
   description: '组件库',
   head: [
     ['link', { rel: 'icon', href: '/logo2.png', type: 'image/png' }],
-    ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '32x32' }],
+    ['link', { rel: 'alternate icon', href: 'https://laine001.github.io/ik-ui/favicon.ico', type: 'image/png', sizes: '32x32' }],
     // ['link', { rel: 'stylesheet', href: 'https://unpkg.com/nes.css/css/nes-core.min.css' }],
   ],
   themeConfig: {
