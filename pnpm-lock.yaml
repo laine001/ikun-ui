@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       packages: ^0.0.8
+      '@ikui/theme': workspace:^1.0.0
       '@typescript-eslint/eslint-plugin': ^5.0.0
       '@vitejs/plugin-vue': ^3.1.0
       '@vitejs/plugin-vue-jsx': ^2.0.1
@@ -39,6 +40,7 @@ importers:
       vitepress: registry.npmmirror.com/vitepress/1.0.0-alpha.13_sass@1.55.0
       vue: registry.npmmirror.com/vue/3.2.39
     devDependencies:
+      '@ikui/theme': link:packages/ikui-theme
       '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.38.1_ypn2ylkkyfa5i233caldtndbqa
       '@vue/test-utils': registry.npmmirror.com/@vue/test-utils/2.0.2_vue@3.2.39
       eslint: registry.npmmirror.com/eslint/8.24.0

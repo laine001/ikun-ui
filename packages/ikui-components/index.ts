@@ -16,8 +16,7 @@ export {
   IkCheckbox,
   IkCheckboxGroup
 }
-import * as types from './button'
-export { types }
+
 export default {
   install(app: App): void {
     app.component(IkButton.name, IkButton)

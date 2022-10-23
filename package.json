@@ -30,6 +30,7 @@
     "vue": "^3.2.39"
   },
   "devDependencies": {
+    "@ikui/theme": "workspace:^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@vue/test-utils": "^2.0.2",
     "eslint": "^8.0.1",
