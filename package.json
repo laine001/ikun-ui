@@ -7,12 +7,15 @@
   "homepage": "https://laine001.github.io/ik-ui/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm build:pkg && pnpm build:theme && pnpm gen",
+    "build:pkg": "vite build",
+    "build:theme": "vite build --config ./scripts/build-theme.config.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 --cache",
-    "test": "vitest"
+    "test": "vitest",
+    "gen": "node ./scripts/gen.ts"
   },
   "keywords": [],
   "author": "",

@@ -14,18 +14,19 @@ export default defineConfig({
       // insertTypesEntry: true,
       // cleanVueFileName: true,
       // copyDtsFiles: true,
-      include: ['./packages/ikui-components']
+      include: ['./packages/ikui-components'],
+      outputDir: ['dist/es', 'dist/lib']
     })
   ],
   build: {
     target: 'modules',
     minify: true,
-    outDir: resolve(__dirname, 'dist/es'),
+    // outDir: resolve(__dirname, 'dist/es'),
     lib: {
       entry: resolve(__dirname, 'packages/ikui-components/index.ts'),
-      name: 'IkUI',
-      fileName: (format) => 'index.js',
-      // formats: ['es']
+      name: 'ikui',
+      fileName: (format) => `index.js`,
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
       external: ['vue'],
@@ -36,9 +37,13 @@ export default defineConfig({
           preserveModules: true,
           dir: 'dist/es',
           // preserveModulesRoot: 'src'
+        },
+        {
+          format: 'cjs',
+          preserveModules: true,
+          dir: 'dist/lib'
         }
-      ]
-      // preserveModules: true,
+      ],
       // globals: {
       //   vue: 'Vue'
       // }
