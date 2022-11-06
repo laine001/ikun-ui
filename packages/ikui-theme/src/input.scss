@@ -1,6 +1,7 @@
 @import '../mixins/config.scss';
 
 .ik-input-wrapper {
+  position: relative;
   .ik-input__inner {
     .ik-input {
       box-sizing: border-box;
@@ -10,9 +11,21 @@
       outline: none;
       width: 100%;
       height: 100%;
+      &:hover {
+        border-color: $button-lighter--primary;
+      }
       &:focus {
         border: 1px solid $primary;
       }
+    }
+  }
+  .after-inner {
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    .ik-icon {
+      opacity: .48;
+      cursor: pointer;
     }
   }
 }

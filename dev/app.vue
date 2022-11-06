@@ -8,6 +8,7 @@ const loading2 = ref(false)
 const loading3 = ref(false)
 const selected = ref(false)
 const selected2 = ref(true)
+const val1 = ref('hello')
 const selectedList = ref(['选项111', '选项222'])
 const fullscreenLoading = ref(false)
 
@@ -47,7 +48,9 @@ const openMessage4 = () => {
 watch(selectedList, (value) => {
   console.log(value, 'selectedList')
 })
-
+const onInputChange = (e) => {
+  console.log(e, 'change')
+}
 </script>
 <template>
   <div>
@@ -96,7 +99,7 @@ watch(selectedList, (value) => {
     </div>
     <div class="examples-box">
       <h1>输入框</h1>
-      <ik-input />
+      <ik-input v-model="val1" hasClear @change="onInputChange" />
     </div>
     <div class="examples-box">
       <h1>图标</h1>

@@ -89,3 +89,7 @@ $allColors: (
     defaultActive: $button-darker--danger,
   ),
 );
+
+*::selection {
+  background-color: $button-lighter--primary;
+}
