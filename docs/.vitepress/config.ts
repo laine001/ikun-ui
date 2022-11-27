@@ -97,6 +97,10 @@ export default {
             {
               text: '加载状态',
               link: '/components/loading'
+            },
+            {
+              text: '回到顶部',
+              link: '/components/backtop'
             }
           ]
         },

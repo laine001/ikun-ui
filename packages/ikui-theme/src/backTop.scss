@@ -1,0 +1,28 @@
+.ik-backtop {
+  width: 40px;
+  height: 40px;
+  background-color: #ebad60;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 120px;
+  right: 60px;
+  cursor: pointer;
+  .ik-icon {
+    fill: #fff;
+  }
+
+  &.show-backtop {
+    animation: shake .22s;
+  }
+  @keyframes shake {
+    0% {
+      transform: translateY(60px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}

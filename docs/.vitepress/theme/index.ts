@@ -3,7 +3,7 @@ import IkUI, { message } from 'ikuiv'
 import '@ikui/theme/index.scss'
 import './var.css';
 import './style.css';
-console.log(IkUI, message, 'IkUI')
+// console.log(IkUI, message, 'IkUI')
 // import 'vitepress-theme-demoblock/theme/styles/index.css';
 // import Demo from 'vitepress-theme-demoblock/components/Demo.vue';
 // import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue';
