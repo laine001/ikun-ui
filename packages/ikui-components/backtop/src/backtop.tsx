@@ -1,6 +1,5 @@
 import { computed, defineComponent, onMounted, ref } from 'vue'
 import IkIcon from '../../icon'
-import '@ikui/theme/src/backtop.scss'
 
 export default defineComponent({
   components: {
