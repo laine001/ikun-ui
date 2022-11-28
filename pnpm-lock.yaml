@@ -13,9 +13,11 @@ importers:
       '@vue/compiler-sfc': ^3.2.39
       '@vue/test-utils': ^2.0.2
       eslint: ^8.24.0
+      eslint-config-prettier: ^8.5.0
       eslint-config-standard-with-typescript: ^23.0.0
       eslint-plugin-import: ^2.25.2
       eslint-plugin-n: ^15.0.0
+      eslint-plugin-prettier: ^4.2.1
       eslint-plugin-promise: ^6.0.0
       eslint-plugin-vue: ^9.8.0
       ikuiv: workspace:0.0.6-beta
@@ -46,9 +48,11 @@ importers:
       '@typescript-eslint/parser': 5.44.0_ypn2ylkkyfa5i233caldtndbqa
       '@vue/test-utils': registry.npmmirror.com/@vue/test-utils/2.0.2_vue@3.2.39
       eslint: registry.npmmirror.com/eslint/8.24.0
+      eslint-config-prettier: 8.5.0_eslint@8.24.0
       eslint-config-standard-with-typescript: registry.npmmirror.com/eslint-config-standard-with-typescript/23.0.0_abmwwi6yyuudcgcsv6j2aljvxe
       eslint-plugin-import: registry.npmmirror.com/eslint-plugin-import/2.26.0_dxmuymui4bbshh5onkdckokeby
       eslint-plugin-n: registry.npmmirror.com/eslint-plugin-n/15.3.0_eslint@8.24.0
+      eslint-plugin-prettier: 4.2.1_cfn5x6ujhhgzv3423d6k7r2zzm
       eslint-plugin-promise: registry.npmmirror.com/eslint-plugin-promise/6.0.1_eslint@8.24.0
       eslint-plugin-vue: 9.8.0_eslint@8.24.0
       ikuiv: link:packages/ikui-components
@@ -591,6 +595,32 @@ packages:
     requiresBuild: true
     optional: true
 
+  /eslint-config-prettier/8.5.0_eslint@8.24.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: registry.npmmirror.com/eslint/8.24.0
+    dev: true
+
+  /eslint-plugin-prettier/4.2.1_cfn5x6ujhhgzv3423d6k7r2zzm:
+    resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      eslint: '>=7.28.0'
+      eslint-config-prettier: '*'
+      prettier: '>=2.0.0'
+    peerDependenciesMeta:
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: registry.npmmirror.com/eslint/8.24.0
+      eslint-config-prettier: 8.5.0_eslint@8.24.0
+      prettier: registry.npmmirror.com/prettier/2.7.1
+      prettier-linter-helpers: 1.0.0
+    dev: true
+
   /eslint-plugin-vue/9.8.0_eslint@8.24.0:
     resolution: {integrity: sha512-E/AXwcTzunyzM83C2QqDHxepMzvI2y6x+mmeYHbVDQlKFqmKYvRrhaVixEeeG27uI44p9oKDFiyCRw4XxgtfHA==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -680,6 +710,10 @@ packages:
 
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    dev: true
+
+  /fast-diff/1.2.0:
+    resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
     dev: true
 
   /fast-glob/3.2.12:
@@ -915,6 +949,13 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
+    dev: true
+
+  /prettier-linter-helpers/1.0.0:
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      fast-diff: 1.2.0
     dev: true
 
   /punycode/2.1.1:
