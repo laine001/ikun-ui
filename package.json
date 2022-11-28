@@ -16,6 +16,7 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write --cache .",
     "test": "vitest",
+    "prepare": "husky install",
     "gen": "node ./scripts/gen.ts"
   },
   "keywords": [],
@@ -46,6 +47,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
+    "husky": "^8.0.2",
     "ikuiv": "workspace:0.0.6-beta",
     "prettier": "^2.7.1",
     "typescript": "*",
