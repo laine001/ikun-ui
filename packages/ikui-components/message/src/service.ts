@@ -32,7 +32,7 @@ const createMessage = (options: MessageServiceOptions) => {
     },
     onDestroy() {
       render(null, container)
-    }
+    },
   }
   const vnode = createVNode(Message, props)
   render(vnode, container)
@@ -47,8 +47,8 @@ const createMessage = (options: MessageServiceOptions) => {
     handler: {
       close() {
         vm.exposed!.visible.value = false
-      }
-    }
+      },
+    },
   }
   return instance
 }
@@ -62,9 +62,7 @@ const closeMessage = (instance: any) => {
 
 const messageService = (messageParams: MessageServiceOptions = {}) => {
   console.log('msgmessageParams', messageParams)
-  const options = typeof messageParams === 'string'
-    ? { message: messageParams }
-    : messageParams
+  const options = typeof messageParams === 'string' ? { message: messageParams } : messageParams
   const instance = createMessage(options)
 
   instanceList.push(instance)
@@ -74,12 +72,10 @@ const messageService = (messageParams: MessageServiceOptions = {}) => {
 messageTypes.forEach((type) => {
   messageService[type] = (messageParams) => {
     console.log(type, 'message-type', messageParams)
-    const options = typeof messageParams === 'string'
-      ? { message: messageParams }
-      : { ...messageParams }
+    const options = typeof messageParams === 'string' ? { message: messageParams } : { ...messageParams }
     const params = {
       type,
-      ...options
+      ...options,
     }
     return messageService(params)
   }
@@ -92,7 +88,7 @@ export const getLastOffset = (id: string): number => {
   if (i > 0) {
     prevInstance = instanceList[i - 1]
   }
-  if (!prevInstance) return 0;
+  if (!prevInstance) return 0
   return prevInstance?.vm?.exposed!.bottom.value
 }
 

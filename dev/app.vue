@@ -29,14 +29,14 @@ const openMessage = () => {
 const openMessage2 = () => {
   _global?.appContext.config.globalProperties.$message({
     type: 'warning',
-    message: 'hahahha'
+    message: 'hahahha',
   })
   id++
 }
 const openMessage3 = () => {
   _global?.appContext.config.globalProperties.$message.success({
     type: 'warning',
-    message: 'hahahha'
+    message: 'hahahha',
   })
   id++
 }
@@ -62,8 +62,8 @@ const onInputChange = (e) => {
       <ik-button type="warning">警告按钮</ik-button>
       <ik-button type="danger">危险按钮</ik-button>
       <ik-button type="primary" disabled>禁用状态</ik-button>
-      <br>
-      <br>
+      <br />
+      <br />
       <ik-button icon="add">按钮</ik-button>
       <ik-button loading>加载中</ik-button>
       <ik-button type="primary" loading>请稍后</ik-button>
@@ -84,17 +84,13 @@ const onInputChange = (e) => {
       <ik-button type="primary" @click="loading3 = !loading3">loading3</ik-button>
       <ik-button type="primary" @click="onClick">全屏按钮</ik-button>
       <ik-button type="primary">全屏按钮方法调用</ik-button>
-      <div v-loading="loading1">
-        这里是loading测试1
-      </div>
+      <div v-loading="loading1">这里是loading测试1</div>
       <div v-loading="loading2" class="loading-demo2">
         <p>寒蝉凄切</p>
         <p>对账听完</p>
         <p>骤雨初歇，可降低哦</p>
       </div>
-      <div v-loading="loading3" class="loading-demo3">
-        品萨福克垃圾啊康师傅
-      </div>
+      <div v-loading="loading3" class="loading-demo3">品萨福克垃圾啊康师傅</div>
       <div v-loading.fullscreen="fullscreenLoading" class="loading-demo3"></div>
     </div>
     <div class="examples-box">
@@ -130,16 +126,16 @@ const onInputChange = (e) => {
   </div>
 </template>
 <style>
-  .examples-box {
-    border: 1px solid orange;
-    padding: 10px;
-    margin: 10px 0;
-  }
-  .loading-demo2 {
-    width: 300px;
-    height: 300px;
-    border-radius: 4px;
-    margin-top: 20px;
-    border: 1px solid saddlebrown;
-  }
+.examples-box {
+  border: 1px solid orange;
+  padding: 10px;
+  margin: 10px 0;
+}
+.loading-demo2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 4px;
+  margin-top: 20px;
+  border: 1px solid saddlebrown;
+}
 </style>

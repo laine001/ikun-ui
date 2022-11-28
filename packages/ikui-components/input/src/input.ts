@@ -1,21 +1,20 @@
 export const InputProps = {
   modelValue: {
-    type: String
+    type: String,
   },
   hasClear: {
-    type: Boolean
+    type: Boolean,
   },
   placeholder: {
-    type: String
-  }
+    type: String,
+  },
 }
-
 
 export const Emits = {
   'update:modelValue': (value): boolean => {
     return typeof value === 'string' || typeof value === 'number'
   },
-  'change' (value) {
+  change(value) {
     return typeof value
-  } 
+  },
 }

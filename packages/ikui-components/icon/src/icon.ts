@@ -6,14 +6,14 @@ export const iconProps = {
   },
   size: {
     type: Number || String,
-    default: (): number => 22
+    default: (): number => 22,
   },
   class: {
-    type: String
+    type: String,
   },
   color: {
-    type: String
-  }
+    type: String,
+  },
 } as const
 
 export type IconInstance = InstanceType<typeof icon>

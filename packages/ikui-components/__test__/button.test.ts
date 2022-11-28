@@ -10,16 +10,16 @@ describe('IkButton', () => {
   test('class', () => {
     const wrapper = mount(IkButton, {
       props: {
-        type: 'primary'
-      }
+        type: 'primary',
+      },
     })
     expect(wrapper.classes()).toContain('ik-button-primary')
   })
   test('loading', () => {
     const wrapper = mount(IkButton, {
       props: {
-        loading: true
-      }
+        loading: true,
+      },
     })
     expect(wrapper.classes()).toContain('ik-button')
   })

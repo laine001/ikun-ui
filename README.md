@@ -48,9 +48,7 @@ import App from './app.vue'
 import ikui from 'ik-ui'
 import 'ikui/lib/index.css'
 
-createApp(App)
-  .use(ikui)
-  .mount('#app')
+createApp(App).use(ikui).mount('#app')
 
 // or
 
@@ -81,6 +79,7 @@ Hava an idea ? u can join us
 </a>
 
 ## Thanks
+
 Learn from many excellent community projects
 
 - [Element-plus](https://github.com/element-plus/element-plus)
@@ -89,4 +88,5 @@ Learn from many excellent community projects
 - [Fighting-Design](https://github.com/LAINE001/fighting-design)
 
 ## LICENSE
+
 ...

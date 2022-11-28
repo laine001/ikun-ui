@@ -1,10 +1,8 @@
 const props = {
   visible: {
     type: Boolean,
-    default: (): boolean => false
-  }
+    default: (): boolean => false,
+  },
 }
 
-export {
-  props
-}
+export { props }

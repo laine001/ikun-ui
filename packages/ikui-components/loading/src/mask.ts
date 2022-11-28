@@ -4,15 +4,15 @@ export function createLoadingComponent() {
     name: 'IkLoading',
     setup() {
       return () => {
-        return h (
+        return h(
           'div',
           {
-            class: 'ik-loading-wrapper'
+            class: 'ik-loading-wrapper',
           },
           'this is loading'
         )
       }
-    }
+    },
   }
 
   const loadingIns = createApp(loadingComponent)
@@ -21,6 +21,6 @@ export function createLoadingComponent() {
     vm,
     get $el(): HTMLElement {
       return vm?.$el
-    }
+    },
   }
 }

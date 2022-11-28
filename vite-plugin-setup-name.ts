@@ -13,11 +13,7 @@ export default (): Plugin => {
         const str = () => s || (s = new MagicString(source))
         const { descriptor } = parse(source)
 
-        if (
-          !descriptor.script
-          && descriptor.scriptSetup
-          && !descriptor.scriptSetup.attrs?.extendIgnore
-        ) {
+        if (!descriptor.script && descriptor.scriptSetup && !descriptor.scriptSetup.attrs?.extendIgnore) {
           const result = compileScript(descriptor, { id })
           const { name = '', lang, inheritAttrs } = result.attrs
           if (name || inheritAttrs) {
@@ -37,12 +33,12 @@ export default (): Plugin => {
           // const filename = basename(id)
           return {
             map,
-            code: str().toString()
+            code: str().toString(),
           }
         }
       } else {
         return null
       }
-    }
+    },
   }
 }

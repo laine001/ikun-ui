@@ -11,9 +11,9 @@ export default (): UserConfigExport => {
       rollupOptions: {
         input,
         output: {
-          assetFileNames: '[name].[ext]'
-        }
-      }
-    }
+          assetFileNames: '[name].[ext]',
+        },
+      },
+    },
   }
 }

@@ -3,42 +3,41 @@ import Message from './message.vue'
 export const messageIconNameList = {
   success: 'success-filling',
   warning: 'warning',
-  info: 'prompt'
+  info: 'prompt',
 }
 
 export const messageProps = {
   message: {
     type: String,
-    default: (): string => ''
+    default: (): string => '',
   },
   type: {
     type: String,
-    default: (): string => ''
+    default: (): string => '',
   },
   zIndex: {
-    type: Number || String
+    type: Number || String,
   },
   id: {
-    type: String
+    type: String,
   },
   onDestory: {
-    type: Function
+    type: Function,
   },
   duration: {
     type: Number,
-    default: (): number => 3000
-  }
+    default: (): number => 3000,
+  },
 } as const
 
 export const messageEmits = {
   destroy: () => true,
-  close: () => true
+  close: () => true,
 }
 
 export const MessageProps = messageProps
 
-export const messageTypes =
-  ['success', 'info', 'warning', 'error'] as const
+export const messageTypes = ['success', 'info', 'warning', 'error'] as const
 
 export type MessageServiceOptions = Record<string, unknown>
 

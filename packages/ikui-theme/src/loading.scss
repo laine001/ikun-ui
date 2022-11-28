@@ -44,7 +44,7 @@
         }
       }
       &:before {
-        content: "";
+        content: '';
         display: block;
         width: 0;
         height: 0;
@@ -63,7 +63,7 @@
   }
   .loader-08::before,
   .loader-08::after {
-    content: "";
+    content: '';
     width: inherit;
     height: inherit;
     border-radius: 50%;

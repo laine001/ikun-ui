@@ -1,21 +1,12 @@
 {
   "compilerOptions": {
-
     "lib": ["ES2015", "DOM.Iterable", "DOM"],
     "declaration": true,
     "declarationDir": "./dist/types",
     "jsx": "preserve"
   },
-  "include": [
-    "./**/*.*",
-    "./docs/shims-vue.d.ts",
-    "docs/.vitepress/**/*",
-    "docs/.vitepress/config.ts",
-    "@types"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["./**/*.*", "./docs/shims-vue.d.ts", "docs/.vitepress/**/*", "docs/.vitepress/config.ts", "@types"],
+  "exclude": ["node_modules"],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true
 }

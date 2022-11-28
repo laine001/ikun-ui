@@ -1,6 +1,7 @@
-# 纯css动画
+# 纯 css 动画
 
 ## 抖动
+
 [查看源代码](https://github.com/LAINE001/ik-ui/blob/master/docs/styles/animation.md)
 
 <div class="animation-box flex-center box1">
@@ -8,12 +9,15 @@
 </div>
 
 ## 只因你
+
 [查看源代码](https://github.com/LAINE001/ik-ui/blob/master/docs/styles/animation.md)
+
 <div class="animation-box flex-center box2">
   <div class="bounce-top">🏀</div>
 </div>
 
 ## 崩~崩崩
+
 [查看源代码](https://github.com/LAINE001/ik-ui/blob/master/docs/styles/animation.md)
 
 <div class="animation-box flex-center box3">
@@ -21,11 +25,13 @@
 </div>
 
 ## 出现动画
+
 <div class="animation-box flex-center box5">
   <div class="bird">🐥</div>
 </div>
 
 ## 转啊转
+
 [查看源代码](https://github.com/LAINE001/ik-ui/blob/master/docs/styles/animation.md)
 
 <div class="animation-box flex-center box4">

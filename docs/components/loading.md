@@ -1,9 +1,13 @@
-# loading组件、指令
+# loading 组件、指令
+
 > 用于加载状态展示
+
 ```bash
 app.config.$globalProp.....
 ```
+
 ## 基本使用
+
 <div style="margin: 10px 0">
   <ik-button @click="toggleLoading">切换loading</ik-button>
 </div>
@@ -15,6 +19,7 @@ app.config.$globalProp.....
 </div>
 
 ::: details 点击展开
+
 ```vue
 <template>
   <ik-button @click="toggleLoading">切换loading</ik-button>
@@ -26,29 +31,34 @@ app.config.$globalProp.....
   </div>
 </template>
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const loading = ref(false)
-  const toggleLoading = () => {
-    loading.value = !loading.value
-  }
+import { ref } from 'vue'
+const loading = ref(false)
+const toggleLoading = () => {
+  loading.value = !loading.value
+}
 </script>
 ```
+
 :::
 
 ## 全屏
-<ik-button @click="toggleLoading2" type="primary">切换全屏loading</ik-button>
+
+<ik-button @click="toggleLoading2" type="primary">切换全屏 loading</ik-button>
+
 <div v-loading.fullscreen="loading2"></div>
 
 :::details 点击展开
+
 ```html
 <ik-button @click="toggleLoading2" type="primary">切换全屏loading</ik-button>
 <div v-loading.fullscreen="loading2"></div>
 ```
+
 :::
 
 ## 方法调用
 
-<ik-button @click="openLoading">打开loading</ik-button>
+<ik-button @click="openLoading">打开 loading</ik-button>
 
 ::: details 点击展开
 
@@ -56,12 +66,13 @@ app.config.$globalProp.....
 <script setup>
   const openLoading = () => {
     IkLoading.service({
-      duration: 1000
+      duration: 1000,
     })
   }
 </script>
 <ik-button @click="openLoading">打开loading</ik-button>
 ```
+
 :::
 
 <script setup>

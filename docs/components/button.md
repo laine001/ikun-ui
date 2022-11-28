@@ -1,5 +1,7 @@
 # 按钮
+
 用于操作
+
 ```javascript
 import { IkButton } from 'ik-ui'
 ```
@@ -19,6 +21,7 @@ import { IkButton } from 'ik-ui'
 </div>
 
 :::details 点击展开
+
 ```vue
 <template>
   <div>
@@ -32,6 +35,7 @@ import { IkButton } from 'ik-ui'
   </div>
 </template>
 ```
+
 :::
 
 ## 带图标
@@ -49,17 +53,19 @@ import { IkButton } from 'ik-ui'
 </div>
 
 :::details 点击展开
+
 ```html
-  <ik-button icon="add">按钮</ik-button>
-  <ik-button>
-    <ik-icon name="user" />
-    按钮
-  </ik-button>
-  <ik-button>
-    按钮
-    <ik-icon name="main" />
-  </ik-button>
+<ik-button icon="add">按钮</ik-button>
+<ik-button>
+  <ik-icon name="user" />
+  按钮
+</ik-button>
+<ik-button>
+  按钮
+  <ik-icon name="main" />
+</ik-button>
 ```
+
 :::
 
 ## 加载中按钮
@@ -70,19 +76,22 @@ import { IkButton } from 'ik-ui'
 </div>
 
 :::details 点击展开
+
 ```html
-  <ik-button loading>加载中</ik-button>
-  <ik-button type="primary" loading>请稍后</ik-button>
+<ik-button loading>加载中</ik-button>
+<ik-button type="primary" loading>请稍后</ik-button>
 ```
+
 :::
 
 ## attrs
-|   参数   |  说明   |  类型   |  可选值   |  默认值  |
-|----------|:-------:|:------:|:---------:|--------:|
-| type     | 按钮类型 | string | primary/warning | - |
+
+| 参数 |   说明   |  类型  |     可选值      | 默认值 |
+| ---- | :------: | :----: | :-------------: | -----: |
+| type | 按钮类型 | string | primary/warning |      - |
 
 ## events
 
-|   参数   |  说明   |  返回参数   |  默认值  |
-|----------|:-------:|:------:|--------:|
-| click     | click事件 | `(): Event => {}` | - |
+| 参数  |    说明    |     返回参数      | 默认值 |
+| ----- | :--------: | :---------------: | -----: |
+| click | click 事件 | `(): Event => {}` |      - |

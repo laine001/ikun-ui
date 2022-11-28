@@ -3,14 +3,14 @@ import IkIcon from '../../icon'
 
 export default defineComponent({
   components: {
-    IkIcon
+    IkIcon,
   },
   name: 'ik-backtop',
   props: {
     icon: {
       type: String,
-      default: (): string => ''
-    }
+      default: (): string => '',
+    },
   },
   emits: ['click'],
   // slots, attrs
@@ -21,7 +21,7 @@ export default defineComponent({
       emit('click', event)
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
       })
     }
     const onScroll = () => {
@@ -43,5 +43,5 @@ export default defineComponent({
       )
       return show.value ? Content : null
     }
-  }
+  },
 })

@@ -40,12 +40,12 @@
       content: ' ';
       width: 3px;
       height: 9px;
-      transform: rotate(45deg) scaleY(.8);
+      transform: rotate(45deg) scaleY(0.8);
       border: 1px solid #fff;
       border-left: 0;
       border-top: 0;
       margin-top: -1px;
-      animation: scale_ani .1s ease-in;
+      animation: scale_ani 0.1s ease-in;
       @keyframes scale_ani {
         from {
           transform: rotate(45deg) scale(0);

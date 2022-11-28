@@ -1,8 +1,8 @@
-import DefaultTheme from 'vitepress/theme';
+import DefaultTheme from 'vitepress/theme'
 import IkUI, { message } from 'ikuiv'
 import '@ikui/theme/index.scss'
-import './var.css';
-import './style.css';
+import './var.css'
+import './style.css'
 // console.log(IkUI, message, 'IkUI')
 // import 'vitepress-theme-demoblock/theme/styles/index.css';
 // import Demo from 'vitepress-theme-demoblock/components/Demo.vue';
@@ -10,9 +10,9 @@ import './style.css';
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    app.use(IkUI);
+    app.use(IkUI)
     app.config.globalProperties.$message = message
     // app.component('Demo', Demo);
     // app.component('DemoBlock', DemoBlock);
-  }
+  },
 }

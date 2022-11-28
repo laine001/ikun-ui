@@ -6,8 +6,8 @@ const computedClses = computed(() => {
   return [
     'ik-loading-mask',
     {
-      'ik-loading-mask--fullscreen': fullscreen
-    }
+      'ik-loading-mask--fullscreen': fullscreen,
+    },
   ]
 })
 </script>

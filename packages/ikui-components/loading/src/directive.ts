@@ -1,10 +1,10 @@
-import type { Directive, DirectiveBinding } from "vue"
+import type { Directive, DirectiveBinding } from 'vue'
 import { createApp } from 'vue'
 import Mask from './mask.vue'
 
 export interface LoadingElType extends HTMLElement {
-  loadingIns?: ProxyHandler;
-  originPosition?: string;
+  loadingIns?: ProxyHandler
+  originPosition?: string
   style: CSSStyleDeclaration
 }
 
@@ -45,7 +45,7 @@ export const IkLoading: Directive = {
         insertDom(el, binding)
       }
     }
-  }
+  },
 }
 export const loadingService = {
   service(options: LoadingServiceOptions) {
@@ -55,6 +55,6 @@ export const loadingService = {
     document.body.appendChild(loadingIns.$el)
     setTimeout(() => {
       document.body.removeChild(loadingIns.$el)
-    }, options.duration || 2000);
-  }
+    }, options.duration || 2000)
+  },
 }

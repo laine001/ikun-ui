@@ -14,6 +14,7 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "format": "prettier --write --cache .",
     "test": "vitest",
     "gen": "node ./scripts/gen.ts"
   },

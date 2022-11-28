@@ -10,14 +10,11 @@ const style = computed(() => {
   return {
     fill: props.color,
     width: size,
-    height: size
+    height: size,
   }
 })
 const classes = computed(() => {
-  return [
-    'ik-icon',
-    props.class
-  ]
+  return ['ik-icon', props.class]
 })
 </script>
 <template>

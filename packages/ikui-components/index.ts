@@ -8,17 +8,7 @@ import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 import IkBacktop from './backtop'
 console.log(IkBacktop)
-export {
-  IkButton,
-  IkInput,
-  IkLoading,
-  loadingService,
-  IkIcon,
-  message,
-  IkCheckbox,
-  IkCheckboxGroup,
-  IkBacktop
-}
+export { IkButton, IkInput, IkLoading, loadingService, IkIcon, message, IkCheckbox, IkCheckboxGroup, IkBacktop }
 
 export default {
   install(app: App): void {
@@ -32,5 +22,5 @@ export default {
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
     app.config.globalProperties.$message = message
-  }
+  },
 }

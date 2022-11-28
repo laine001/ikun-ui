@@ -6,16 +6,13 @@ const props = defineProps(buttonProps)
 const emits = defineEmits(['click'])
 
 const computedCls = computed(() => {
-  const {
-    type,
-    disabled
-  } = props
+  const { type, disabled } = props
   return [
     'ik-button',
     `ik-button-${type}`,
     {
-      'ik-button-disabled': disabled
-    }
+      'ik-button-disabled': disabled,
+    },
   ]
 })
 const iconColor = computed(() => {
@@ -29,7 +26,7 @@ const onClick = () => {
 
 defineExpose({
   /** @description button type */
-  type: props.type
+  type: props.type,
 })
 </script>
 <template>

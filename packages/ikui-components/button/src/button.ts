@@ -1,31 +1,25 @@
-import type { ExtractPropTypes } from "vue"
+import type { ExtractPropTypes } from 'vue'
 import type button from './button.vue'
 
-export const buttonTypes = [
-  'default',
-  'primary',
-  'success',
-  'warning',
-  'danger'
-] as const
+export const buttonTypes = ['default', 'primary', 'success', 'warning', 'danger'] as const
 
 export const buttonProps = {
   type: {
     type: String,
     values: buttonTypes,
-    default: 'default'
+    default: 'default',
   },
   disabled: {
     type: Boolean,
-    default: () => false
+    default: () => false,
   },
   icon: {
-    type: String
+    type: String,
   },
   loading: {
     type: Boolean,
-    default: (): boolean => false
-  }
+    default: (): boolean => false,
+  },
 } as const
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
