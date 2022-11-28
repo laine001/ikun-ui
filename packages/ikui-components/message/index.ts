@@ -1,9 +1,8 @@
 // import type { App } from 'vue'
 import messageService from './src/service'
 
-const withInstallForFunc = () => {
-
-}
+// const withInstallForFunc = () => {
+// }
 
 // export const IkMessage = () => {
 //   Message.install = (app: App) => {

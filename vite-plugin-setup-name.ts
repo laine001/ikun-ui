@@ -1,6 +1,6 @@
 import MagicString from 'magic-string'
 import { parse, compileScript } from '@vue/compiler-sfc'
-import { basename } from 'path'
+// import { basename } from 'path'
 import type { Plugin } from 'vite'
 
 export default (): Plugin => {
@@ -34,7 +34,7 @@ export default (): Plugin => {
           }
 
           const map = str().generateMap({ hires: true })
-          const filename = basename(id)
+          // const filename = basename(id)
           return {
             map,
             code: str().toString()

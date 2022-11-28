@@ -25,7 +25,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'packages/ikui-components/index.ts'),
       name: 'ikui',
-      fileName: (format) => `index.js`,
+      fileName: () => `index.js`,
       formats: ['es', 'cjs']
     },
     rollupOptions: {

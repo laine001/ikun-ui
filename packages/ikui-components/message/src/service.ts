@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ComponentInternalInstance, createVNode, render, shallowReactive, VNode } from 'vue'
 import Message from './message.vue'
 import { MessageServiceOptions, messageTypes } from './message'
@@ -82,10 +84,6 @@ messageTypes.forEach((type) => {
     return messageService(params)
   }
 })
-
-const formatOptions = (opts) => {
-
-}
 
 export const getLastOffset = (id: string): number => {
   const i = instanceList.findIndex((instance) => instance.id === id)

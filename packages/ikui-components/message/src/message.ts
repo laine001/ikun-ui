@@ -40,6 +40,6 @@ export const MessageProps = messageProps
 export const messageTypes =
   ['success', 'info', 'warning', 'error'] as const
 
-export type MessageServiceOptions = {}
+export type MessageServiceOptions = Record<string, unknown>
 
 export type messageInstance = typeof Message

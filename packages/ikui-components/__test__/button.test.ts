@@ -1,5 +1,5 @@
 import IkButton from '../button'
-import { describe, expect, it, test } from 'vitest'
+import { describe, expect, test } from 'vitest'
 import { mount } from '@vue/test-utils'
 
 describe('IkButton', () => {

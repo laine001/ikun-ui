@@ -10,7 +10,7 @@ const onInput = (e: MouseEvent): void => {
   emit('change', tar.value)
 }
 
-const model: WritableComputedRef<any> = computed({
+const model: WritableComputedRef<unknown> = computed({
   get() {
     return props.modelValue
   },

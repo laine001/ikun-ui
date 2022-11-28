@@ -40,6 +40,8 @@
         return '#a4abd6'
       case 'success':
         return '#5aa4ae'
+      default:
+        return '#f29a76'
     }
   })
 

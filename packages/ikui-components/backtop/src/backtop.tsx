@@ -13,7 +13,8 @@ export default defineComponent({
     }
   },
   emits: ['click'],
-  setup(props, { emit, slots, attrs }) {
+  // slots, attrs
+  setup(props, { emit }) {
     const show = ref(false)
     console.log(props, 'props')
     const handleClick = (event: MouseEvent) => {
@@ -23,7 +24,7 @@ export default defineComponent({
         behavior: 'smooth'
       })
     }
-    const onScroll = (e) => {
+    const onScroll = () => {
       const st = document.documentElement.scrollTop
       show.value = st > 400 ? true : false
     }
