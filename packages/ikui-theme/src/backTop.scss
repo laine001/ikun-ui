@@ -1,7 +1,8 @@
+@import '../mixins/config.scss';
 .ik-backtop {
   width: 40px;
   height: 40px;
-  background-color: #ebad60;
+  background-color: $primary;
   border-radius: 4px;
   display: flex;
   justify-content: center;

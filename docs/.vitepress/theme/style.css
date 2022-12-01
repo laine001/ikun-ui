@@ -9,7 +9,7 @@
 }
 .VPSidebarGroup .items .link.active {
   transition: all 0.2s;
-  background-color: #ebad604a;
+  background-color: var(--vp-c-brand-hover);
   border-radius: 4px;
 }
 
@@ -32,7 +32,7 @@ summary {
   width: 400px;
   height: 400px;
   border-radius: 100%;
-  background-color: antiquewhite;
+  background-color: var(--vp-c-brand-opacity);
   z-index: -1;
   /* transition: all ; */
 
@@ -49,13 +49,13 @@ summary {
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  background-color: skyblue;
+  background-color: #b087eb5c;
   z-index: -1;
   /* transition: all ; */
 
   position: fixed;
   bottom: 120px;
-  right: -40px;
+  right: 0px;
 
   animation: slide-ani2 9s 200ms linear alternate infinite;
   animation-delay: 600ms;
@@ -103,5 +103,5 @@ summary {
   border-radius: 4px;
   box-sizing: border-box;
   padding: 20px;
-  border: 1px solid sandybrown;
+  border: 1px solid var(--vp-c-brand);
 }

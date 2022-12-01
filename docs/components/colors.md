@@ -15,7 +15,7 @@
   </div>
   <div class="colors-box">
     <div class="title">
-      日暮
+      山梗
       <span class="detail">hex cd8025</span>
     </div>
   </div>
