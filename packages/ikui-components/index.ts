@@ -7,8 +7,20 @@ import IkCheckboxGroup from './checkbox-group'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 import IkBacktop from './backtop'
-console.log(IkBacktop)
-export { IkButton, IkInput, IkLoading, loadingService, IkIcon, message, IkCheckbox, IkCheckboxGroup, IkBacktop }
+import IkModal from './modal'
+
+export {
+  IkButton,
+  IkInput,
+  IkLoading,
+  loadingService,
+  IkIcon,
+  message,
+  IkCheckbox,
+  IkCheckboxGroup,
+  IkBacktop,
+  IkModal,
+}
 
 export default {
   install(app: App): void {
@@ -18,6 +30,7 @@ export default {
     app.component(IkCheckbox.name, IkCheckbox)
     app.component(IkCheckboxGroup.name, IkCheckboxGroup)
     app.component(IkBacktop.name, IkBacktop)
+    app.component(IkModal.name, IkModal)
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService

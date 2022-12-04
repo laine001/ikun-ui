@@ -6,13 +6,16 @@
 }
 .VPSidebarGroup .items .link {
   padding: 5px 0 5px 10px;
+  transition: all 0.36s;
 }
 .VPSidebarGroup .items .link.active {
   transition: all 0.2s;
   background-color: var(--vp-c-brand-hover);
-  border-radius: 4px;
+  border-radius: 6px;
 }
-
+.VPButton.medium {
+  border-radius: 12px !important;
+}
 .flex {
   display: flex;
 }

@@ -1,0 +1,98 @@
+@import '../mixins/config.scss';
+
+// .slide-top-enter-active {
+//   animation: slide-in 0.26s;
+// }
+// .slide-top-leave-active {
+//   animation: slide-out 0.26s;
+// }
+// @keyframes slide-in {
+//   0% {
+//     transform: translateY(40px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// @keyframes slide-out {
+//   0% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: translateY(-60px);
+//     opacity: 0;
+//   }
+// }
+
+.ik-modal--root {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  .ik-modal--wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    .ik-modal {
+      background-color: #fff;
+      border-radius: 8px;
+      width: 40vw;
+      margin: 0 auto;
+      margin-top: 15vh;
+      min-height: 200px;
+      box-sizing: border-box;
+      box-shadow: 0 6px 16px 0 rgb(0 0 0 / 8%), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+      display: flex;
+      flex-direction: column;
+      + &.ik-modal--show {
+        animation: slide-top 0.2s;
+      }
+      @keyframes slide-top {
+        0% {
+          transform: translateY(40px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .ik-modal--header {
+        height: 45px;
+        box-sizing: border-box;
+        padding: 10px;
+        border-bottom: 1px solid #dedede;
+        display: flex;
+        justify-content: space-between;
+        .ik-icon {
+          cursor: pointer;
+          border-radius: 4px;
+          &:hover {
+            background-color: #eaecf1;
+          }
+        }
+      }
+      .ik-modal--body {
+        flex: 1;
+        padding: 10px;
+      }
+      .ik-modal--footer {
+        border-top: 1px solid #dedede;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: flex-end;
+        .ik-button-primary {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

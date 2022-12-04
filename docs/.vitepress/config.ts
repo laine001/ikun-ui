@@ -76,7 +76,7 @@ export default {
             },
             {
               text: '视觉与色彩',
-              link: '/components/colors',
+              link: '/guide/colors',
             },
             {
               text: '节点与规划',
@@ -91,23 +91,23 @@ export default {
           collapsible: true,
           items: [
             {
-              text: '按钮',
+              text: '按钮 Button',
               link: '/components/button',
             },
+            // {
+            //   text: '色彩 Color',
+            //   link: '/components/colors',
+            // },
             {
-              text: '色彩',
-              link: '/components/colors',
-            },
-            {
-              text: '图标',
+              text: '图标 Icon',
               link: '/components/icon',
             },
             {
-              text: '加载状态',
+              text: '加载状态 Loading',
               link: '/components/loading',
             },
             {
-              text: '回到顶部',
+              text: '回到顶部 BackTop',
               link: '/components/backtop',
             },
           ],
@@ -117,16 +117,20 @@ export default {
           collapsible: true,
           items: [
             {
-              text: '输入框',
+              text: '输入框 Input',
               link: '/components/input',
             },
             {
-              text: '复选框',
+              text: '复选框 Checkbox',
               link: '/components/checkbox',
             },
             {
-              text: '提示',
+              text: '提示 Message',
               link: '/components/message',
+            },
+            {
+              text: '对话框 Modal',
+              link: '/components/modal',
             },
           ],
         },

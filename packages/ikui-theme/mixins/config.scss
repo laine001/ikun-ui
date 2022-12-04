@@ -52,7 +52,7 @@ $allColors: (
     // 简约的 hover 状态背景色
     // simpleHover: darken($default, 3%),
     // 简约的 Active 状态背景色
-    // simpleActive: darken($default, 9%),,,,,,,,,,,,,,,,,,
+    // simpleActive: darken($default, 9%),,,,,,,,,,,,,,,,,,,
   ),
   (
     name: 'primary',
@@ -94,3 +94,5 @@ $allColors: (
 *::selection {
   background-color: $button-lighter--primary;
 }
+
+$border-radius--size: 6px;

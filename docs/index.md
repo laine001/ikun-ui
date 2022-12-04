@@ -2,12 +2,12 @@
 layout: home
 
 title: IKUI
-titleTemplate: 一个组件库
+titleTemplate: 极简组件库
 
 hero:
   name: IKUI
-  text: 一个组件库
-  tagline: 以学习为目的...
+  text: 极简组件库
+  tagline: 基于VUE3...
   image:
     # src: /logo-with-shadow.png
     src: /logo2.png
@@ -26,10 +26,10 @@ hero:
 features:
   - icon: 🎵
     title: 唱
-    details: 暂不支持按需引入
+    details: 按需引入
   - icon: ⚡️
     title: 跳
-    details: 暂不支持主题切换
+    details: 主题切换
   - icon: 🛠️
     title: Rap
     details: 基于TypeScript开发
