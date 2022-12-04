@@ -78,8 +78,7 @@ import { IkButton } from 'ik-ui'
 :::details 点击展开
 
 ```html
-<ik-button loading>加载中</ik-button>
-<ik-button type="primary" loading>请稍后</ik-button>
+<ik-button loading>加载中</ik-button> <ik-button type="primary" loading>请稍后</ik-button>
 ```
 
 :::
