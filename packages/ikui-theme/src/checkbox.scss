@@ -16,8 +16,8 @@
     }
   }
   .ik-checkbox-icon {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 2px;
     border: 1px solid #333;
     display: flex;
@@ -31,20 +31,20 @@
     cursor: pointer;
   }
   &.ik-checkbox--selected {
-    color: $primary;
+    color: var(--primary-color);
     .ik-checkbox-icon {
-      border: 1px solid $primary;
-      background-color: $primary;
+      border: 1px solid var(--primary-color);
+      background-color: var(--primary-color);
     }
     .ik-checkbox-icon::after {
       content: ' ';
-      width: 3px;
-      height: 9px;
+      width: 4px;
+      height: 10px;
       transform: rotate(45deg) scaleY(0.8);
       border: 1px solid #fff;
       border-left: 0;
       border-top: 0;
-      margin-top: -1px;
+      margin-top: -2px;
       animation: scale_ani 0.1s ease-in;
       @keyframes scale_ani {
         from {

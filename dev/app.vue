@@ -51,12 +51,20 @@ watch(selectedList, (value) => {
 const onInputChange = (e) => {
   console.log(e, 'change')
 }
+const setCssVar = (prop: string, value: string, dom = document.documentElement): void => {
+  dom.style.setProperty(prop, value)
+}
+const toggleTheme = () => {
+  console.log('123')
+  setCssVar('--primary-color', 'blue')
+  setCssVar('--success-color', 'green')
+}
 </script>
 <template>
   <div>
     <div class="examples-box">
       <h1>按钮</h1>
-      <ik-button>普通按钮</ik-button>
+      <ik-button @click="toggleTheme">切换主题</ik-button>
       <ik-button type="primary">主题按钮</ik-button>
       <ik-button type="success">成功按钮</ik-button>
       <ik-button type="warning">警告按钮</ik-button>

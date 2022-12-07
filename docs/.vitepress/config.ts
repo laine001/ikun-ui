@@ -82,6 +82,10 @@ export default {
               text: '节点与规划',
               link: '/guide/timeline',
             },
+            {
+              text: '动态主题',
+              link: '/guide/toggle-theme',
+            },
           ],
         },
       ],

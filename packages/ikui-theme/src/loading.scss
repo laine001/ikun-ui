@@ -26,10 +26,10 @@
       display: inline-block;
       width: 1em;
       height: 1em;
-      color: $primary;
+      color: var(--primary-color);
       vertical-align: middle;
       pointer-events: none;
-      border: 1px solid $primary;
+      border: 1px solid var(--primary-color);
       border-radius: 50%;
       animation: 1s loader-04 linear infinite;
       position: relative;
@@ -67,7 +67,7 @@
     width: inherit;
     height: inherit;
     border-radius: 50%;
-    background-color: $primary;
+    background-color: var(--primary-color);
     opacity: 0.6;
     position: absolute;
     top: 0;

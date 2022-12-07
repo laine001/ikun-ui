@@ -12,10 +12,10 @@
       width: 100%;
       height: 100%;
       &:hover {
-        border-color: $button-lighter--primary;
+        border-color: var(--primary-color-hover);
       }
       &:focus {
-        border: 1px solid $primary;
+        border: 1px solid var(--primary-color);
       }
     }
   }

@@ -1,0 +1,35 @@
+$qianyun: #eaecf1; // 浅云
+$rimu: #6379f6; // 绀宇
+$tianshuibi: #5aa4ae; // 天水碧
+$zhuyantuo: #f29a76; // 朱颜砣
+$shiliuqun: #b13b2e; // 石榴裙
+$mushanzi: #a4abd6; // 暮山紫
+
+$default: $qianyun;
+$primary: $rimu;
+$success: $tianshuibi;
+$warning: $zhuyantuo;
+$danger: $shiliuqun;
+$info: $mushanzi;
+
+:root {
+  --default-color: #eaecf1;
+  --primary-color: #6379f6;
+  --success-color: #5aa4ae;
+  --warning-color: #f29a76;
+  --danger-color: #b13b2e;
+
+  --default-color-lighter-1: #f3f4f7;
+  --primary-color-lighter-1: #7185f7;
+  --success-color-lighter-1: #64aab3;
+  --warning-color-lighter-1: #f29d7b;
+  --danger-color-lighter-1: #b93e30;
+
+  --default-color-darker-1: #e1e4eb;
+  --primary-color-darker-1: #5971f5;
+  --success-color-darker-1: #54a0aa;
+  --warning-color-darker-1: #f08c63;
+  --danger-color-darker-1: #a9382c;
+
+  --primary-color-hover: #e8ebfb;
+}

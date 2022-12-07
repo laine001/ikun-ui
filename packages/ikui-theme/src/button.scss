@@ -1,4 +1,5 @@
 @import '../mixins/config.scss';
+@import '../mixins/var.scss';
 
 .ik-button {
   display: inline-flex;
@@ -13,6 +14,8 @@
   transition: transform 0.26s ease-in-out;
 
   .ik-button__inner {
+    height: 24px;
+    line-height: 24px;
     display: inline-flex;
   }
   .loading-icon {
@@ -29,27 +32,77 @@
   }
   &:hover {
     transform: translateY(-1px);
-    // box-shadow: 0 2px 2px -1px #00000033,
-    //           0 1px 2px 0 #00000033,
-    //           0 1px 2px 0 #00000033;
   }
   &:focus {
     outline: none;
   }
-  @for $list from 1 to (length($allColors) + 1) {
-    $item: nth($allColors, $list);
+  // @for $list from 1 to (length($allColors) + 1) {
+  //   $item: nth($allColors, $list);
 
-    &.ik-button-#{map-get($item, name)} {
-      background-color: map-get($item, default);
-      color: map-get($item, defaultTextColor);
-      &:hover {
-        background-color: map-get($item, defaultHover);
-      }
-      &:active {
-        background-color: map-get($item, defaultActive);
-      }
+  //   &.ik-button-#{map-get($item, name)} {
+  //     background-color: map-get($item, default);
+  //     color: map-get($item, defaultTextColor);
+  //     &:hover {
+  //       background-color: map-get($item, defaultHover);
+  //     }
+  //     &:active {
+  //       background-color: map-get($item, defaultActive);
+  //     }
+  //   }
+  // }
+  &.ik-button-default {
+    background-color: var(--default-color);
+    &:hover {
+      background-color: var(--default-color-lighter-1);
+    }
+    &:active {
+      background-color: var(--default-color-darker-1);
     }
   }
+  &.ik-button-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    &:hover {
+      background-color: var(--primary-color-lighter-1);
+    }
+    &:active {
+      background-color: var(--primary-color-darker-1);
+    }
+  }
+  &.ik-button-success {
+    color: #fff;
+    background-color: var(--success-color);
+    &:hover {
+      background-color: var(--success-color-lighter-1);
+    }
+    &:active {
+      background-color: var(--success-color-darker-1);
+    }
+  }
+  &.ik-button-warning {
+    color: #fff;
+    background-color: var(--warning-color);
+    &:hover {
+      background-color: var(--warning-color-lighter-1);
+    }
+    &:active {
+      background-color: var(--warning-color-darker-1);
+    }
+  }
+  &.ik-button-danger {
+    color: #fff;
+    background-color: var(--danger-color);
+    &:hover {
+      background-color: var(--danger-color-lighter-1);
+    }
+    &:active {
+      background-color: var(--danger-color-darker-1);
+    }
+  }
+  // &.ik-button-info {
+  //   color: #fff;
+  //   background-color: var(--info-color);
+  // }
   &.ik-button-disabled {
     cursor: not-allowed;
     background-color: #dee1e5;

@@ -14,7 +14,13 @@
   border-radius: 6px;
 }
 .VPButton.medium {
-  border-radius: 12px !important;
+  border-radius: 10px !important;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+}
+.pager-link:hover .title {
+  color: var(--primary-color) !important;
 }
 .flex {
   display: flex;
@@ -52,7 +58,7 @@ summary {
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  background-color: #b087eb5c;
+  background-color: var(--vp-c-brand-opacity);
   z-index: -1;
   /* transition: all ; */
 
