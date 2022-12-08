@@ -21,7 +21,7 @@
 .card {
   margin-right: 15px;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: all .32s linear;
   width: 25%;
   display: flex;

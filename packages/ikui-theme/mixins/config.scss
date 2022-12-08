@@ -49,9 +49,6 @@ $allColors: (
     defaultHover: $button-lighter--default,
     // Active 状态背景色
     defaultActive: $button-darker--default,
-    // 简约的 hover 状态背景色
-    // simpleHover: darken($default, 3%),
-    // 简约的 Active 状态背景色,
   ),
   (
     name: 'primary',

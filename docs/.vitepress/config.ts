@@ -19,16 +19,16 @@ export default {
   ],
   themeConfig: {
     footer: {
-      copyright: '本文档仅供个人娱乐学习使用',
+      copyright: '本文档暂仅供个人学习使用',
     },
-    algolia: {
-      appId: '7H67QR5P0A',
-      apiKey: 'deaab78bcdfe96b599497d25acc6460e',
-      indexName: 'vitejs',
-      searchParameters: {
-        facetFilters: ['tags:cn'],
-      },
-    },
+    // algolia: {
+    //   appId: '7H67QR5P0A',
+    //   apiKey: 'deaab78bcdfe96b599497d25acc6460e',
+    //   indexName: 'vitejs',
+    //   searchParameters: {
+    //     facetFilters: ['tags:cn'],
+    //   },
+    // },
     socialLinks: [
       {
         icon: 'github',
@@ -36,6 +36,11 @@ export default {
       },
     ],
     nav: [
+      {
+        text: '指引',
+        link: '/guide/quickstart',
+        activeMatch: '/guide/',
+      },
       {
         text: '组件',
         link: '/components/button',
@@ -51,7 +56,7 @@ export default {
         items: [
           {
             text: 'vitejs',
-            link: 'https://vitepress.vuejs.org/',
+            link: 'https://vitejs.dev/',
           },
           {
             text: 'vue3',

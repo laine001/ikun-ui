@@ -2,25 +2,25 @@
 layout: home
 
 title: IKUI
-titleTemplate: 极简组件库
+titleTemplate: A simple UI
 
 hero:
   name: IKUI
-  text: 极简组件库
-  tagline: 基于VUE3...
+  text: A simple UI
+  tagline: Built on Vue3 and Vitejs .
   image:
     # src: /logo-with-shadow.png
     src: /logo2.png
     alt: IKUNUI
   actions:
     - theme: brand
-      text: 开 始
+      text: Get Start
       link: /guide/
     # - theme: alt
     #   text: 为什么选IKUI
     #   link: /guide/why
     - theme: alt
-      text: 在 GitHub 上查看
+      text: View on Github
       link: https://github.com/LAINE001/ik-ui
 
 features:
