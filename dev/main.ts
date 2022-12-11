@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
-import app from './app.vue'
+import app from './layout.vue'
 import IkUI from 'ikuiv'
 import '@ikui/theme/index.scss'
+
+document.title = 'ikui-dev'
 
 createApp(app).use(IkUI).mount('#app')
 

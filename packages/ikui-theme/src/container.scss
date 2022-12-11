@@ -1,0 +1,36 @@
+@import '../mixins/config.scss';
+
+.ik-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  // padding: 12px;
+  &.ik-container__column {
+    flex-direction: column;
+  }
+  .ik-header {
+    height: 50px;
+    line-height: 50px;
+    border-radius: var(--default-radius);
+    background-color: #a4ade3;
+    box-sizing: border-box;
+    padding: 0 12px;
+  }
+  .ik-aside {
+    width: 180px;
+    min-width: 180px;
+    // height: 100%;
+    background-color: beige;
+    border-radius: var(--default-radius);
+    background-color: var(--default-color);
+    box-sizing: border-box;
+    padding: 12px;
+  }
+  .ik-main {
+    flex: 1;
+    border-radius: var(--default-radius);
+    background-color: #8d9beb;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+}

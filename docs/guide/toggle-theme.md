@@ -8,7 +8,7 @@
 <ik-button class="t-b4" @click="() => toggleTheme('#7185f7')"></ik-button>
 
 <div style="margin-top: 15px">
-  <ik-button type="primary">主 题</ik-button>
+  <ik-button type="primary">主题按钮</ik-button>
   <br />
   <br />
   <ik-input />
@@ -50,14 +50,14 @@
 
 }
 const toggleTheme = (brandColor) => {
-const brandColor1 = calcColor(brandColor, 0.2)
-const brandColor2 = calcColor(brandColor, -0.2)
-const brandColor3 = calcColor(brandColor, 0.1)
-console.log(brandColor1, brandColor2, brandColor3)
-setCssVar('--primary-color', brandColor)
-setCssVar('--primary-color-lighter-1', brandColor1)
-setCssVar('--primary-color-darker-1', brandColor2)
-setCssVar('--primary-color-hover', brandColor3 + '3b')
+  const brandColor1 = calcColor(brandColor, 0.1)
+  const brandColor2 = calcColor(brandColor, -0.2)
+  const brandColor3 = calcColor(brandColor, 0.1)
+  console.log(brandColor1, brandColor2, brandColor3)
+  setCssVar('--primary-color', brandColor)
+  setCssVar('--primary-color-lighter-1', brandColor1)
+  setCssVar('--primary-color-darker-1', brandColor2)
+  setCssVar('--primary-color-hover', brandColor3 + '3b')
 }
 </script>
 <style>

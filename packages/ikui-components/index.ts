@@ -8,6 +8,7 @@ import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 import IkBacktop from './backtop'
 import IkModal from './modal'
+import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 
 export {
   IkButton,
@@ -20,6 +21,10 @@ export {
   IkCheckboxGroup,
   IkBacktop,
   IkModal,
+  IkContainer,
+  IkAside,
+  IkMain,
+  IkHeader,
 }
 
 export default {
@@ -31,6 +36,10 @@ export default {
     app.component(IkCheckboxGroup.name, IkCheckboxGroup)
     app.component(IkBacktop.name, IkBacktop)
     app.component(IkModal.name, IkModal)
+    app.component(IkContainer.name, IkContainer)
+    app.component(IkAside.name, IkAside)
+    app.component(IkMain.name, IkMain)
+    app.component(IkHeader.name, IkHeader)
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService

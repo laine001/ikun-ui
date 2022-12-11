@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   margin-right: 12px;
   padding: 6px 20px;
-  border-radius: $border-radius--size;
+  border-radius: var(--default-radius);
   border: none;
   outline: none;
   cursor: pointer;

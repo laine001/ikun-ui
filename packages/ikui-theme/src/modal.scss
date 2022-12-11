@@ -44,7 +44,7 @@
     bottom: 0;
     .ik-modal {
       background-color: #fff;
-      border-radius: 8px;
+      border-radius: var(--default-radius);
       width: 500px;
       margin: 0 auto;
       margin-top: 15vh;

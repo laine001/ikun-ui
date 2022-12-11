@@ -126,6 +126,10 @@ export default {
           collapsible: true,
           items: [
             {
+              text: '布局 Layout',
+              link: '/components/layout',
+            },
+            {
               text: '输入框 Input',
               link: '/components/input',
             },

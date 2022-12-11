@@ -4,6 +4,7 @@ export const InputProps = {
   },
   hasClear: {
     type: Boolean,
+    default: (): boolean => false,
   },
   placeholder: {
     type: String,
