@@ -2,7 +2,11 @@
 
 ## 基本使用
 
-<!-- <ik-backtop /> -->
+<ik-backtop />
+
+<p>向下滑动显示</p>
+<p>向下滑动显示</p>
+<p>向下滑动显示</p>
 
 ::: details 点击展开
 
@@ -12,35 +16,33 @@
 
 :::
 
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
-<p style="margin: 25px 0">这是文本</p>
+## 圆形
+
+<ik-backtop shape :bottom="180" />
+::: details 点击展开
+```vue
+<ik-backtop shape :bottom="180" />
+```
+:::
 
 ## 自定义图标
 
-<ik-backtop icon="top-filling" />
+<ik-backtop :right="10" icon="direction-up" />
+<ik-backtop :right="110" icon="arrow-up-bold" />
 
 ::: details 点击展开
 
-```html
-<ik-backtop icon="top-filling" />
+```vue
+<ik-backtop icon="direction-up" />
+<ik-backtop icon="icon-arrow-up-bold" />
 ```
 
 :::
+
+## attrs
+
+| 参数   |      说明      |  类型  |     可选值     | 默认值 |
+| ------ | :------------: | :----: | :------------: | -----: |
+| icon   |   icon 名称    | string | `ik-icon name` |      - |
+| bottom |  距离底部距离  | number |       -        |    120 |
+| right  | 距离右侧部距离 | number |       -        |     60 |

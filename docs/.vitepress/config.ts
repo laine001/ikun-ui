@@ -103,10 +103,6 @@ export default {
               text: '按钮 Button',
               link: '/components/button',
             },
-            // {
-            //   text: '色彩 Color',
-            //   link: '/components/colors',
-            // },
             {
               text: '图标 Icon',
               link: '/components/icon',
@@ -128,6 +124,10 @@ export default {
             {
               text: '布局 Layout',
               link: '/components/layout',
+            },
+            {
+              text: '头像 Avatar',
+              link: '/components/avatar',
             },
             {
               text: '输入框 Input',

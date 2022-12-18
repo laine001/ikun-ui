@@ -4,11 +4,13 @@ import IkInput from './input'
 import IkIcon from './icon'
 import IkCheckbox from './checkbox'
 import IkCheckboxGroup from './checkbox-group'
-import { message } from './message'
-import { IkLoading, loadingService } from './loading'
+
 import IkBacktop from './backtop'
+import IkAvatar from './avatar'
 import IkModal from './modal'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
+import { message } from './message'
+import { IkLoading, loadingService } from './loading'
 
 export {
   IkButton,
@@ -25,7 +27,10 @@ export {
   IkAside,
   IkMain,
   IkHeader,
+  IkAvatar,
 }
+
+export * from './button'
 
 export default {
   install(app: App): void {
@@ -40,6 +45,7 @@ export default {
     app.component(IkAside.name, IkAside)
     app.component(IkMain.name, IkMain)
     app.component(IkHeader.name, IkHeader)
+    app.component(IkAvatar.name, IkAvatar)
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService

@@ -6,10 +6,12 @@
       <ik-header class="my-header">
         <div class="header-left"><ik-icon name="toggle-left" color="#ffffff" /></div>
         <div class="header-right">
-          <span class="avatar"></span>
+          <ik-avatar square url="https://avatars.githubusercontent.com/u/40457081?s=48&v=4" />
         </div>
       </ik-header>
-      <ik-main class="demo1-main">main</ik-main>
+      <ik-main class="demo1-main">
+        <ik-button type="success">阿斯弗</ik-button>
+      </ik-main>
     </ik-container>
   </ik-container>
 </template>
@@ -56,10 +58,7 @@ body {
   }
 }
 
-.avatar {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 100%;
+.ik-avatar {
+  // margin-top: 2px;
 }
 </style>

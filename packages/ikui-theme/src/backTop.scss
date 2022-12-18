@@ -1,7 +1,7 @@
 @import '../mixins/config.scss';
 .ik-backtop {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   background-color: var(--primary-color);
   border-radius: var(--default-radius);
   display: flex;
@@ -10,6 +10,10 @@
   position: fixed;
   bottom: 120px;
   right: 60px;
+  opacity: 0.88;
+  &.ik-backtop__shape {
+    border-radius: 100%;
+  }
   cursor: pointer;
   .ik-icon {
     fill: #fff;
