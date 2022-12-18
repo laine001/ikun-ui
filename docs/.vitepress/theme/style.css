@@ -11,7 +11,7 @@
 .VPSidebarGroup .items .link.active {
   transition: all 0.2s;
   background-color: var(--vp-c-brand-hover);
-  border-radius: 6px;
+  border-radius: var(--default-radius);
 }
 .VPButton.medium {
   border-radius: 8px !important;
@@ -20,8 +20,14 @@
 .actions .action .brand:hover {
   opacity: 0.88;
 }
+.pager .pager-link {
+  border-radius: var(--default-radius);
+}
 .pager-link:hover .title {
   color: var(--primary-color) !important;
+}
+.custom-block {
+  border-radius: var(--default-radius);
 }
 .flex {
   display: flex;

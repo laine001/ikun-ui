@@ -6,6 +6,7 @@
 <ik-button class="t-b2" @click="() => toggleTheme('#673ab7')"></ik-button>
 <ik-button class="t-b3" @click="() => toggleTheme('#eb920e')"></ik-button>
 <ik-button class="t-b4" @click="() => toggleTheme('#7185f7')"></ik-button>
+<ik-button class="t-b4" @click="() => toggleRadius()">切换圆角</ik-button>
 
 <div style="margin-top: 15px">
   <ik-button type="primary">主题按钮</ik-button>
@@ -30,6 +31,8 @@
 <script lang="ts" setup>
   import { ref } from 'vue'
   const checkedList1 = ref(['选项一', '选项二'])
+  const radiusList = ref(['2px', '4px', '6px', '8px', '10px'])
+  const radiusTag = ref(0)
   const setCssVar = (prop, value, node = document.documentElement) => {
     node.style.setProperty(prop, value)
   }
@@ -58,6 +61,11 @@ const toggleTheme = (brandColor) => {
   setCssVar('--primary-color-lighter-1', brandColor1)
   setCssVar('--primary-color-darker-1', brandColor2)
   setCssVar('--primary-color-hover', brandColor3 + '3b')
+}
+const toggleRadius = () => {
+  const r = radiusList.value[radiusTag.value]
+  setCssVar('--default-radius', r)
+  radiusTag.value >= 4 ? radiusTag.value = 0 : radiusTag.value++
 }
 </script>
 <style>

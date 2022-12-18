@@ -51,7 +51,7 @@ defineExpose({
 })
 </script>
 <template>
-  <transition name="f-msg-fade" @before-leave="$emit('close')" @after-leave="$emit('destroy')">
+  <transition name="ik-msg-fade" @before-leave="$emit('close')" @after-leave="$emit('destroy')">
     <div class="ik-message" v-show="visible" :style="computedStyle">
       <ik-icon v-if="props.type" :name="messageIconNameList[props.type]" :color="computedIconColor" />
       {{ message }}
