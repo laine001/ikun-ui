@@ -6,10 +6,9 @@
 <ik-button class="t-b2" @click="() => toggleTheme('#673ab7')"></ik-button>
 <ik-button class="t-b3" @click="() => toggleTheme('#eb920e')"></ik-button>
 <ik-button class="t-b4" @click="() => toggleTheme('#7185f7')"></ik-button>
-<ik-button class="t-b4" @click="() => toggleRadius()">切换圆角</ik-button>
 
 <div style="margin-top: 15px">
-  <ik-button type="primary">主题按钮</ik-button>
+  <ik-button type="primary" @click="toggleRadius">切换圆角</ik-button>
   <br />
   <br />
   <ik-input />

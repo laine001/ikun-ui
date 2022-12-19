@@ -8,6 +8,7 @@ export const InputProps = {
   },
   placeholder: {
     type: String,
+    default: (): string => '请输入',
   },
 }
 

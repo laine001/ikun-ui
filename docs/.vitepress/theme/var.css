@@ -35,7 +35,7 @@
   --vp-c-brand-lightest: #1a1a20;
   /* --vp-c-brand-dark: #6379f6; */
   /* --vp-c-brand-dark: #6379f6; */
-  --vp-c-brand-darker: var(--primary-color);
+  --vp-c-brand-dark: var(--primary-color);
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
 
   --vp-c-brand-opacity: var(--primary-color-hover);
