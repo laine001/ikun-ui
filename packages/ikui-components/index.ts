@@ -6,6 +6,7 @@ import IkCheckbox from './checkbox'
 import IkCheckboxGroup from './checkbox-group'
 
 import IkBacktop from './backtop'
+import IkSelect from './select'
 import IkAvatar from './avatar'
 import IkModal from './modal'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
@@ -28,6 +29,7 @@ export {
   IkMain,
   IkHeader,
   IkAvatar,
+  IkSelect,
 }
 
 export * from './button'
@@ -46,6 +48,7 @@ export default {
     app.component(IkMain.name, IkMain)
     app.component(IkHeader.name, IkHeader)
     app.component(IkAvatar.name, IkAvatar)
+    app.component(IkSelect.name, IkSelect)
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService

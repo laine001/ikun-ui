@@ -1,13 +1,9 @@
 import { computed, defineComponent } from 'vue'
+import { props } from './props'
 
 export default defineComponent({
   name: 'ik-modal',
-  props: {
-    visible: {
-      type: Boolean,
-      default: (): boolean => false,
-    },
-  },
+  props,
   setup(props, { slots, emit }) {
     console.log(props, 'props')
     const onClickMask = (e: Event): void => {

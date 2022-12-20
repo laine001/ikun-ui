@@ -1,0 +1,46 @@
+@import '../mixins/config.scss';
+
+.ik-select {
+  width: 260px;
+  position: relative;
+  .ik-select__inner {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--input-default-border-color);
+    border-radius: var(--default-radius);
+    padding: 5px 12px;
+    &:hover {
+      border-color: var(--primary-color-hover);
+    }
+    .ik-select__input {
+      line-height: 24px;
+      font-size: 14px;
+    }
+    .ik-icon {
+      fill: var(--input-default-border-color);
+    }
+  }
+  .ik-select--options {
+    background-color: #fff;
+    box-shadow: var(--default-shadow);
+    border-radius: var(--default-radius);
+    box-sizing: border-box;
+    padding: 8px;
+
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    .ik-select--item {
+      cursor: pointer;
+      border-radius: var(--default-radius);
+      padding: 4px;
+      font-size: 14px;
+      transition: all 0.46s;
+      user-select: none;
+      &:hover {
+        color: var(--primary-color);
+        background-color: var(--default-color);
+      }
+    }
+  }
+}

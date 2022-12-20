@@ -35,3 +35,9 @@ $info: $mushanzi;
 
   --default-radius: 6px;
 }
+:root {
+  --input-default-border-color: #dde0e5;
+  --input-hover-border-color: #dde0e5;
+
+  --default-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
