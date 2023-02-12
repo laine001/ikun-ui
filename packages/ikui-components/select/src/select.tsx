@@ -36,7 +36,7 @@ export default defineComponent({
       const Content = (
         <div class="ik-select">
           <div class="ik-select__inner" onClick={onClickSelct}>
-            <input class="ik-select__input" value={selectValue.value} readonly type="text" />
+            <input placeholder="请选择" class="ik-select__input" value={selectValue.value} readonly type="text" />
             <ik-icon name="arrow-right"></ik-icon>
           </div>
 
