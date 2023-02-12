@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue'
+const selectValue = ref('hello')
+const selectOption = ref(['hello', 'ok', 'jntm'])
+</script>
 <template>
   <ik-container>
     <ik-aside>aside</ik-aside>
@@ -11,6 +15,7 @@
       </ik-header>
       <ik-main class="demo1-main">
         <ik-button type="success">阿斯弗</ik-button>
+        <ik-select v-model="selectValue" :option="selectOption"></ik-select>
       </ik-main>
     </ik-container>
   </ik-container>
@@ -57,7 +62,9 @@ body {
     }
   }
 }
-
+.demo1-main {
+  background-color: #dedede !important;
+}
 .ik-avatar {
   // margin-top: 2px;
 }

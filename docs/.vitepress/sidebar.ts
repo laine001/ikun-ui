@@ -67,6 +67,10 @@ export default {
           link: '/components/input',
         },
         {
+          text: '下拉框 Select',
+          link: '/components/select',
+        },
+        {
           text: '复选框 Checkbox',
           link: '/components/checkbox',
         },

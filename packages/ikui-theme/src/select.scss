@@ -1,20 +1,40 @@
 @import '../mixins/config.scss';
 
+.slide-fade__select-enter-active,
+.slide-fade__select-leave-active {
+  transition: all 0.1s;
+}
+// .slide-fade__select-enter-from {
+//   transform: translateY(10px);
+// }
+
+.slide-fade__select-enter-from,
+.slide-fade__select-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
 .ik-select {
   width: 260px;
   position: relative;
+  margin-top: 14px;
   .ik-select__inner {
     display: flex;
     justify-content: space-between;
     border: 1px solid var(--input-default-border-color);
     border-radius: var(--default-radius);
     padding: 5px 12px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
     &:hover {
       border-color: var(--primary-color-hover);
     }
     .ik-select__input {
       line-height: 24px;
       font-size: 14px;
+      cursor: pointer;
+      user-select: none;
     }
     .ik-icon {
       fill: var(--input-default-border-color);
@@ -25,7 +45,7 @@
     box-shadow: var(--default-shadow);
     border-radius: var(--default-radius);
     box-sizing: border-box;
-    padding: 8px;
+    padding: 4px 8px;
 
     position: absolute;
     top: 40px;
@@ -37,6 +57,11 @@
       font-size: 14px;
       transition: all 0.46s;
       user-select: none;
+      margin: 4px 0;
+      &.ik-select--item__active {
+        color: var(--primary-color);
+        background-color: var(--default-color);
+      }
       &:hover {
         color: var(--primary-color);
         background-color: var(--default-color);

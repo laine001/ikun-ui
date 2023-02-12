@@ -5,7 +5,7 @@ export interface SelectOptionType {
   value: OptionType
 }
 
-export const props = {
+export const selectProps = {
   modelValue: {
     type: String || Number,
     default: (): string => '',
@@ -14,4 +14,9 @@ export const props = {
     type: Array,
     default: (): Array<string | number | SelectOptionType> => [],
   },
+} as const
+
+export const selectEmits = {
+  'update:modelValue': (value): boolean => !!value,
+  change: (value): boolean => !!value,
 } as const
