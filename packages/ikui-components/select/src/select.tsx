@@ -6,7 +6,7 @@ export default defineComponent({
   name: 'ik-select',
   props,
   emits,
-  setup(props, { slots, emit }) {
+  setup(props, { emit }) {
     const selectValue = ref(props.modelValue)
     const filteredOptions = ref([])
     const selectOptionVisible = ref<boolean>(false)

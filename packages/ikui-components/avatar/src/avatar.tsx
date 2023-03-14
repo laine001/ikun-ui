@@ -6,7 +6,7 @@ export default defineComponent({
   props,
   // emits: ['click'],
   // slots, attrs
-  setup(props, { emit }) {
+  setup(props) {
     console.log(props, 'props')
     const computedCls = computed(() => {
       return [
