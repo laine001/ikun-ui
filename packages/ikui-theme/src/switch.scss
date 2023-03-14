@@ -1,0 +1,35 @@
+@import '../mixins/config.scss';
+
+.ik-switch {
+  min-width: 40px;
+  height: 20px;
+  display: inline-flex;
+  box-sizing: border-box;
+  padding: 2px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+
+  position: relative;
+  .ik-switch__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.2s;
+
+    position: absolute;
+    top: 2px;
+  }
+  &.ik-switch__actived {
+    background-color: var(--primary-color);
+    .ik-switch__dot {
+      left: calc(100% - 18px);
+    }
+  }
+  &.ik-switch__default {
+    background-color: #b5b7bd;
+    .ik-switch__dot {
+      left: 2px;
+    }
+  }
+}

@@ -10,6 +10,10 @@ export const selectProps = {
     type: String || Number,
     default: (): string => '',
   },
+  filterOn: {
+    type: Boolean,
+    default: (): boolean => false,
+  },
   option: {
     type: Array,
     default: (): Array<string | number | SelectOptionType> => [],

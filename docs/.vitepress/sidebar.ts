@@ -48,6 +48,10 @@ export default {
           text: '回到顶部 BackTop',
           link: '/components/backtop',
         },
+        {
+          text: '开关 Switch',
+          link: '/components/switch',
+        },
       ],
     },
     {

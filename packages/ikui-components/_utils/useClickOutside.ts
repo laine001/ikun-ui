@@ -5,7 +5,9 @@
  */
 export const useClickOutside = (target: HTMLElement, callback: () => void) => {
   const handler = (e) => {
-    if (e.target.contains(target)) {
+    const element = e.target
+    if (element && !e.target.contains(target)) {
+    } else {
       callback()
     }
   }

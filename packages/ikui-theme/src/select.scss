@@ -30,6 +30,9 @@
     &:hover {
       border-color: var(--primary-color-hover);
     }
+    &.select--focus {
+      border-color: var(--primary-color);
+    }
     .ik-select__input {
       line-height: 24px;
       font-size: 14px;
@@ -46,6 +49,7 @@
     border-radius: var(--default-radius);
     box-sizing: border-box;
     padding: 4px 8px;
+    z-index: 9;
 
     position: absolute;
     top: 40px;

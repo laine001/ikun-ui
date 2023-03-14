@@ -1,4 +1,4 @@
-import { defineComponent, ref, watch, Transition, onMounted } from 'vue'
+import { defineComponent, ref, watch, Transition, onMounted, computed } from 'vue'
 import { selectProps as props, selectEmits as emits } from './props'
 import { useClickOutside } from '../../_utils/useClickOutside'
 
@@ -8,17 +8,19 @@ export default defineComponent({
   emits,
   setup(props, { slots, emit }) {
     const selectValue = ref(props.modelValue)
+    const filteredOptions = ref([])
     const selectOptionVisible = ref<boolean>(false)
     const selectOptionsRef = ref<HTMLElement>(null)
 
+    const selectIsFocus = ref<boolean>(false)
+
     onMounted(() => {
-      console.log(selectOptionsRef.value, 'mounted')
       useClickOutside(selectOptionsRef.value, () => {
         selectOptionVisible.value = false
       })
     })
     const onClickSelectItem = (item) => {
-      if (selectValue.value === item) return
+      // if (selectValue.value === item) return
       emit('update:modelValue', item)
       selectValue.value = item
       selectOptionVisible.value = false
@@ -26,23 +28,59 @@ export default defineComponent({
     const onClickSelct = () => {
       selectOptionVisible.value = true
     }
-    // const selectIndex
     watch(
       () => props.modelValue,
       (value) => emit('change', value)
     )
+    const onInput = (e) => {
+      if (typeof e.target.value === 'string' && e.target.value) {
+        const ls = props.option.filter((item: string) => {
+          return item.includes(e.target.value)
+        })
+        filteredOptions.value = ls || []
+      } else {
+        filteredOptions.value = props.option
+      }
+    }
+    const onFocus = () => {
+      selectIsFocus.value = true
+    }
+    const onBlur = () => {
+      selectIsFocus.value = false
+    }
+    const selectOptions = computed<any[]>(() => {
+      if (!filteredOptions.value.length) return props.option
+      return filteredOptions.value
+    })
 
+    const selectComputedCls = computed(() => {
+      return [
+        'ik-select__inner',
+        {
+          'select--focus': selectIsFocus.value,
+        },
+      ]
+    })
     return () => {
       const Content = (
         <div class="ik-select">
-          <div class="ik-select__inner" onClick={onClickSelct}>
-            <input placeholder="请选择" class="ik-select__input" value={selectValue.value} readonly type="text" />
+          <div class={selectComputedCls.value} onClick={onClickSelct}>
+            <input
+              placeholder="请选择"
+              class="ik-select__input"
+              value={selectValue.value}
+              readonly={!props.filterOn}
+              type="text"
+              onInput={onInput}
+              onFocus={onFocus}
+              onBlur={onBlur}
+            />
             <ik-icon name="arrow-right"></ik-icon>
           </div>
 
           <Transition name="slide-fade__select">
             <div v-show={selectOptionVisible.value} class="ik-select--options" ref={selectOptionsRef}>
-              {props.option.map((item, index) => (
+              {selectOptions.value.map((item, index) => (
                 <div
                   class={{ 'ik-select--item': true, 'ik-select--item__active': item === props.modelValue }}
                   key={index}

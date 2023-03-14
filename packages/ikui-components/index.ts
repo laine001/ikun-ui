@@ -9,6 +9,7 @@ import IkBacktop from './backtop'
 import IkSelect from './select'
 import IkAvatar from './avatar'
 import IkModal from './modal'
+import IkSwitch from './switch'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
@@ -30,10 +31,11 @@ export {
   IkHeader,
   IkAvatar,
   IkSelect,
+  IkSwitch,
 }
 
 export * from './button'
-
+console.log(IkSwitch.name, 'IkSwitch')
 export default {
   install(app: App): void {
     app.component(IkButton.name, IkButton)
@@ -49,6 +51,7 @@ export default {
     app.component(IkHeader.name, IkHeader)
     app.component(IkAvatar.name, IkAvatar)
     app.component(IkSelect.name, IkSelect)
+    app.component(IkSwitch.name, IkSwitch)
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
