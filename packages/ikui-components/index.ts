@@ -10,6 +10,7 @@ import IkSelect from './select'
 import IkAvatar from './avatar'
 import IkModal from './modal'
 import IkSwitch from './switch'
+import IkTooltip from './tooltip'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
@@ -52,6 +53,7 @@ export default {
     app.component(IkAvatar.name, IkAvatar)
     app.component(IkSelect.name, IkSelect)
     app.component(IkSwitch.name, IkSwitch)
+    app.component(IkTooltip.name, IkTooltip)
     // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService

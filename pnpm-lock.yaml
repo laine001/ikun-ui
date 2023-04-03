@@ -21,7 +21,7 @@ importers:
       eslint-plugin-promise: ^6.0.0
       eslint-plugin-vue: ^9.8.0
       husky: ^8.0.2
-      ikuiv: workspace:0.0.6-beta
+      ikuiv: workspace:0.0.9-beta
       jsdom: ^20.0.0
       magic-string: ^0.26.4
       prettier: ^2.7.1
@@ -32,6 +32,8 @@ importers:
       vitepress: 1.0.0-alpha.13
       vitest: ^0.23.4
       vue: ^3.2.39
+      vue-popperjs: ^2.3.0
+      vue3-popper: ^1.5.0
     dependencies:
       packages: registry.npmmirror.com/packages/0.0.8
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/3.1.0_vite@3.1.3+vue@3.2.39
@@ -43,6 +45,7 @@ importers:
       vite: registry.npmmirror.com/vite/3.1.3_sass@1.55.0
       vitepress: registry.npmmirror.com/vitepress/1.0.0-alpha.13_sass@1.55.0
       vue: registry.npmmirror.com/vue/3.2.39
+      vue-popperjs: 2.3.0
     devDependencies:
       '@ikui/theme': link:packages/ikui-theme
       '@typescript-eslint/eslint-plugin': 5.44.0_n6rgri5fk2kl74aodkpz7shttq
@@ -62,6 +65,7 @@ importers:
       typescript: registry.npmmirror.com/typescript/4.8.4
       vite-plugin-dts: 1.6.6_vite@3.1.3
       vitest: registry.npmmirror.com/vitest/0.23.4_jsdom@20.0.0+sass@1.55.0
+      vue3-popper: 1.5.0_vue@3.2.39
 
   packages/ikui-components:
     specifiers: {}
@@ -148,6 +152,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: true
+
+  /@popperjs/core/2.11.7:
+    resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
     dev: true
 
   /@rushstack/node-core-library/3.53.2:
@@ -407,6 +415,10 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+    dev: true
+
+  /debounce/1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
     dev: true
 
   /debug/4.3.4:
@@ -933,6 +945,11 @@ packages:
       boolbase: 1.0.0
     dev: true
 
+  /opencollective-postinstall/2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
+    dev: false
+
   /path-browserify/1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
@@ -950,6 +967,11 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
     dev: true
+
+  /popper.js/1.16.1:
+    resolution: {integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==}
+    deprecated: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+    dev: false
 
   /postcss-selector-parser/6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
@@ -1129,6 +1151,25 @@ packages:
       semver: 7.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vue-popperjs/2.3.0:
+    resolution: {integrity: sha512-925QEeNjlMtb3eDHl5ZlODJzqnQL0nQPEKpr9aQ3XBg21DyqAdfLgD/At4svsPwFeIkpdF1gvHarENon47L9Cg==}
+    requiresBuild: true
+    dependencies:
+      opencollective-postinstall: 2.0.3
+      popper.js: 1.16.1
+    dev: false
+
+  /vue3-popper/1.5.0_vue@3.2.39:
+    resolution: {integrity: sha512-xaEnx90YBnlSg5G2yWqm2DHWHg+DB99UVRp4VsyTF0QLXyHrqSuE1Xo5+sG0AQq/lBcrGMlk5NU5xE2MDLKViw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.2.20
+    dependencies:
+      '@popperjs/core': 2.11.7
+      debounce: 1.2.1
+      vue: registry.npmmirror.com/vue/3.2.39
     dev: true
 
   /xml-name-validator/4.0.0:

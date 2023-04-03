@@ -83,12 +83,22 @@ export default {
         //   link: '/components/select',
         // },
         {
+          text: '对话框 Modal',
+          link: '/components/modal',
+        },
+      ],
+    },
+    {
+      text: '信息反馈',
+      collapsible: true,
+      items: [
+        {
           text: '提示 Message',
           link: '/components/message',
         },
         {
-          text: '对话框 Modal',
-          link: '/components/modal',
+          text: '文字提示 Tooltip',
+          link: '/components/tooltip',
         },
       ],
     },

@@ -25,6 +25,12 @@ const selectOption = ref(['hello', 'ok', 'jntm'])
         <ik-button type="success">阿斯弗</ik-button>
         <ik-select filterOn v-model="selectValue" :option="selectOption"></ik-select>
         <ik-switch />
+        <ik-tooltip placement="top">
+          <template #content>
+            <div>123123</div>
+          </template>
+          <ik-button>左中</ik-button>
+        </ik-tooltip>
       </ik-main>
     </ik-container>
   </ik-container>
