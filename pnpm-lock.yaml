@@ -32,7 +32,6 @@ importers:
       vitepress: 1.0.0-alpha.13
       vitest: ^0.23.4
       vue: ^3.2.39
-      vue-popperjs: ^2.3.0
       vue3-popper: ^1.5.0
     dependencies:
       packages: registry.npmmirror.com/packages/0.0.8
@@ -45,7 +44,6 @@ importers:
       vite: registry.npmmirror.com/vite/3.1.3_sass@1.55.0
       vitepress: registry.npmmirror.com/vitepress/1.0.0-alpha.13_sass@1.55.0
       vue: registry.npmmirror.com/vue/3.2.39
-      vue-popperjs: 2.3.0
     devDependencies:
       '@ikui/theme': link:packages/ikui-theme
       '@typescript-eslint/eslint-plugin': 5.44.0_n6rgri5fk2kl74aodkpz7shttq
@@ -68,6 +66,9 @@ importers:
       vue3-popper: 1.5.0_vue@3.2.39
 
   packages/ikui-components:
+    specifiers: {}
+
+  packages/ikui-theme:
     specifiers: {}
 
 packages:
@@ -945,11 +946,6 @@ packages:
       boolbase: 1.0.0
     dev: true
 
-  /opencollective-postinstall/2.0.3:
-    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
-    hasBin: true
-    dev: false
-
   /path-browserify/1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
@@ -967,11 +963,6 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
     dev: true
-
-  /popper.js/1.16.1:
-    resolution: {integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==}
-    deprecated: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
-    dev: false
 
   /postcss-selector-parser/6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
@@ -1152,14 +1143,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /vue-popperjs/2.3.0:
-    resolution: {integrity: sha512-925QEeNjlMtb3eDHl5ZlODJzqnQL0nQPEKpr9aQ3XBg21DyqAdfLgD/At4svsPwFeIkpdF1gvHarENon47L9Cg==}
-    requiresBuild: true
-    dependencies:
-      opencollective-postinstall: 2.0.3
-      popper.js: 1.16.1
-    dev: false
 
   /vue3-popper/1.5.0_vue@3.2.39:
     resolution: {integrity: sha512-xaEnx90YBnlSg5G2yWqm2DHWHg+DB99UVRp4VsyTF0QLXyHrqSuE1Xo5+sG0AQq/lBcrGMlk5NU5xE2MDLKViw==}
