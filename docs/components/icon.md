@@ -1,4 +1,4 @@
-# 图标组件
+# 图标 Icon
 
 ```javascript
 import { IkIcon } from 'ik-ui'
