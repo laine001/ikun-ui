@@ -1,0 +1,24 @@
+@import '../mixins/config.scss';
+:root {
+  --popper-theme-background-color: #333;
+  --popper-theme-background-color-hover: #333;
+  --popper-theme-border-radius: 4px;
+  --popper-theme-padding: 4px 12px;
+  --popper-theme-text-color: #fff;
+}
+.ik-tooltip {
+  .popper {
+    border-radius: 4px;
+  }
+  &.ik-tooltip--light {
+    .popper {
+      background-color: #fff;
+      color: #333;
+      border-radius: 4px;
+      box-shadow: 0 6px 16px -8px #00000014, 0 9px 28px #0000000d, 0 12px 48px 16px #00000008;
+      #arrow::before {
+        background-color: #fff;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import type tooltip from './tooltip.vue'
+
 export type Placement =
   | 'auto'
   | 'auto-start'
@@ -20,7 +22,7 @@ export type TriggerType = 'hover' | 'click'
 export const props = {
   placement: {
     type: String,
-    default: (): string => 'top' as Placement,
+    default: (): string => 'auto' as Placement,
   },
   triggerType: {
     type: String,
@@ -30,4 +32,10 @@ export const props = {
     type: Boolean,
     default: (): boolean => true,
   },
+  light: {
+    type: Boolean,
+    default: (): boolean => false,
+  },
 } as const
+
+export type IkTooltipInstance = InstanceType<typeof tooltip>

@@ -36,7 +36,7 @@ export {
 }
 
 export * from './button'
-console.log(IkSwitch.name, 'IkSwitch')
+
 export default {
   install(app: App): void {
     app.component(IkButton.name, IkButton)
@@ -54,7 +54,6 @@ export default {
     app.component(IkSelect.name, IkSelect)
     app.component(IkSwitch.name, IkSwitch)
     app.component(IkTooltip.name, IkTooltip)
-    // app.component(IkLoading.name, IkLoading)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
     app.config.globalProperties.$message = message
