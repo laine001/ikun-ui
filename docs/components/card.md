@@ -72,6 +72,12 @@
 
 :::
 
+## 3D 悬浮效果
+
+<div style="width: 200px;">
+  <ik-card suspension :height="300">content...</ik-card>
+</div>
+
 <style>
   .demo-box {
     width: 500px;

@@ -8,6 +8,12 @@ export const cardProps = {
     type: String as PropType<ShadowType>,
     default: 'always',
   },
+  suspension: {
+    type: Boolean,
+  },
+  height: {
+    type: [String || Number],
+  },
 } as const
 
 export type CardProps = ExtractPropTypes<typeof cardProps>
