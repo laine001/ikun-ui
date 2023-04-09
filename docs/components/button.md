@@ -70,7 +70,7 @@ import { IkButton } from 'ik-ui'
 
 ## 加载中按钮
 
-<div>
+<div class="flex">
   <ik-button loading>加载中</ik-button>
   <ik-button type="primary" loading>请稍后</ik-button>
 </div>
@@ -94,3 +94,11 @@ import { IkButton } from 'ik-ui'
 | 参数  |    说明    |     返回参数      | 默认值 |
 | ----- | :--------: | :---------------: | -----: |
 | click | click 事件 | `(): Event => {}` |      - |
+
+<style lang="scss">
+  .flex {
+    .ik-button {
+      margin-right: 12px;
+    }
+  }
+</style>

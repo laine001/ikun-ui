@@ -29,7 +29,7 @@
 
 message 有多个消息类型可用： `success`、`warning`、 `info`
 
-<div>
+<div class="demo-box">
   <ik-button type="success" @click="openMessage2">成功提示</ik-button>
   <ik-button type="warning" @click="openMessage3">警告提示</ik-button>
 </div>
@@ -95,3 +95,10 @@ const openMessage4 = () => {
     })
   }
 </script>
+<style lang="scss">
+  .demo-box {
+    .ik-button {
+      margin-right: 12px;
+    }
+  }
+</style>

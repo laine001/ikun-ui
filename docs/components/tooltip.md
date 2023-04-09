@@ -29,20 +29,21 @@
 ## 基础配置
 
 不显示`箭头`，`点击`触发展示。可配置`白色背景`。
-
+<ik-space>
 <ik-tooltip placement="top" triggerType="click" :arrow="false">
-  <template #content>
-    <div>这是提示内容</div>
-  </template>
-  <ik-button>按钮</ik-button>
-</ik-tooltip>
-
-<ik-tooltip placement="top" light triggerType="click" arrow>
 <template #content>
 <div>这是提示内容</div>
 </template>
 <ik-button>按钮</ik-button>
 </ik-tooltip>
+
+  <ik-tooltip placement="top" light triggerType="click" arrow>
+    <template #content>
+      <div>这是提示内容</div>
+    </template>
+    <ik-button>按钮</ik-button>
+  </ik-tooltip>
+</ik-space>
 
 ::: details 点击展开
 

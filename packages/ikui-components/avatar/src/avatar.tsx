@@ -7,7 +7,6 @@ export default defineComponent({
   // emits: ['click'],
   // slots, attrs
   setup(props) {
-    console.log(props, 'props')
     const computedCls = computed(() => {
       return [
         'ik-avatar',

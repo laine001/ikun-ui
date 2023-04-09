@@ -63,6 +63,14 @@ export default {
           link: '/components/layout',
         },
         {
+          text: '卡片 Card',
+          link: '/components/card',
+        },
+        {
+          text: '间距 Space',
+          link: '/components/space',
+        },
+        {
           text: '头像 Avatar',
           link: '/components/avatar',
         },

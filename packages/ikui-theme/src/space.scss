@@ -1,0 +1,10 @@
+@import '../mixins/config.scss';
+.ik-space {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  .ik-space__item {
+    flex: 1;
+  }
+}

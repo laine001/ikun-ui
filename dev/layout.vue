@@ -31,6 +31,48 @@ const selectOption = ref(['hello', 'ok', 'jntm'])
           </template>
           <ik-button>左中</ik-button>
         </ik-tooltip>
+        <br />
+        <br />
+        <br />
+        <ik-space>
+          <ik-switch />
+          <ik-switch />
+          <span>123213</span>
+          hellow
+          <div style="border: 1px solid">
+            123
+            <p>哈哈哈哈</p>
+          </div>
+        </ik-space>
+        <ik-space size="small" wrap>
+          <ik-button>按 钮</ik-button>
+          <ik-button>按 钮2</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+          <ik-button>按钮3</ik-button>
+        </ik-space>
       </ik-main>
     </ik-container>
   </ik-container>
@@ -85,8 +127,5 @@ body {
 }
 .demo1-main {
   background-color: #dedede !important;
-}
-.ik-avatar {
-  // margin-top: 2px;
 }
 </style>
