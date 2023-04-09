@@ -32,6 +32,7 @@
 <ik-space>
 <ik-tooltip placement="top" triggerType="click" :arrow="false">
 <template #content>
+
 <div>这是提示内容</div>
 </template>
 <ik-button>按钮</ik-button>
