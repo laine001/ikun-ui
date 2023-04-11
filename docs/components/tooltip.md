@@ -11,7 +11,7 @@
   <ik-button>按钮</ik-button>
 </ik-tooltip>
 
-::: details 点击展开
+::: details
 
 ```html
 <template>

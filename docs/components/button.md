@@ -8,31 +8,29 @@ import { IkButton } from 'ik-ui'
 
 ## 普通按钮
 
-<div class="flex">
+<!-- <div class="flex">
   <ik-button>普通按钮</ik-button>
   <ik-button type="primary">主要按钮</ik-button>
   <ik-button type="success">成功按钮</ik-button>
-  <!-- <ik-button type="info">信息按钮</ik-button> -->
 </div>
 <div class="flex" style="margin-top: 10px">
   <ik-button type="warning">警告按钮</ik-button>
   <ik-button type="danger">危险按钮</ik-button>
   <ik-button type="primary" disabled>按钮禁用</ik-button>
-</div>
+</div> -->
 
-:::details 点击展开
+:::demo
 
 ```vue
 <template>
-  <div>
+  <ik-space wrap="wrap">
     <ik-button>普通按钮</ik-button>
     <ik-button type="primary">主要按钮</ik-button>
-    <ik-button type="info">信息按钮</ik-button>
     <ik-button type="success">成功按钮</ik-button>
     <ik-button type="warning">警告按钮</ik-button>
     <ik-button type="danger">危险按钮</ik-button>
     <ik-button type="primary" disabled>主要按钮禁用</ik-button>
-  </div>
+  </ik-space>
 </template>
 ```
 

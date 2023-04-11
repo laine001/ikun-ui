@@ -1,4 +1,5 @@
-// import { demoBlockPlugin } from 'vitepress-theme-demoblock';
+import { demoBlockPlugin } from 'vitepress-theme-demoblock'
+// import { demoblock as demoBlockPlugin } from './plugins/blockPlugin'
 import sidebar from './sidebar'
 import nav from './nav'
 
@@ -41,23 +42,41 @@ export default {
     nav,
     sidebar,
   },
-  async transformHead(ctx) {
-    console.log(ctx)
-    // return Promise.reject()
-    // return {
-    //   title: 'hellokitty'
-    // }
-    return new Promise((res) => {
-      res({
-        title: 'hellokitty',
-      })
-    })
-  },
-  async transformHtml(code, id, context) {},
+  // async transformHead(ctx) {
+  //   console.log(ctx)
+  //   // return Promise.reject()
+  //   // return {
+  //   //   title: 'hellokitty'
+  //   // }
+  //   return new Promise((res) => {
+  //     res({
+  //       title: 'hellokitty',
+  //     })
+  //   })
+  // },
+  // async transformHtml(code, id, context) {},
   markdown: {
     theme: 'material-palenight',
-    // config: (md) => {
-    //   md.use(demoBlockPlugin);
-    // }
+    config: (md) => {
+      // md.use(demoblock)
+      // demoblock(md)
+      // , {
+      //   customClass: 'demoblock-custom',
+      //   cssPreprocessor: 'scss',
+      //   // customStyleTagName: 'style lang="less"',
+      //   scriptImports: ["import * as ElementPlus from 'element-plus'"],
+      //   scriptReplaces: [
+      //     {
+      //       searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
+      //       replaceValue: 'const { defineComponent: _defineComponent } = Vue',
+      //     },
+      //     { searchValue: /import ({.*}) from 'element-plus'/g, replaceValue: (s, s1) => `const ${s1} = ElementPlus` },
+      //   ],
+      //   styleReplaces: [
+      //     { searchValue: '@import "docs/styles/index.css";', replaceValue: '@import "@docs/styles/index.css";' },
+      //   ],
+      // }
+      md.use(demoBlockPlugin)
+    },
   },
 }
