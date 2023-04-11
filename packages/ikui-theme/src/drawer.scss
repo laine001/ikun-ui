@@ -1,0 +1,72 @@
+@import '../mixins/config.scss';
+@import '../mixins/transition.scss';
+
+.ik-drawer {
+  .ik-drawer__mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: rgba($color: #000000, $alpha: 0.46);
+    transition: all 0.2s;
+    z-index: 99;
+  }
+
+  .ik-drawer__body {
+    position: fixed;
+
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    box-shadow: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
+      0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+    z-index: 99;
+    &.r2l {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 320px;
+    }
+    &.l2r {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 320px;
+    }
+    &.t2b {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 300px;
+    }
+    &.b2t {
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 300px;
+    }
+
+    .ik-drawer__body--header {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #dedede;
+      .header-close {
+        padding: 2px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--default-color);
+        }
+      }
+    }
+    .ik-drawer__body--content {
+      padding: 12px;
+    }
+  }
+}

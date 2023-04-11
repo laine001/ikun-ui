@@ -33,6 +33,7 @@
 <ik-button type="primary">按钮三</ik-button>
 </ik-space>
 <br>
+<br>
 <ik-space size="large">
 <ik-button type="primary">按钮四</ik-button>
 <ik-button type="primary">按钮五</ik-button>
@@ -68,6 +69,7 @@
   <ik-card>content two</ik-card>
   <ik-card>content three</ik-card>
 </ik-space>
+<br>
 <br>
 <ik-space direction="column">
   <ik-card>content one</ik-card>

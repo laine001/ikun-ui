@@ -12,7 +12,7 @@ export const cardProps = {
     type: Boolean,
   },
   height: {
-    type: [String || Number],
+    type: String || Number,
   },
 } as const
 

@@ -1,0 +1,55 @@
+// drawer ============================= start
+// mask
+.drawer-fade-enter-active,
+.drawer-fade-leave-active {
+  transition: all 0.28s;
+}
+
+.drawer-fade-enter-from,
+.drawer-fade-leave-to {
+  opacity: 0;
+}
+
+.drawer-slide-enter-active,
+.drawer-slide-leave-active {
+  transition: all 0.28s;
+}
+.drawer-slide-enter-from,
+.drawer-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.drawer-slide__right-enter-active,
+.drawer-slide__right-leave-active {
+  opacity: 1;
+  transition: all 0.28s;
+}
+.drawer-slide__right-enter-from,
+.drawer-slide__right-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.drawer-slide__top-enter-active,
+.drawer-slide__top-leave-active {
+  opacity: 1;
+  transition: all 0.28s;
+}
+.drawer-slide__top-enter-from,
+.drawer-slide__top-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.drawer-slide__bottom-enter-active,
+.drawer-slide__bottom-leave-active {
+  opacity: 1;
+  transition: all 0.28s;
+}
+.drawer-slide__bottom-enter-from,
+.drawer-slide__bottom-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}
+// drawer ============================= end

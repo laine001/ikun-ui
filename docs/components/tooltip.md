@@ -133,7 +133,7 @@
   <template #content>
     <div>文字提示</div>
   </template>
-  <ik-button>LT</ik-button>
+  <ik-button>RT</ik-button>
 </ik-tooltip>
 <ik-tooltip placement="right">
   <template #content>
@@ -145,7 +145,7 @@
   <template #content>
     <div>文字提示</div>
   </template>
-  <ik-button>LB</ik-button>
+  <ik-button>RB</ik-button>
 </ik-tooltip>
 </div>
 

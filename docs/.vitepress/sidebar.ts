@@ -105,6 +105,10 @@ export default {
           link: '/components/message',
         },
         {
+          text: '抽屉 Drawer',
+          link: '/components/drawer',
+        },
+        {
           text: '文字提示 Tooltip',
           link: '/components/tooltip',
         },

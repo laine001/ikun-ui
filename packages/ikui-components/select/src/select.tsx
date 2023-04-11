@@ -75,7 +75,7 @@ export default defineComponent({
               onFocus={onFocus}
               onBlur={onBlur}
             />
-            <ik-icon name="arrow-right"></ik-icon>
+            <ik-icon class="ik-select--clear" name="arrow-right" size={18}></ik-icon>
           </div>
 
           <Transition name="slide-fade__select">

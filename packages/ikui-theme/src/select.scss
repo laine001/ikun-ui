@@ -42,6 +42,10 @@
     .ik-icon {
       fill: var(--input-default-border-color);
     }
+    .ik-select--clear {
+      margin-top: 3px;
+      transform: rotate(90deg);
+    }
   }
   .ik-select--options {
     background-color: #fff;

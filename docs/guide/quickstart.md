@@ -12,7 +12,7 @@ npm install ikui
 import { createApp } from 'vue'
 import App from './app.vue'
 
-import ikui from 'ik-ui'
+import ikui from 'ikuiv'
 import 'ikui/lib/index.css'
 
 createApp(App).use(ikui).mount('#app')
@@ -25,7 +25,7 @@ app.use(IkButton)
 
 ## 使用
 
-```
+```html
 <ik-button>按 钮</ik-button>
 ```
 
