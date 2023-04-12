@@ -8,7 +8,7 @@ npm install ikui
 
 ## 引入
 
-```js
+```js{3,4,5}
 import { createApp } from 'vue'
 import App from './app.vue'
 

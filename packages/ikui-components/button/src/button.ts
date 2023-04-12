@@ -1,7 +1,9 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 import type button from './button.vue'
 
 export const buttonTypes = ['default', 'primary', 'success', 'warning', 'danger'] as const
+
+export type ButtonSize = 'small' | 'default' | 'large'
 
 export const buttonProps = {
   type: {
@@ -19,6 +21,18 @@ export const buttonProps = {
   loading: {
     type: Boolean,
     default: (): boolean => false,
+  },
+  round: {
+    type: Boolean,
+    default: false,
+  },
+  size: {
+    type: String as PropType<ButtonSize>,
+    default: 'default',
+  },
+  plain: {
+    type: Boolean,
+    default: false,
   },
 } as const
 

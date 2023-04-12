@@ -5,16 +5,21 @@
   display: inline-flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  // margin-right: 12px;
   min-width: 60px;
   padding: 6px 20px;
-  border-radius: var(--default-radius);
-  border: none;
-  outline: none;
-  cursor: pointer;
+
   font-size: 14px;
   transition: transform 0.26s ease-in-out;
 
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--default-radius);
+
+  &.ik-button__round {
+    border-radius: var(--default-round-radius);
+  }
   .ik-button__inner {
     height: 24px;
     line-height: 24px;
@@ -52,8 +57,22 @@
   //     }
   //   }
   // }
+  &.ik-button-small {
+    padding: 2px 12px;
+  }
+  &.ik-button-large {
+    padding: 8px 24px;
+  }
+
   &.ik-button-default {
     background-color: var(--default-color);
+    &.ik-button-disabled {
+      background-color: var(--default-color-lighter-2);
+      &:hover,
+      &:active {
+        background-color: var(--default-color-lighter-2);
+      }
+    }
     &:hover {
       background-color: var(--default-color-lighter-1);
     }
@@ -64,6 +83,24 @@
   &.ik-button-primary {
     color: #fff;
     background-color: var(--primary-color);
+    &.ik-button-disabled {
+      background-color: var(--primary-color-lighter-2);
+      &:hover,
+      &:active {
+        background-color: var(--primary-color-lighter-2);
+      }
+    }
+    &.ik-button-plain {
+      background-color: #fff;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      &:hover {
+        background-color: #fff;
+      }
+      &:active {
+        background-color: #fff;
+      }
+    }
     &:hover {
       background-color: var(--primary-color-lighter-1);
     }
@@ -74,6 +111,24 @@
   &.ik-button-success {
     color: #fff;
     background-color: var(--success-color);
+    &.ik-button-disabled {
+      background-color: var(--success-color-lighter-2);
+      &:hover,
+      &:active {
+        background-color: var(--success-color-lighter-2);
+      }
+    }
+    &.ik-button-plain {
+      background-color: #fff;
+      border: 1px solid var(--success-color);
+      color: var(--success-color);
+      &:hover {
+        background-color: #fff;
+      }
+      &:active {
+        background-color: #fff;
+      }
+    }
     &:hover {
       background-color: var(--success-color-lighter-1);
     }
@@ -84,6 +139,24 @@
   &.ik-button-warning {
     color: #fff;
     background-color: var(--warning-color);
+    &.ik-button-disabled {
+      background-color: var(--warning-color-lighter-2);
+      &:hover,
+      &:active {
+        background-color: var(--warning-color-lighter-2);
+      }
+    }
+    &.ik-button-plain {
+      background-color: #fff;
+      border: 1px solid var(--warning-color);
+      color: var(--warning-color);
+      &:hover {
+        background-color: #fff;
+      }
+      &:active {
+        background-color: #fff;
+      }
+    }
     &:hover {
       background-color: var(--warning-color-lighter-1);
     }
@@ -94,6 +167,24 @@
   &.ik-button-danger {
     color: #fff;
     background-color: var(--danger-color);
+    &.ik-button-disabled {
+      background-color: var(--danger-color-lighter-2);
+      &:hover,
+      &:active {
+        background-color: var(--danger-color-lighter-2);
+      }
+    }
+    &.ik-button-plain {
+      background-color: #fff;
+      border: 1px solid var(--danger-color);
+      color: var(--danger-color);
+      &:hover {
+        background-color: #fff;
+      }
+      &:active {
+        background-color: #fff;
+      }
+    }
     &:hover {
       background-color: var(--danger-color-lighter-1);
     }
@@ -107,12 +198,8 @@
   // }
   &.ik-button-disabled {
     cursor: not-allowed;
-    background-color: #dee1e5;
-    color: #333;
     &:hover,
     &:active {
-      background-color: #dee1e5;
-      color: #333;
       transform: none;
     }
   }

@@ -121,3 +121,14 @@ summary {
   padding: 20px;
   border: 1px solid var(--vp-c-brand);
 }
+
+.control-button-wrap {
+  display: none !important;
+}
+
+.vp-doc tr,
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  font-size: 15px;
+}

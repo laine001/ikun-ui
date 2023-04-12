@@ -19,12 +19,13 @@ $info: $mushanzi;
   --warning-color: #f29a76;
   --danger-color: #b13b2e;
 
+  // hover
   --default-color-lighter-1: #f3f4f7;
   --primary-color-lighter-1: #7185f7;
   --success-color-lighter-1: #64aab3;
   --warning-color-lighter-1: #f29d7b;
   --danger-color-lighter-1: #b93e30;
-
+  // active
   --default-color-darker-1: #e1e4eb;
   --primary-color-darker-1: #5971f5;
   --success-color-darker-1: #54a0aa;
@@ -34,6 +35,14 @@ $info: $mushanzi;
   --primary-color-hover: #e8ebfb;
 
   --default-radius: 6px;
+  --default-round-radius: 24px;
+
+  // disabled
+  --default-color-lighter-2: #f1f2f5;
+  --primary-color-lighter-2: #8c9aeb;
+  --success-color-lighter-2: #8dc0c7;
+  --warning-color-lighter-2: #efa384;
+  --danger-color-lighter-2: #d5685c;
 }
 :root {
   --input-default-border-color: #dde0e5;
