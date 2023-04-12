@@ -85,8 +85,9 @@ Learn from many excellent community projects
 - [Element-plus](https://github.com/element-plus/element-plus)
 - [Vant](https://github.com/youzan/vant)
 - [Varlet](https://github.com/varletjs/varlet)
+- [Antd](https://ant.design/index-cn)
 - [Fighting-Design](https://github.com/LAINE001/fighting-design)
 
 ## LICENSE
 
-...
+[MIT](https://github.com/LAINE001/ik-ui/blob/master/LICENSE)
