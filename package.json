@@ -16,6 +16,7 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write --cache .",
     "test:run": "vitest run",
+    "coverage": "vitest run --coverage",
     "prepare": "husky install",
     "gen": "node ./scripts/gen.ts"
   },
