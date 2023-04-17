@@ -15,7 +15,7 @@
     "docs:serve": "vitepress serve docs",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write --cache .",
-    "test": "vitest",
+    "test:run": "vitest run",
     "prepare": "husky install",
     "gen": "node ./scripts/gen.ts"
   },
