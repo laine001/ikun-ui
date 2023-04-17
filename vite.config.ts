@@ -53,4 +53,11 @@ export default defineConfig({
   server: {
     port: 9526,
   },
+
+  test: {
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html'],
+    },
+  },
 })

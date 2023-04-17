@@ -1,4 +1,5 @@
 import IkButton from '../button'
+import IkIcon from '../icon'
 import { describe, expect, test } from 'vitest'
 import { mount } from '@vue/test-utils'
 
