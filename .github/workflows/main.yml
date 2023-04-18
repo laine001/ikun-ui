@@ -19,7 +19,7 @@ jobs:
       - name: Run Test
         run: pnpm run coverage
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v3
         with:
-          directory: /coverage
+          files: /coverage
           token: ${{ secrets.CODECOV_TOKEN }}
