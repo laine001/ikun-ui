@@ -14,8 +14,9 @@
 
 <p>
   <img src="https://github.com/LAINE001/ik-ui/actions/workflows/pages.yml/badge.svg?branch=master" />
-  [![codecov](https://codecov.io/gh/LAINE001/ik-ui/branch/master/graph/badge.svg?token=0D5SALPD1A)](https://codecov.io/gh/LAINE001/ik-ui)
+  <img src="https://codecov.io/gh/LAINE001/ik-ui/branch/master/graph/badge.svg?token=0D5SALPD1A" />
   <a href="https://www.npmjs.com/package/ikuiv"><img src="https://badgen.net/npm/v/ikuiv" /></a>
+  <img src="https://img.shields.io/github/license/laine001/ik-ui?color=red" />
 </p>
 
 ## Features
