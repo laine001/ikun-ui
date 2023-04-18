@@ -25,6 +25,10 @@ export default [
         text: 'vue3',
         link: 'https://vuejs.org/',
       },
+      {
+        text: 'Blog',
+        link: 'https://laine001.github.io/',
+      },
     ],
   },
 ]
