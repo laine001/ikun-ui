@@ -1,7 +1,7 @@
 # ikui
 
 <p>
-  <img alt="logo" src="https://laine001.github.io/ik-ui/logo3.jpg" width="160" height="160" />
+  <img alt="logo" src="https://laine001.github.io/ik-ui/logo4.png" width="180" height="180" />
 </p>
 
 <h1>
