@@ -10,7 +10,7 @@ hero:
   tagline: Built on Vue3 and Vitejs .
   image:
     # src: /logo-with-shadow.png
-    src: /logo2.png
+    src: /logo4.png
     alt: IKUNUI
   actions:
     - theme: brand
