@@ -17,6 +17,9 @@
   border-radius: 8px !important;
   border: none;
 }
+.VPImage {
+  max-width: 280px !important;
+}
 .actions .action .brand:hover {
   opacity: 0.88;
 }

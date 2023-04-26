@@ -9,7 +9,7 @@ export default {
   lang: 'en-US',
   description: '组件库',
   head: [
-    ['link', { rel: 'icon', href: '/layers.png', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/layer5.png', type: 'image/png' }],
     [
       'link',
       {
