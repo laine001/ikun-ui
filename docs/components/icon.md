@@ -6,76 +6,69 @@ import { IkIcon } from 'ik-ui'
 
 ## 不同颜色
 
-<div class="flex">
-  <div class="icon-demo-box"><ik-icon name="star-fill" color="#cd8025" /></div>
-  <div class="icon-demo-box"><ik-icon name="star-fill" color="#5aa4ae" /></div>
-  <div class="icon-demo-box"><ik-icon name="star-fill" color="#f29a76" /></div>
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="#b13b2e" /></div>
-  <div class="icon-demo-box"><ik-icon name="camera" color="#5c4f55" /></div>
-  <div class="icon-demo-box"><ik-icon name="camera" color="#a4abd6" /></div>
-</div>
+::: demo
 
-:::details 点击展开
-
-```html
-<ik-icon name="star-fill" color="pink" />
-<ik-icon name="star-fill" color="orange" />
-<ik-icon name="star-fill" color="deepskyblue" />
-<ik-icon name="heart-fill" color="red" />
-<ik-icon name="camera" />
-<ik-icon name="camera" color="deeppink" />
+```vue
+<template>
+  <div class="flex">
+    <div class="icon-demo-box"><ik-icon name="star-fill" color="#cd8025" /></div>
+    <div class="icon-demo-box"><ik-icon name="star-fill" color="#5aa4ae" /></div>
+    <div class="icon-demo-box"><ik-icon name="star-fill" color="#f29a76" /></div>
+    <div class="icon-demo-box"><ik-icon name="heart-fill" color="#b13b2e" /></div>
+    <div class="icon-demo-box"><ik-icon name="camera" color="#5c4f55" /></div>
+    <div class="icon-demo-box"><ik-icon name="camera" color="#a4abd6" /></div>
+  </div>
+</template>
 ```
 
 :::
 
 ## 不同大小
 
-<div class="flex">
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" /></div>
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="28" /></div>
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="34" /></div>
-  <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="42" /></div>
-</div>
+::: demo
 
-::: details 点击展开
-
-```html
-<ik-icon name="heart-fill" color="red" />
-<ik-icon name="heart-fill" color="red" size="28" />
-<ik-icon name="heart-fill" color="red" :size="34" />
-<ik-icon name="heart-fill" color="red" :size="42" />
+```vue
+<template>
+  <div class="flex">
+    <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" /></div>
+    <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="28" /></div>
+    <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="34" /></div>
+    <div class="icon-demo-box"><ik-icon name="heart-fill" color="red" :size="42" /></div>
+  </div>
+</template>
 ```
 
 :::
 
 ## 部分展示
 
-<div class="flex">
-<div class="icon-demo-box"><ik-icon name="bell" /></div>
-<div class="icon-demo-box"><ik-icon name="email" /></div>
-<div class="icon-demo-box"><ik-icon name="main" /></div>
-<div class="icon-demo-box"><ik-icon name="user" /></div>
-<div class="icon-demo-box"><ik-icon name="likes" /></div>
-<div class="icon-demo-box"><ik-icon name="search" /></div>
-<div class="icon-demo-box"><ik-icon name="chart" /></div>
-<div class="icon-demo-box"><ik-icon name="add" /></div>
-<div class="icon-demo-box"><ik-icon name="kongtiao" /></div>
-<div class="icon-demo-box"><ik-icon name="files" /></div>
-<div class="icon-demo-box"><ik-icon name="zhire" /></div>
-<div class="icon-demo-box"><ik-icon name="switch" /></div>
-<div class="icon-demo-box"><ik-icon name="chuizi-copy" /></div>
-</div>
+::: demo
 
-::: details 点击展开
-
-```html
-<ik-icon name="bell" />
-<ik-icon name="email" />
-<ik-icon name="main" />
-<ik-icon name="user" />
-<ik-icon name="likes" />
-<ik-icon name="search" />
-<ik-icon name="chart" />
+```vue
+<script lang="ts" setup>
+const list = [
+  'bell',
+  'email',
+  'main',
+  'user',
+  'likes',
+  'search',
+  'chart',
+  'add',
+  'kongtiao',
+  'files',
+  'zhire',
+  'switch',
+  'chuizi-copy',
+]
+</script>
+<template>
+  <div class="flex">
+    <template v-for="item in list">
+      <div class="icon-demo-box"><ik-icon :name="item" /></div>
+    </template>
+  </div>
+</template>
 ```
 
 :::
@@ -86,7 +79,7 @@ import { IkIcon } from 'ik-ui'
 | ----- | :--: | :---------------------: | :----: | -----: |
 | name  | 名称 |         string          |        |        |
 | size  | 大小 |         string          |   -    |      - |
-| color | 颜色 | string<`CSSProperties`> |   -    |      / |
+| color | 颜色 | string<`CSSProperties`> |   -    |      - |
 
 <style lang="scss">
   .flex {
