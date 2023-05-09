@@ -2,7 +2,7 @@
 
 ## 总览
 
-IKUI（发音 i kun ui），是个人兴趣爱好的产物，此库主要使用：
+IKUI（ik ui），个人兴趣爱好的产物，此库主要使用：
 
 - 🐥 基于 TypeScript
 - ⚡ 基于 Vite
