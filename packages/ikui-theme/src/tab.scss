@@ -1,0 +1,35 @@
+@import '../mixins/config.scss';
+
+.ik-tab {
+  .ik-tab--header {
+    border-bottom: 2px solid #dedede;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    .header--active__block {
+      content: ' ';
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: all 0.22s;
+
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+    }
+    .tab-header--item {
+      cursor: pointer;
+      display: flex;
+      user-select: none;
+      text-align: center;
+      padding: 4px 0;
+      font-size: 14px;
+      // margin: 0 10px;
+      &.tab-header-item__active {
+        color: var(--primary-color);
+      }
+    }
+  }
+  .ik-tab-item {
+    padding: 10px 0;
+  }
+}

@@ -61,5 +61,12 @@
     "vitepress-theme-demoblock": "^2.0.2",
     "vitest": "^0.29.8",
     "vue3-popper": "^1.5.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
   }
 }

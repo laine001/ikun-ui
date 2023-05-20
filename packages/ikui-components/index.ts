@@ -14,6 +14,8 @@ import IkTooltip from './tooltip'
 import IkSpace from './space'
 import IkCard from './card'
 import IkDrawer from './drawer'
+import IkTab from './tab'
+import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
@@ -39,6 +41,7 @@ export {
   IkSpace,
   IkCard,
   IkDrawer,
+  IkTab,
 }
 
 export * from './button'
@@ -63,6 +66,8 @@ export default {
     app.component(IkCard.name, IkCard)
     app.component(IkSpace.name, IkSpace)
     app.component(IkDrawer.name, IkDrawer)
+    app.component(IkTab.name, IkTab)
+    app.component(IkTabItem.name, IkTabItem)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
     app.config.globalProperties.$message = message

@@ -86,13 +86,13 @@ export default {
           text: '复选框 Checkbox',
           link: '/components/checkbox',
         },
-        // {
-        //   text: '下拉框 Select',
-        //   link: '/components/select',
-        // },
         {
           text: '对话框 Modal',
           link: '/components/modal',
+        },
+        {
+          text: '选项卡 Tab',
+          link: '/components/tab',
         },
       ],
     },

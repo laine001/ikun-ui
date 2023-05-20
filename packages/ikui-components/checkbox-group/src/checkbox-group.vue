@@ -4,7 +4,7 @@ import { checkboxGroupProps, checkboxGroupEmits, checkboxGroupCtxKey } from './c
 import { CheckboxLabelType } from './interface'
 const props = defineProps(checkboxGroupProps)
 const emit = defineEmits(checkboxGroupEmits)
-console.log(props, 'props')
+// console.log(props, 'props')
 const changeEvent = async (val: CheckboxLabelType): Promise<void> => {
   emit('update:modelValue', val)
   await nextTick()

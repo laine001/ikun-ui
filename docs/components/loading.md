@@ -1,10 +1,6 @@
 # loading 组件、指令
 
-> 用于加载状态展示
-
-```bash
-app.config.$globalProp.....
-```
+用于页面和区块的加载中状态
 
 ## 基本使用
 

@@ -25,6 +25,9 @@ export default {
     footer: {
       copyright: '本文档暂仅供个人学习使用',
     },
+    search: {
+      provider: 'local',
+    },
     // algolia: {
     //   appId: '7H67QR5P0A',
     //   apiKey: 'deaab78bcdfe96b599497d25acc6460e',
@@ -58,6 +61,7 @@ export default {
   markdown: {
     theme: 'material-palenight',
     config: (md) => {
+      // console.log(md, 'md')
       // md.use(demoblock)
       // demoblock(md)
       // , {

@@ -20,6 +20,17 @@
 .VPImage {
   max-width: 280px !important;
 }
+.VPDocAsideOutline .content {
+  border: none;
+}
+.VPDocAsideOutline .active {
+  color: var(--primary-color) !important;
+}
+.outline-marker {
+  width: 4px !important;
+  border-top-right-radius: var(--default-radius);
+  border-bottom-right-radius: var(--default-radius);
+}
 .actions .action .brand:hover {
   opacity: 0.88;
 }
