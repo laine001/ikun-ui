@@ -1,4 +1,4 @@
-import { demoBlockPlugin } from 'vitepress-theme-demoblock'
+import { demoBlockPlugin } from './vitepress-theme-demoblock/node'
 // import { demoblock as demoBlockPlugin } from './plugins/blockPlugin'
 import sidebar from './sidebar'
 import nav from './nav'
@@ -59,9 +59,10 @@ export default {
   // },
   // async transformHtml(code, id, context) {},
   markdown: {
-    theme: 'material-palenight',
+    theme: 'material-theme-palenight',
     config: (md) => {
       // console.log(md, 'md')
+      md.use(demoBlockPlugin)
       // md.use(demoblock)
       // demoblock(md)
       // , {
@@ -80,7 +81,6 @@ export default {
       //     { searchValue: '@import "docs/styles/index.css";', replaceValue: '@import "@docs/styles/index.css";' },
       //   ],
       // }
-      md.use(demoBlockPlugin)
     },
   },
 }

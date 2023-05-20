@@ -26,7 +26,7 @@ export default [
         link: 'https://vuejs.org/',
       },
       {
-        text: 'Blog',
+        text: 'blog',
         link: 'https://laine001.github.io/',
       },
     ],

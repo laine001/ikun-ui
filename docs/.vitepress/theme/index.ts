@@ -6,9 +6,9 @@ import '@ikui/theme/index.scss'
 import './var.css'
 import './style.css'
 // console.log(IkUI, message, 'IkUI')
-import Demo from 'vitepress-theme-demoblock/dist/client/components/Demo.vue'
-import DemoBlock from 'vitepress-theme-demoblock/dist/client/components/DemoBlock.vue'
-import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
+import Demo from '../vitepress-theme-demoblock/client/components/Demo.vue'
+import DemoBlock from '../vitepress-theme-demoblock/client/components/DemoBlock.vue'
+import '../vitepress-theme-demoblock/theme/styles/index.css'
 
 export default {
   ...DefaultTheme,
