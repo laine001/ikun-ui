@@ -1,9 +1,11 @@
-import { InjectionKey, ExtractPropTypes } from 'vue'
+import { InjectionKey, ExtractPropTypes, PropType } from 'vue'
+
+export type TabType = 'segmented' | 'card' | 'default'
 
 export const tabProps = {
   type: {
-    type: String,
-    default: (): string => '',
+    type: String as PropType<TabType>,
+    default: 'default',
   },
 } as const
 

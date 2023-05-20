@@ -91,7 +91,7 @@ export default {
           link: '/components/modal',
         },
         {
-          text: '选项卡 Tab',
+          text: '选项卡 Tabs',
           link: '/components/tab',
         },
       ],

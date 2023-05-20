@@ -1,4 +1,4 @@
-import { defineComponent, onMounted, provide, ref, renderSlot } from 'vue'
+import { computed, defineComponent, onMounted, provide, ref } from 'vue'
 import { tabProps as props, tabEmits as emits, tabCtxKey } from './props'
 
 export default defineComponent({
@@ -50,9 +50,18 @@ export default defineComponent({
       )
       return TabHeader
     }
+
+    const computedCls = computed(() => {
+      return [
+        `ik-tab`,
+        {
+          'ik-tab--segmented': props.type === 'segmented',
+        },
+      ]
+    })
     return () => {
       const Content = (
-        <div class="ik-tab">
+        <div class={computedCls.value}>
           <div class="ik-tab--header" ref={headerRef}>
             <span class="header--active__block" ref={blockRef}></span>
             {renderHeader()}

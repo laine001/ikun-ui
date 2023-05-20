@@ -2,7 +2,7 @@
 
 .ik-tab {
   .ik-tab--header {
-    border-bottom: 2px solid #dedede;
+    border-bottom: 2px solid #f5f5f5;
     display: flex;
     gap: 20px;
     position: relative;
@@ -26,6 +26,28 @@
       // margin: 0 10px;
       &.tab-header-item__active {
         color: var(--primary-color);
+      }
+    }
+  }
+  &.ik-tab--segmented {
+    .ik-tab--header {
+      background-color: #f5f5f5;
+      border: none;
+      border-radius: var(--default-radius);
+      padding: 0 2px;
+      .tab-header--item {
+        z-index: 2;
+        padding: 4px 8px;
+      }
+      .header--active__block {
+        content: ' ';
+        height: calc(100% - 4px);
+        background-color: #fff;
+        border-radius: var(--default-radius);
+        bottom: 2px;
+        top: 2px;
+        left: 2px;
+        z-index: 1;
       }
     }
   }
