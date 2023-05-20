@@ -87,7 +87,7 @@ const render = (content: string, options: DemoblockPluginOptions) => {
   return {
     template: templateArr.join(''),
     script: pageScript,
-    style: styleString
+    style: styleString,
   }
 }
 

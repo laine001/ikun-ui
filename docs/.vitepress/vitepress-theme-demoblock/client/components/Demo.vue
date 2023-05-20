@@ -23,10 +23,7 @@
     >
       <transition name="arrow-slide">
         <i
-          :class="[
-            'control-icon',
-            { 'icon-caret-down': !isExpanded, 'icon-caret-up': isExpanded, hovering: hover }
-          ]"
+          :class="['control-icon', { 'icon-caret-down': !isExpanded, 'icon-caret-up': isExpanded, hovering: hover }]"
         ></i>
       </transition>
       <transition name="text-slide">
@@ -45,16 +42,7 @@
 
 <script>
 import { useRoute, useData } from 'vitepress'
-import {
-  ref,
-  reactive,
-  computed,
-  watch,
-  onMounted,
-  onBeforeUnmount,
-  nextTick,
-  getCurrentInstance
-} from 'vue'
+import { ref, reactive, computed, watch, onMounted, onBeforeUnmount, nextTick, getCurrentInstance } from 'vue'
 import { useClipboard, useThrottleFn } from '@vueuse/core'
 import { stripTemplate, stripScript, stripStyle } from '../utils'
 import message from './message'
@@ -63,7 +51,7 @@ export default {
   name: 'Demo',
   props: {
     customClass: String,
-    sourceCode: String
+    sourceCode: String,
   },
   setup(props) {
     // ====================== Hooks ======================
@@ -82,7 +70,7 @@ export default {
     const control = ref(null)
     const demoBlock = ref(null)
 
-    watch(isExpanded, val => {
+    watch(isExpanded, (val) => {
       meta.value.style.height = val ? `${codeAreaHeight.value + 1}px` : '0'
       if (!val) {
         fixedControl.value = false
@@ -126,7 +114,7 @@ export default {
 
     watch(
       () => route.path,
-      path => {
+      (path) => {
         pathArr.value = path.split('/')
       }
     )
@@ -159,7 +147,7 @@ export default {
           'hide-text': '隐藏代码',
           'show-text': '显示代码',
           'copy-button-text': '复制代码片段',
-          'copy-success-text': '复制成功'
+          'copy-success-text': '复制成功',
         }
       )
     })
@@ -199,9 +187,9 @@ export default {
       control,
       onCopy,
       goCodepen,
-      demoBlock
+      demoBlock,
     }
-  }
+  },
 }
 </script>
 

@@ -12,8 +12,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'DemoBlock',
   props: {
-    customClass: String
-  }
+    customClass: String,
+  },
 })
 </script>
 

@@ -9,9 +9,9 @@ Message.newInstance = (props = {}) => {
     render() {
       return h(Message, {
         ...props,
-        ref: 'messageRef'
+        ref: 'messageRef',
       })
-    }
+    },
   })
 
   const instance = app.mount(container)
@@ -24,7 +24,7 @@ Message.newInstance = (props = {}) => {
     },
     remove(name) {
       messageRef.remove(name)
-    }
+    },
   }
 }
 
@@ -48,5 +48,5 @@ export default {
   },
   error(content, options) {
     return message(content, { ...options, type: 'error' })
-  }
+  },
 }

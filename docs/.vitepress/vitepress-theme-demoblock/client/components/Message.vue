@@ -46,7 +46,7 @@ export default defineComponent({
     }
 
     return { messages, add, remove }
-  }
+  },
 })
 </script>
 

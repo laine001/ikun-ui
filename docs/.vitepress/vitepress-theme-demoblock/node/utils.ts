@@ -1,12 +1,7 @@
 import type { SFCTemplateCompileOptions } from '@vue/compiler-sfc'
 import { compileTemplate, TemplateCompiler, compileScript, parse } from '@vue/compiler-sfc'
 import type { DemoblockPluginOptions } from '../types'
-import {
-  ScriptOrStyleReplacePattern,
-  ScriptSetupPattern,
-  StylePattern,
-  TemplateReplacePattern
-} from './patterns'
+import { ScriptOrStyleReplacePattern, ScriptSetupPattern, StylePattern, TemplateReplacePattern } from './patterns'
 
 export function stripScript(content: string, id: any) {
   const result = content.match(ScriptSetupPattern)
@@ -15,7 +10,7 @@ export function stripScript(content: string, id: any) {
     const { descriptor } = parse(source)
     const { content: scriptContent } = compileScript(descriptor, {
       refSugar: true,
-      id
+      id,
     })
     return scriptContent
   }
@@ -39,16 +34,11 @@ export function stripTemplate(content: string) {
 export function pad(source: string) {
   return source
     .split(/\r?\n/)
-    .map(line => `  ${line}`)
+    .map((line) => `  ${line}`)
     .join('\n')
 }
 
-export function genInlineComponentText(
-  id: any,
-  template: string,
-  script: string,
-  options: DemoblockPluginOptions
-) {
+export function genInlineComponentText(id: any, template: string, script: string, options: DemoblockPluginOptions) {
   let source = template
   if (TemplateReplacePattern.test(source)) {
     source = source.replace(TemplateReplacePattern, '$1')
@@ -59,13 +49,13 @@ export function genInlineComponentText(
     filename: `inline-component-${id}.vue`,
     // compiler: TemplateCompiler,
     compilerOptions: {
-      mode: 'function'
-    }
+      mode: 'function',
+    },
   }
   const compiled = compileTemplate(finalOptions as SFCTemplateCompileOptions)
   // tips
   if (compiled.tips && compiled.tips.length) {
-    compiled.tips.forEach(tip => {
+    compiled.tips.forEach((tip) => {
       console.warn(tip)
     })
   }
@@ -73,7 +63,7 @@ export function genInlineComponentText(
   if (compiled.errors && compiled.errors.length) {
     console.error(
       `\n  Error compiling template:\n${pad(compiled.source)}\n` +
-        compiled.errors.map(e => `  - ${e}`).join('\n') +
+        compiled.errors.map((e) => `  - ${e}`).join('\n') +
         '\n'
     )
   }
