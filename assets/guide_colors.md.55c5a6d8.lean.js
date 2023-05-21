@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as l,V as a}from"./chunks/framework.98d8df24.js";const h=JSON.parse('{"title":"色彩","description":"","frontmatter":{},"headers":[],"relativePath":"guide/colors.md","filePath":"guide/colors.md"}'),d={name:"guide/colors.md"},c=a("",8),i=[c];function e(r,t,v,n,b,x){return s(),l("div",null,i)}const p=o(d,[["render",e]]);export{h as __pageData,p as default};
