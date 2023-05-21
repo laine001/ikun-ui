@@ -1,15 +1,9 @@
-.VPNavBarTitle .title {
-  padding-left: 10px;
+.VPSidebarItem .item {
+  padding-left: 8px;
 }
-.VPSidebarGroup .title {
-  padding-left: 10px;
-}
-.VPSidebarGroup .items .link {
-  padding: 5px 0 5px 10px;
-  transition: all 0.36s;
-}
-.VPSidebarGroup .items .link.active {
+.VPSidebarItem .is-active {
   transition: all 0.2s;
+  /* padding-left: 8px; */
   background-color: var(--vp-c-brand-hover);
   border-radius: var(--default-radius);
 }
@@ -146,3 +140,15 @@ summary {
   border: none;
   font-size: 15px;
 }
+
+/* .VPSidebar::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5 !important;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+} */

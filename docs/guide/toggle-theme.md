@@ -49,8 +49,7 @@
       rgb += ('00' + c).substr(c.length)
     }
     return rgb
-
-}
+  }
 const toggleTheme = (brandColor) => {
   const brandColor1 = calcColor(brandColor, 0.1)
   const brandColor2 = calcColor(brandColor, -0.2)

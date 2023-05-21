@@ -2,7 +2,7 @@ export default {
   '/guide/': [
     {
       text: '指引',
-      collapsible: true,
+      collapsed: false,
       items: [
         {
           text: '概览',
@@ -29,8 +29,8 @@ export default {
   ],
   '/components/': [
     {
-      text: '基础组件',
-      collapsible: true,
+      text: '通用',
+      collapsed: false,
       items: [
         {
           text: '按钮 Button',
@@ -41,38 +41,26 @@ export default {
           link: '/components/icon',
         },
         {
-          text: '加载状态 Loading',
-          link: '/components/loading',
-        },
-        {
-          text: '回到顶部 BackTop',
-          link: '/components/backtop',
-        },
-        {
-          text: '开关 Switch',
-          link: '/components/switch',
-        },
-      ],
-    },
-    {
-      text: '内容展示',
-      collapsible: true,
-      items: [
-        {
           text: '布局 Layout',
           link: '/components/layout',
-        },
-        {
-          text: '卡片 Card',
-          link: '/components/card',
         },
         {
           text: '间距 Space',
           link: '/components/space',
         },
         {
-          text: '头像 Avatar',
-          link: '/components/avatar',
+          text: '回到顶部 BackTop',
+          link: '/components/backtop',
+        },
+      ],
+    },
+    {
+      text: '数据录入',
+      collapsed: false,
+      items: [
+        {
+          text: '开关 Switch',
+          link: '/components/switch',
         },
         {
           text: '输入框 Input',
@@ -86,9 +74,27 @@ export default {
           text: '复选框 Checkbox',
           link: '/components/checkbox',
         },
+      ],
+    },
+    {
+      text: '数据展示',
+      collapsed: false,
+      items: [
+        {
+          text: '头像 Avatar',
+          link: '/components/avatar',
+        },
+        {
+          text: '卡片 Card',
+          link: '/components/card',
+        },
         {
           text: '对话框 Modal',
           link: '/components/modal',
+        },
+        {
+          text: '抽屉 Drawer',
+          link: '/components/drawer',
         },
         {
           text: '选项卡 Tabs',
@@ -98,15 +104,15 @@ export default {
     },
     {
       text: '信息反馈',
-      collapsible: true,
+      collapsed: false,
       items: [
         {
           text: '提示 Message',
           link: '/components/message',
         },
         {
-          text: '抽屉 Drawer',
-          link: '/components/drawer',
+          text: '加载状态 Loading',
+          link: '/components/loading',
         },
         {
           text: '文字提示 Tooltip',
@@ -115,20 +121,19 @@ export default {
       ],
     },
   ],
-  '/styles/': [
-    {
-      text: 'CSS',
-      // collapsible: true,
-      items: [
-        {
-          text: '动画',
-          link: '/styles/animation',
-        },
-        {
-          text: '阴影',
-          link: '/styles/shadow',
-        },
-      ],
-    },
-  ],
+  // '/styles/': [
+  //   {
+  //     text: 'CSS',
+  //     items: [
+  //       {
+  //         text: '动画',
+  //         link: '/styles/animation',
+  //       },
+  //       {
+  //         text: '阴影',
+  //         link: '/styles/shadow',
+  //       },
+  //     ],
+  //   },
+  // ],
 }

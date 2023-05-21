@@ -9,11 +9,11 @@ export default [
     link: '/components/button',
     activeMatch: '/components/',
   },
-  {
-    text: 'CSS',
-    link: '/styles/animation',
-    activeMatch: '/styles/',
-  },
+  // {
+  //   text: 'CSS',
+  //   link: '/styles/animation',
+  //   activeMatch: '/styles/',
+  // },
   {
     text: '相关链接',
     items: [

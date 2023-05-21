@@ -39,10 +39,22 @@ $info: $mushanzi;
 
   // disabled
   --default-color-lighter-2: #f1f2f5;
-  --primary-color-lighter-2: #8c9aeb;
+  --primary-color-lighter-2: #6d85ff;
   --success-color-lighter-2: #8dc0c7;
   --warning-color-lighter-2: #efa384;
-  --danger-color-lighter-2: #d5685c;
+  --danger-color-lighter-2: #d44737;
+
+  --primary-color-lighter-3: #7791ff;
+  --primary-color-lighter-4: #8ba9ff;
+  --primary-color-lighter-5: #9ec2ff;
+  --primary-color-lighter-6: #b2daff;
+  --primary-color-lighter-7: #bee8ff;
+
+  --danger-color-lighter-3: #f85340;
+  --danger-color-lighter-4: #ff5e4a;
+  --danger-color-lighter-5: #ff644e;
+  --danger-color-lighter-6: #ff6a53;
+  --danger-color-lighter-7: #ff7057;
 }
 :root {
   --input-default-border-color: #dde0e5;
