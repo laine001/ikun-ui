@@ -24,8 +24,8 @@
     border: 1px solid var(--input-default-border-color);
     border-radius: var(--default-radius);
     padding: 5px 12px;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--select-inner-bg);
+    color: var(--select-inner-color);
     cursor: pointer;
     &:hover {
       border-color: var(--primary-color-hover);
@@ -48,7 +48,7 @@
     }
   }
   .ik-select--options {
-    background-color: #fff;
+    background-color: var(--select-options-bg);
     box-shadow: var(--default-shadow);
     border-radius: var(--default-radius);
     box-sizing: border-box;

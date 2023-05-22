@@ -17,7 +17,7 @@
   .ik-drawer__body {
     position: fixed;
 
-    background-color: #fff;
+    background-color: var(--drawer-body-bg);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

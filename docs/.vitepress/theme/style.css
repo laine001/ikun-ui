@@ -85,6 +85,14 @@ summary {
   animation-delay: 600ms;
 }
 
+.dark .is-home::before {
+  background-color: #434348;
+}
+
+.dark .is-home::after {
+  background-color: #2e2e2e;
+}
+
 @keyframes slide-ani {
   0% {
     transform: translate(0, 0);

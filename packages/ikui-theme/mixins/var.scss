@@ -61,4 +61,33 @@ $info: $mushanzi;
   --input-hover-border-color: #dde0e5;
 
   --default-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+
+  // select
+  --select-inner-bg: #fff;
+  --select-inner-color: #333;
+  --select-options-bg: #fff;
+
+  // model
+  --drawer-body-bg: #fff;
+
+  // tabs
+  --tabs-header-bg: #f5f5f5;
+  --tabs-header-block-bg: #fff;
+}
+
+.dark {
+  --default-color: #525354;
+  --default-color-lighter-2: #666;
+
+  // select
+  --select-inner-bg: #333;
+  --select-inner-color: #c7c7c7;
+  --select-options-bg: #333;
+
+  // model
+  --drawer-body-bg: #333;
+
+  // tabs
+  --tabs-header-bg: #333;
+  --tabs-header-block-bg: #666;
 }
