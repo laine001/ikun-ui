@@ -19,6 +19,8 @@ $info: $mushanzi;
   --warning-color: #f29a76;
   --danger-color: #b13b2e;
 
+  --button-plain-bg: #fff;
+
   // hover
   --default-color-lighter-1: #f3f4f7;
   --primary-color-lighter-1: #7185f7;
@@ -76,8 +78,12 @@ $info: $mushanzi;
 }
 
 .dark {
+  // button
   --default-color: #525354;
+  --default-color-darker-1: #333;
+  --default-color-lighter-1: #444;
   --default-color-lighter-2: #666;
+  --button-plain-bg: transparent;
 
   // select
   --select-inner-bg: #333;

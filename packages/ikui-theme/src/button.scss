@@ -91,14 +91,14 @@
       }
     }
     &.ik-button-plain {
-      background-color: #fff;
+      background-color: var(--button-plain-bg);
       border: 1px solid var(--primary-color);
       color: var(--primary-color);
       &:hover {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
       &:active {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
     }
     &:hover {
@@ -119,14 +119,14 @@
       }
     }
     &.ik-button-plain {
-      background-color: #fff;
+      background-color: var(--button-plain-bg);
       border: 1px solid var(--success-color);
       color: var(--success-color);
       &:hover {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
       &:active {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
     }
     &:hover {
@@ -147,14 +147,14 @@
       }
     }
     &.ik-button-plain {
-      background-color: #fff;
+      background-color: var(--button-plain-bg);
       border: 1px solid var(--warning-color);
       color: var(--warning-color);
       &:hover {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
       &:active {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
     }
     &:hover {
@@ -175,14 +175,14 @@
       }
     }
     &.ik-button-plain {
-      background-color: #fff;
+      background-color: var(--button-plain-bg);
       border: 1px solid var(--danger-color);
       color: var(--danger-color);
       &:hover {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
       &:active {
-        background-color: #fff;
+        background-color: var(--button-plain-bg);
       }
     }
     &:hover {

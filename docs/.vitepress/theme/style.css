@@ -93,6 +93,10 @@ summary {
   background-color: #2e2e2e;
 }
 
+.dark {
+  --primary-color-hover: #333;
+}
+
 @keyframes slide-ani {
   0% {
     transform: translate(0, 0);
