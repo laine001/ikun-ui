@@ -15,6 +15,7 @@ import IkSpace from './space'
 import IkCard from './card'
 import IkDrawer from './drawer'
 import IkTab from './tab'
+import IkMenu from './menu'
 import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
@@ -42,6 +43,7 @@ export {
   IkCard,
   IkDrawer,
   IkTab,
+  IkMenu,
 }
 
 export * from './button'
@@ -66,6 +68,7 @@ export default {
     app.component(IkCard.name, IkCard)
     app.component(IkSpace.name, IkSpace)
     app.component(IkDrawer.name, IkDrawer)
+    app.component(IkMenu.name, IkMenu)
     app.component(IkTab.name, IkTab)
     app.component(IkTabItem.name, IkTabItem)
     app.directive('loading', IkLoading)

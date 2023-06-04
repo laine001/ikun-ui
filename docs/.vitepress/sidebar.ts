@@ -45,6 +45,10 @@ export default {
           link: '/components/layout',
         },
         {
+          text: '导航菜单 Menu',
+          link: '/components/menu',
+        },
+        {
           text: '间距 Space',
           link: '/components/space',
         },

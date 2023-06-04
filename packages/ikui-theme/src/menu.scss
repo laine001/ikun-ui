@@ -1,0 +1,82 @@
+@import '../mixins/config.scss';
+@import '../mixins/var.scss';
+
+.ik-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  width: 200px;
+  font-size: 15px;
+  border-right: 1px solid var(--default-color-lighter-2);
+
+  .ik-menu-submenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.26s;
+    .submenu-title {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: var(--default-radius);
+      user-select: none;
+      .submenu-title__wrap {
+        display: flex;
+      }
+      .menu-icon {
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+      }
+      .arrow-icon {
+        margin-left: 6px;
+        transition: all 0.16s;
+        transform-origin: center;
+        display: flex;
+        align-items: center;
+        &.arrow-icon__expand {
+          transform: rotateZ(90deg);
+        }
+      }
+      &:hover {
+        background-color: var(--default-color-lighter-2);
+        color: var(--primary-color);
+        .ik-icon {
+          fill: var(--primary-color);
+        }
+      }
+    }
+    .submenu-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+  .ik-menu--item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+    user-select: none;
+    .ik-menu--item__wrap {
+      display: flex;
+    }
+    .menu-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+    }
+    &:hover {
+      background-color: var(--default-color-lighter-2);
+      color: var(--primary-color);
+      .ik-icon {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
