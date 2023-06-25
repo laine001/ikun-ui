@@ -5,8 +5,10 @@
   display: flex;
   flex-direction: column;
   padding: 4px;
-  width: 200px;
-  font-size: 15px;
+  max-width: 220px;
+  width: 100%;
+
+  font-size: 14px;
   border-right: 1px solid var(--default-color-lighter-2);
 
   .ik-menu-submenu {
@@ -56,6 +58,7 @@
   }
   .ik-menu--item {
     width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;

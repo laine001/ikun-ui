@@ -27,8 +27,9 @@
 
 ## 自定义图标
 
-<ik-backtop :right="10" icon="direction-up" />
-<ik-backtop :right="110" icon="arrow-up-bold" />
+<!-- <ik-backtop :right="160" icon="up2" /> -->
+<ik-backtop :right="10" icon="thumbs-up" />
+<ik-backtop :right="110" icon="dengpao" />
 
 ::: details 点击展开
 

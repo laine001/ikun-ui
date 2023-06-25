@@ -4,7 +4,7 @@ import type backtop from './backtop'
 export const props = {
   icon: {
     type: String,
-    default: (): string => 'top-filling',
+    default: (): string => 'arrow-up',
   },
   shape: {
     type: Boolean,

@@ -2,10 +2,31 @@
 import { ref } from 'vue'
 const selectValue = ref('hello')
 const selectOption = ref(['hello', 'ok', 'jntm'])
+const menuList = [
+  {
+    label: '首页',
+    icon: 'home',
+  },
+  {
+    label: '组件管理',
+    icon: 'files',
+    children: [
+      {
+        label: '表单',
+      },
+      {
+        label: '内容',
+      },
+    ],
+  },
+]
 </script>
 <template>
   <ik-container>
-    <ik-aside>aside</ik-aside>
+    <ik-aside>
+      <div class="logo">ikui-admin-template</div>
+      <ik-menu :items="menuList" />
+    </ik-aside>
     <ik-container direction="ver">
       <ik-header class="my-header">
         <div class="header-left"><ik-icon name="toggle-left" color="#ffffff" /></div>
@@ -93,7 +114,14 @@ body {
   height: 100%;
   min-height: 100vh;
 }
-
+.logo {
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  height: 32px;
+  background-color: var(--default-color-lighter-2);
+  border-radius: var(--default-radius);
+}
 .my-header {
   display: flex;
   justify-content: space-between;

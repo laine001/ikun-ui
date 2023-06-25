@@ -1,5 +1,5 @@
 <script lang="ts" setup name="IkDrawer">
-import { computed, defineEmits } from 'vue'
+import { computed } from 'vue'
 import { drawerProps } from './drawer'
 const props = defineProps(drawerProps)
 const emit = defineEmits(['cancel'])
