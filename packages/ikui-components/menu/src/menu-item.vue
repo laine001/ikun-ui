@@ -1,8 +1,11 @@
 <script setup lang="ts" name="ik-menu-item">
-import { computed, CSSProperties, defineProps } from 'vue'
+import { computed, CSSProperties, defineProps, getCurrentInstance } from 'vue'
+import type { Router } from 'vue-router'
 import { menuItemProps } from '../../menu/src/prop'
 const props = defineProps(menuItemProps)
-console.log(props.current._level, '======')
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const instance = getCurrentInstance()!
+const router = instance.appContext.config.globalProperties.$router as Router
 
 const computedStyle = computed<CSSProperties>(() => {
   const { _level } = props.current
@@ -11,11 +14,23 @@ const computedStyle = computed<CSSProperties>(() => {
   }
 })
 const onClickMenuItem = () => {
-  console.log(props.current)
+  // console.log(props.current, router.currentRoute.value.path, 'click')
+  if (router) {
+    if (props.current.path === router?.currentRoute.value.path) return
+    router.push(props.current.path)
+  }
 }
+const computedClses = computed(() => {
+  return [
+    'ik-menu--item',
+    {
+      'ik-menu--item__active': props.current.path && props.current.path === router?.currentRoute?.value.path,
+    },
+  ]
+})
 </script>
 <template>
-  <div class="ik-menu--item" :style="computedStyle" @click="onClickMenuItem">
+  <div :class="computedClses" :style="computedStyle" @click="onClickMenuItem">
     <div class="ik-menu--item__wrap">
       <span class="menu-icon" v-if="props.current">
         <ik-icon :size="14" :name="props.current.icon" />

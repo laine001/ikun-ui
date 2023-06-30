@@ -6,13 +6,15 @@ const menuList = [
   {
     label: '首页',
     icon: 'home',
+    path: '/dashboard',
   },
   {
     label: '组件管理',
     icon: 'files',
     children: [
       {
-        label: '表单',
+        label: '设置',
+        path: '/setting',
       },
       {
         label: '内容',
@@ -23,7 +25,7 @@ const menuList = [
 </script>
 <template>
   <ik-container>
-    <ik-aside>
+    <ik-aside class="my-aside">
       <div class="logo">ikui-admin-template</div>
       <ik-menu :items="menuList" />
     </ik-aside>
@@ -43,7 +45,8 @@ const menuList = [
         </div>
       </ik-header>
       <ik-main class="demo1-main">
-        <ik-button type="success">阿斯弗</ik-button>
+        <router-view></router-view>
+        <!-- <ik-button type="success">阿斯弗</ik-button>
         <ik-select filterOn v-model="selectValue" :option="selectOption"></ik-select>
         <ik-switch />
         <ik-tooltip placement="top">
@@ -93,7 +96,7 @@ const menuList = [
           <ik-button>按钮3</ik-button>
           <ik-button>按钮3</ik-button>
           <ik-button>按钮3</ik-button>
-        </ik-space>
+        </ik-space> -->
       </ik-main>
     </ik-container>
   </ik-container>
@@ -126,6 +129,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff !important;
   .header-left {
     height: 100%;
     padding: 0 2px;
@@ -153,7 +157,10 @@ body {
     }
   }
 }
+.my-aside {
+  background-color: #fff !important;
+}
 .demo1-main {
-  background-color: #dedede !important;
+  background-color: #f4f5f6 !important;
 }
 </style>

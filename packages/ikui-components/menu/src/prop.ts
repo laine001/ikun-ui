@@ -8,6 +8,7 @@ export interface MenuItem {
   isExpand?: boolean
   _level: number
   open?: boolean
+  path?: string
 }
 
 export type MenuItems = MenuItem[]
