@@ -29,7 +29,7 @@
 
 <!-- <ik-backtop :right="160" icon="up2" /> -->
 <ik-backtop :right="10" icon="thumbs-up" />
-<ik-backtop :right="110" icon="dengpao" />
+<ik-backtop :right="110" icon="up" />
 
 ::: details 点击展开
 

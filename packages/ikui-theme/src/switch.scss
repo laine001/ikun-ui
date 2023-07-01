@@ -1,5 +1,14 @@
 @import '../mixins/config.scss';
 
+.ik-switch__wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  .ik-switch--text {
+    color: #666;
+    font-size: 14px;
+  }
+}
 .ik-switch {
   min-width: 40px;
   height: 20px;
@@ -21,15 +30,21 @@
     top: 2px;
   }
   &.ik-switch__actived {
-    background-color: var(--primary-color);
+    background-color: var(--switch-bg-on-color);
     .ik-switch__dot {
       left: calc(100% - 18px);
     }
   }
   &.ik-switch__default {
-    background-color: #b5b7bd;
+    background-color: var(--switch-bg-off-color);
     .ik-switch__dot {
       left: 2px;
+    }
+  }
+  &.ik-switch--square {
+    border-radius: 4px;
+    .ik-switch__dot {
+      border-radius: 4px;
     }
   }
 }

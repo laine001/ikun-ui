@@ -58,6 +58,7 @@ $info: $mushanzi;
   --danger-color-lighter-6: #ff6a53;
   --danger-color-lighter-7: #ff7057;
 }
+
 :root {
   --input-default-border-color: #dde0e5;
   --input-hover-border-color: #dde0e5;
@@ -68,6 +69,10 @@ $info: $mushanzi;
   --select-inner-bg: #fff;
   --select-inner-color: #333;
   --select-options-bg: #fff;
+
+  // switch
+  --switch-bg-on-color: var(--primary-color);
+  --switch-bg-off-color: var(--default-color-darker-1);
 
   // model
   --drawer-body-bg: #fff;
