@@ -122,6 +122,10 @@ export default {
           text: '文字提示 Tooltip',
           link: '/components/tooltip',
         },
+        {
+          text: '锁屏 LockScreen',
+          link: '/components/lockScreen',
+        },
       ],
     },
   ],

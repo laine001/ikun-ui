@@ -1,6 +1,7 @@
 import { defineComponent, ref, watch, Transition, onMounted, computed } from 'vue'
 import { selectProps as props, selectEmits as emits } from './props'
-import { useClickOutside } from '../../_utils/useClickOutside'
+// import { useClickOutside } from '../../_utils/useClickOutside'
+import { onClickOutside } from '@vueuse/core'
 
 export default defineComponent({
   name: 'ik-select',
@@ -15,8 +16,15 @@ export default defineComponent({
     const selectIsFocus = ref<boolean>(false)
 
     onMounted(() => {
-      useClickOutside(selectOptionsRef.value, () => {
-        selectOptionVisible.value = false
+      onClickOutside(selectOptionsRef.value, (event) => {
+        const classList = (event.target as HTMLElement).classList
+        if (
+          !classList?.contains('ik-select__input') &&
+          !classList.contains('ik-icon') &&
+          !classList.contains('ik-select__inner')
+        ) {
+          selectOptionVisible.value = false
+        }
       })
     })
     const onClickSelectItem = (item) => {

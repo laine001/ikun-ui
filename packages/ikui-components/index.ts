@@ -16,6 +16,7 @@ import IkCard from './card'
 import IkDrawer from './drawer'
 import IkTab from './tab'
 import IkMenu from './menu'
+import IkLockScreen from './lock-screen'
 import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
@@ -44,6 +45,7 @@ export {
   IkDrawer,
   IkTab,
   IkMenu,
+  IkLockScreen,
 }
 
 export * from './button'
@@ -71,6 +73,7 @@ export default {
     app.component(IkMenu.name, IkMenu)
     app.component(IkTab.name, IkTab)
     app.component(IkTabItem.name, IkTabItem)
+    app.component(IkLockScreen.name, IkLockScreen)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
     app.config.globalProperties.$message = message

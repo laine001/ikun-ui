@@ -53,3 +53,15 @@
   transform: translateY(100%);
 }
 // drawer ============================= end
+
+// lockScreen ============================= start
+.lockScreen-enter-active,
+.lockScreen-leave-active {
+  transition: all 0.32s;
+}
+.lockScreen-enter-from,
+.lockScreen-leave-to {
+  opacity: 0;
+  transform: translateY(-80%);
+}
+// lockScreen ============================= end

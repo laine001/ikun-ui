@@ -3,7 +3,7 @@ import { iconProps } from './icon'
 import { computed, onMounted } from 'vue'
 const props = defineProps(iconProps)
 onMounted(() => {
-  import('https://at.alicdn.com/t/c/font_4046682_y8x04pufa9.js')
+  import('https://at.alicdn.com/t/c/font_4046682_j0zeke51nie.js')
 })
 const style = computed(() => {
   const size = typeof props.size === 'string' ? props.size : `${props.size}px`

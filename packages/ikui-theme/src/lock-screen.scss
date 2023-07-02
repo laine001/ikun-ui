@@ -1,0 +1,38 @@
+@import '../mixins/config.scss';
+
+.ik-lock-screen {
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ik-lock-screen--bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 996;
+    // background: url(/public/fullscreen-bg1.jpg) center center no-repeat;
+    // background: url(https://fastly.jsdelivr.net/gh/chuzhixin/image/vab-image-lock/11.jpg) center center no-repeat;
+    background: url('/public/fullscreen-bg2.jpg') center center / 100% 100% fixed;
+    background-size: cover;
+    filter: blur(10px);
+  }
+  .ik-lock-screen--content {
+    z-index: 996;
+
+    padding: 14px;
+    border-radius: var(--default-radius);
+    background-color: #ffffff;
+  }
+}
