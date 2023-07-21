@@ -25,10 +25,10 @@ hero:
 
 features:
   - icon: 🎵
-    title: 唱
+    title: Sing
     details: 按需引入
   - icon: ⚡️
-    title: 跳
+    title: Dancing
     details: 主题切换
   - icon: 🛠️
     title: Rap
