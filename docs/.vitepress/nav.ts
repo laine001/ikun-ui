@@ -29,6 +29,10 @@ export default [
         text: 'blog',
         link: 'https://laine001.github.io/',
       },
+      {
+        text: '酷酷鸭',
+        link: 'http://118.25.1.63/'
+      }
     ],
   },
 ]
