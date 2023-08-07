@@ -3,23 +3,23 @@
 ## 安装
 
 ```bash
-npm install ikui
+npm install ikun-ui
 ```
 
 ## 引入
 
-```js{3,4,5}
+```js{4,5}
 import { createApp } from 'vue'
 import App from './app.vue'
 
-import ikui from 'ikuiv'
+import ikun from 'ikun-ui'
 import 'ikui/lib/index.css'
 
-createApp(App).use(ikui).mount('#app')
+createApp(App).use(ikun).mount('#app')
 
 // or
 
-import { IkButton } from 'ik-ui'
+import { IkButton } from 'ikun-ui'
 app.use(IkButton)
 ```
 

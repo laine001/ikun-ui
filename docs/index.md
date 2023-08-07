@@ -1,17 +1,17 @@
 ---
 layout: home
 
-title: IKUI
+title: IKUNUI
 titleTemplate: A simple UI
 
 hero:
-  name: IKUI
+  name: IKUN-UI
   text: A simple UI
   tagline: Built on Vue3 and Vitejs .
   image:
     # src: /logo-with-shadow.png
     src: /layer5.png
-    alt: IKUNUI
+    alt: IKUN-UI
   actions:
     - theme: brand
       text: Get Start
@@ -21,19 +21,19 @@ hero:
     #   link: /guide/why
     - theme: alt
       text: View on Github
-      link: https://github.com/LAINE001/ik-ui
+      link: https://github.com/LAINE001/ikun-ui
 
 features:
   - icon: 🎵
     title: Sing
-    details: 按需引入
+    details:
   - icon: ⚡️
     title: Dancing
-    details: 主题切换
+    details:
   - icon: 🛠️
     title: Rap
-    details: 基于TypeScript开发
+    details:
   - icon: 🏀
-    title: play
-    details: 基于Vite开发
+    title: Basketball
+    details:
 ---

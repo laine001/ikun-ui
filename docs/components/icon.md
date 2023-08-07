@@ -1,7 +1,7 @@
 # 图标 Icon
 
 ```javascript
-import { IkIcon } from 'ik-ui'
+import { IkIcon } from 'ikun-ui'
 ```
 
 ## 不同颜色

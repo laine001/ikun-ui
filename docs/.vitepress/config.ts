@@ -39,7 +39,7 @@ export default {
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/LAINE001/ik-ui',
+        link: 'https://github.com/LAINE001/ikun-ui',
       },
     ],
     nav,

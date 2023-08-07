@@ -10,9 +10,9 @@ IKUI（ik ui），个人兴趣爱好的产物，此库主要使用：
 - ✨ monorepo 风格仓库
 
 ```bash
-npm install ikui
+npm install ikun-ui
 ```
 
 ```js
-app.use(ikui)
+app.use(ikun)
 ```
