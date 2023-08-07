@@ -1,6 +1,6 @@
 # 开始
 
-<img width="80" style="margin-top: 40px" src="/ikun-ui/ikun.gif" />
+<!-- <img width="80" style="margin-top: 40px" src="/ikun-ui/ikun.gif" /> -->
 
 ## 总览
 
