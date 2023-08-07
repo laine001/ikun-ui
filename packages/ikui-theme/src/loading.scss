@@ -60,10 +60,12 @@
     position: relative;
     width: 100%;
     height: 100%;
+    text-align: center;
+    line-height: 40px;
   }
   .loader-08::before,
   .loader-08::after {
-    content: '';
+    content: '🏀';
     width: inherit;
     height: inherit;
     border-radius: 50%;

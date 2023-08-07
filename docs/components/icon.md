@@ -1,8 +1,6 @@
 # 图标 Icon
 
-```javascript
-import { IkIcon } from 'ikun-ui'
-```
+语义化的矢量图形 🐥
 
 ## 不同颜色
 
