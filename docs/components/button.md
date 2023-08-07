@@ -84,6 +84,10 @@
       按钮
       <ik-icon name="main" />
     </ik-button>
+
+    <ik-button>
+      <img width="30" src="/ikun-ui/ikun.gif" />
+    </ik-button>
   </ik-space>
 </template>
 ```

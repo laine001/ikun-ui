@@ -1,5 +1,7 @@
 # 开始
 
+<img width="80" style="margin-top: 40px" src="/ikun-ui/ikun.gif" />
+
 ## 总览
 
 IKUI（ik ui），个人兴趣爱好的产物，此库主要使用：

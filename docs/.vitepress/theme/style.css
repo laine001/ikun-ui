@@ -59,7 +59,7 @@ summary {
   font-size: 320px;
   text-align: center;
   line-height: 400px;
-  opacity: 0.6;
+  opacity: 0.5;
   /* background-color: var(--vp-c-brand-opacity); */
   z-index: -1;
   /* transition: all ; */

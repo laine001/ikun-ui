@@ -1,5 +1,7 @@
 # 快速上手
 
+<img width="80" style="margin-top: 40px" src="/ikun-ui/ikun.gif" />
+
 ## 安装
 
 ```bash
@@ -26,9 +28,18 @@ app.use(IkButton)
 ## 使用
 
 ```html
-<ik-button>按 钮</ik-button>
+<ik-space>
+  <ik-button>按 钮</ik-button>
+  <ik-button ikun></ik-button>
+</ik-space>
 ```
 
 ## 效果
 
-<ik-button>按 钮</ik-button>
+<ik-space>
+  <ik-button>按 钮</ik-button>
+
+  <ik-button>
+    <img width="30" src="/ikun-ui/ikun.gif" />
+  </ik-button>
+</ik-space>
