@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://laine001.github.io/ik-ui/",
+  "homepage": "https://laine001.github.io/ikun-ui/",
   "scripts": {
     "dev": "vite",
     "build": "pnpm build:pkg && pnpm build:theme && pnpm gen",

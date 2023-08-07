@@ -1,7 +1,7 @@
 # IKUI
 
 <p>
-  <img alt="logo" src="https://laine001.github.io/ik-ui/layer5.png" width="180" height="180" />
+  <img alt="logo" src="https://laine001.github.io/ikun-ui/layer5.png" width="180" height="180" />
 </p>
 
 <h1>

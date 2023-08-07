@@ -52,11 +52,15 @@ summary {
   opacity: 0.88;
 }
 .is-home::before {
-  content: ' ';
+  content: '🏀';
   width: 400px;
   height: 400px;
   border-radius: 100%;
-  background-color: var(--vp-c-brand-opacity);
+  font-size: 320px;
+  text-align: center;
+  line-height: 400px;
+  opacity: 0.6;
+  /* background-color: var(--vp-c-brand-opacity); */
   z-index: -1;
   /* transition: all ; */
 
@@ -69,11 +73,15 @@ summary {
 }
 
 .is-home::after {
-  content: ' ';
-  width: 200px;
-  height: 200px;
+  content: '🐥';
+  width: 260px;
+  height: 260px;
+  text-align: center;
+  line-height: 260px;
+  font-size: 220px;
   border-radius: 100%;
-  background-color: var(--vp-c-brand-opacity);
+  opacity: 0.8;
+  /* background-color: var(--vp-c-brand-opacity); */
   z-index: -1;
   /* transition: all ; */
 

@@ -4,8 +4,8 @@ import sidebar from './sidebar'
 import nav from './nav'
 
 export default {
-  base: '/ik-ui/',
-  title: 'IKUI',
+  base: '/ikun-ui/',
+  title: 'IKUN-UI',
   lang: 'en-US',
   description: '组件库',
   head: [
@@ -14,7 +14,7 @@ export default {
       'link',
       {
         rel: 'alternate icon',
-        href: 'https://laine001.github.io/ik-ui/favicon.ico',
+        href: 'https://laine001.github.io/ikun-ui/favicon.ico',
         type: 'image/png',
         sizes: '32x32',
       },
