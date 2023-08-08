@@ -52,7 +52,7 @@ summary {
   opacity: 0.88;
 }
 .is-home::before {
-  content: '🏀';
+  content: '🐥';
   width: 400px;
   height: 400px;
   border-radius: 100%;
@@ -73,7 +73,7 @@ summary {
 }
 
 .is-home::after {
-  content: '🐥';
+  content: '🏀';
   width: 260px;
   height: 260px;
   text-align: center;
