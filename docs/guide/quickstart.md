@@ -39,7 +39,7 @@ app.use(IkButton)
 <ik-space>
   <ik-button>按 钮</ik-button>
 
-  <!-- <ik-button>
-    <img width="30" src="/ikun-ui/ikun.gif" />
-  </ik-button> -->
+  <ik-button>
+    <img width="30" src="https://laine001.github.io/ikun-ui/ikun.gif" />
+  </ik-button>
 </ik-space>
