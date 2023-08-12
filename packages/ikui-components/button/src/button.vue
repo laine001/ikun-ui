@@ -15,7 +15,7 @@ const computedCls = computed(() => {
       'ik-button-disabled': disabled || loading,
       'ik-button-plain': plain,
       'ik-button__round': round,
-      'ik-button__ikun': ikun,
+      // 'ik-button__ikun': ikun,
     },
   ]
 })
@@ -36,6 +36,7 @@ defineExpose({
 <template>
   <button :class="computedCls" @click="onClick" :disabled="props.disabled">
     <span class="ik-button__inner">
+      <img v-if="ikun" width="20" src="https://laine001.github.io/ikun-ui/ikun.gif" />
       <ik-icon v-if="icon" :name="props.icon" :color="iconColor"></ik-icon>
       <ik-icon v-if="loading" name="loading" :color="iconColor" class="loading-icon"></ik-icon>
       <slot></slot>

@@ -25,6 +25,12 @@
     height: 24px;
     line-height: 24px;
     display: inline-flex;
+    align-items: center;
+    .ik-icon {
+      width: 18px !important;
+      height: 18px !important;
+      margin: 0 2px;
+    }
   }
   .loading-icon {
     // animation: name duration timing-function delay iteration-count direction fill-mode;

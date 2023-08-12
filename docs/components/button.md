@@ -85,9 +85,7 @@
       <ik-icon name="main" />
     </ik-button>
 
-    <!-- <ik-button>
-      <img width="30" src="/ikun-ui/ikun.gif" />
-    </ik-button> -->
+    <ik-button ikun></ik-button>
   </ik-space>
 </template>
 ```
@@ -102,16 +100,22 @@
 
 ```vue
 <template>
-  <ik-button size="small">普通按钮</ik-button>
-  <ik-button type="primary" size="small">主要按钮</ik-button>
+  <ik-space>
+    <ik-button size="small">普通按钮</ik-button>
+    <ik-button type="primary" size="small">主要按钮</ik-button>
+  </ik-space>
   <br />
   <br />
-  <ik-button>普通按钮</ik-button>
-  <ik-button type="primary">主要按钮</ik-button>
+  <ik-space>
+    <ik-button>普通按钮</ik-button>
+    <ik-button type="primary">主要按钮</ik-button>
+  </ik-space>
   <br />
   <br />
-  <ik-button size="large">普通按钮</ik-button>
-  <ik-button type="primary" size="large">主要按钮</ik-button>
+  <ik-space>
+    <ik-button size="large">普通按钮</ik-button>
+    <ik-button type="primary" size="large">主要按钮</ik-button>
+  </ik-space>
 </template>
 ```
 
@@ -131,23 +135,6 @@
 ```
 
 :::
-
-<!-- ## 开启中分
-
-`ikun`属性开启中分
-
-:::demo
-
-```vue
-<template>
-  <ik-space>
-    <ik-button ikun>按 钮</ik-button>
-    <ik-button type="primary" ikun>按 钮</ik-button>
-  </ik-space>
-</template>
-```
-
-::: -->
 
 ## Props
 
