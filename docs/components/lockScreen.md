@@ -9,7 +9,8 @@ const visible = ref(false)
 const toggleLockScreen = () => {
   visible.value = true
 }
-const onUnlock = () => {
+const onUnlock = (pwd) => {
+  console.log(pwd)
   visible.value = false
 }
 </script>

@@ -20,6 +20,7 @@
   &.ik-button__round {
     border-radius: var(--default-round-radius);
   }
+
   .ik-button__inner {
     height: 24px;
     line-height: 24px;
@@ -190,6 +191,35 @@
     }
     &:active {
       background-color: var(--danger-color-darker-1);
+    }
+  }
+  &.ik-button__ikun {
+    position: relative;
+    overflow: hidden;
+    // background-color: #333;
+    // color: #fff;
+    .ik-button__inner {
+      z-index: 1;
+    }
+    &::before,
+    &::after {
+      content: '';
+      border-radius: 65px 21px 76px 14px / 90px 17px 111px 26px;
+      background-image: linear-gradient(to right, lightgrey, grey);
+      width: 20px;
+      height: 20px;
+      z-index: 0;
+
+      position: absolute;
+    }
+    &::before {
+      left: calc(50% - 21px);
+      top: -2px;
+    }
+    &::after {
+      right: calc(50% - 19px);
+      top: -3px;
+      transform: rotate(270deg);
     }
   }
   // &.ik-button-info {

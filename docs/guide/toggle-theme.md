@@ -2,16 +2,27 @@
 
 支持主题切换，内部通过计算取得其色阶值
 
-<ik-button class="t-b1" @click="() => toggleTheme('#1677ff')"></ik-button>
+<!-- <ik-button class="t-b1" @click="() => toggleTheme('#1677ff')"></ik-button>
 <ik-button class="t-b2" @click="() => toggleTheme('#673ab7')"></ik-button>
 <ik-button class="t-b3" @click="() => toggleTheme('#eb920e')"></ik-button>
-<ik-button class="t-b4" @click="() => toggleTheme('#7185f7')"></ik-button>
+<ik-button class="t-b4" @click="() => toggleTheme('#7185f7')"></ik-button> -->
+
+<div class="t-c-box">
+  <span class="t-b t-b1" @click="() => toggleTheme('#1677ff')">1</span>
+  <span class="t-b t-b2" @click="() => toggleTheme('#673ab7')">2</span>
+  <span class="t-b t-b3" @click="() => toggleTheme('#eb920e')">3</span>
+  <span class="t-b t-b4" @click="() => toggleTheme('#7185f7')">4</span>
+  <span class="t-b t-b5" @click="() => toggleTheme('#ff6723')">5</span>
+</div>
+
+<!-- <input type="color" /> -->
 
 <div style="margin-top: 15px">
-  <ik-button type="primary" @click="toggleRadius">切换圆角</ik-button>
+  <ik-button type="primary" @click="toggleRadius">点击切换圆角</ik-button>
   <br />
   <br />
   <ik-input />
+  <br />
 
   <ik-checkbox-group v-model="checkedList1">
     <ik-checkbox label="选项一"></ik-checkbox>
@@ -19,12 +30,23 @@
     <ik-checkbox label="选项三"></ik-checkbox>
   </ik-checkbox-group>
   <br />
+  <ik-tab type="segmented">
+  <ik-tab-item label="选项卡一"></ik-tab-item>
+  <ik-tab-item label="选项卡二"></ik-tab-item>
+  <ik-tab-item label="选项卡第三个"></ik-tab-item>
+</ik-tab>
   <div v-loading="true">
     雨霖铃<br />
     寒蝉凄切<br />
     对长亭晚<br />
     骤雨初歇
   </div>
+
+  <br />
+
+<ik-switch :defaultValue="true"></ik-switch>
+<br />
+
 </div>
 
 <script lang="ts" setup>
@@ -67,8 +89,23 @@ const toggleRadius = () => {
 }
 </script>
 <style>
+  .t-c-box {
+    display: flex;
+  }
+  .t-b {
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    border-radius: var(--default-radius);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
   .t-b1 {
     background: #1677ff !important;
+    margin-left: 0 !important;
   }
   .t-b2 {
     background: #673ab7 !important;
@@ -78,6 +115,9 @@ const toggleRadius = () => {
   }
   .t-b4 {
     background: #7185f7 !important;
+  }
+  .t-b5 {
+    background: #ff6723;
   }
 </style>
 

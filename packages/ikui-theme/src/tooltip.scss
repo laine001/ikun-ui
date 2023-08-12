@@ -1,4 +1,5 @@
 @import '../mixins/config.scss';
+
 :root {
   --popper-theme-background-color: #333;
   --popper-theme-background-color-hover: #333;
@@ -16,8 +17,11 @@
       color: #333;
       border-radius: 4px;
       box-shadow: 0 6px 16px -8px #00000014, 0 9px 28px #0000000d, 0 12px 48px 16px #00000008;
-      #arrow::before {
+      &:hover {
         background-color: #fff;
+      }
+      #arrow::before {
+        background-color: #fff !important;
       }
     }
   }

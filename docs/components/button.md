@@ -132,6 +132,23 @@
 
 :::
 
+<!-- ## 开启中分
+
+`ikun`属性开启中分
+
+:::demo
+
+```vue
+<template>
+  <ik-space>
+    <ik-button ikun>按 钮</ik-button>
+    <ik-button type="primary" ikun>按 钮</ik-button>
+  </ik-space>
+</template>
+```
+
+::: -->
+
 ## Props
 
 | 参数    |    说明    |  类型   |                 可选值                 |    默认值 |

@@ -10,13 +10,13 @@ export default defineConfig({
     vue(),
     vueJsx(),
     setupNamePlugin(),
-    dts({
-      // insertTypesEntry: true,
-      // cleanVueFileName: true,
-      // copyDtsFiles: true,
-      include: ['./packages/ikui-components'],
-      outputDir: ['dist/es', 'dist/lib'],
-    }),
+    // dts({
+    //   // insertTypesEntry: true,
+    //   // cleanVueFileName: true,
+    //   // copyDtsFiles: true,
+    //   include: ['./packages/ikui-components'],
+    //   outputDir: ['dist/es', 'dist/lib'],
+    // }),
   ],
   build: {
     target: 'modules',
@@ -24,26 +24,26 @@ export default defineConfig({
     // outDir: resolve(__dirname, 'dist/es'),
     lib: {
       entry: resolve(__dirname, 'packages/ikui-components/index.ts'),
-      name: 'ikui',
-      fileName: () => `index.js`,
-      formats: ['es', 'cjs'],
+      name: 'ikunui',
+      // fileName: () => `index.js`,
+      formats: ['es', 'cjs', 'umd', 'iife'],
     },
     rollupOptions: {
       external: ['vue'],
-      output: [
-        {
-          format: 'es',
-          // entryFileNames: '[name].js',
-          preserveModules: true,
-          dir: 'dist/es',
-          // preserveModulesRoot: 'src'
-        },
-        {
-          format: 'cjs',
-          preserveModules: true,
-          dir: 'dist/lib',
-        },
-      ],
+      // output: [
+      //   {
+      //     format: 'es',
+      //     // entryFileNames: '[name].js',
+      //     preserveModules: true,
+      //     dir: 'dist/es',
+      //     // preserveModulesRoot: 'src'
+      //   },
+      //   {
+      //     format: 'cjs',
+      //     preserveModules: true,
+      //     dir: 'dist/lib',
+      //   },
+      // ],
       // globals: {
       //   vue: 'Vue'
       // }
@@ -53,7 +53,6 @@ export default defineConfig({
   server: {
     port: 9526,
   },
-
   test: {
     coverage: {
       provider: 'istanbul',

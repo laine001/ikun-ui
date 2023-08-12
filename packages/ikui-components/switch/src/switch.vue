@@ -1,10 +1,11 @@
 <script setup lang="ts" name="IkSwitch">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { SwitchProps, emits } from './prop'
 const props = defineProps(SwitchProps)
 const emit = defineEmits(emits)
 const bool = ref<boolean>(props.modelValue)
 const switchRef = ref()
+bool.value = props.defaultValue ?? false
 const handleToggle = () => {
   bool.value = !bool.value
   emit('update:modelValue', bool.value)
@@ -23,7 +24,6 @@ const computedCls = computed(() => {
 })
 
 const setCssVar = () => {
-  console.log(switchRef.value, 'switchRef2')
   Object.keys(props.style ?? {}).forEach((styleProp) => {
     if (styleProp && props.style[styleProp]) {
       switchRef.value.style.setProperty(`${styleProp}`, props.style[styleProp])

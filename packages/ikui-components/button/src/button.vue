@@ -6,7 +6,7 @@ const props = defineProps(buttonProps)
 const emits = defineEmits(['click'])
 
 const computedCls = computed(() => {
-  const { type, disabled, loading, round, size, plain } = props
+  const { type, disabled, loading, round, size, plain, ikun } = props
   return [
     'ik-button',
     `ik-button-${type}`,
@@ -15,6 +15,7 @@ const computedCls = computed(() => {
       'ik-button-disabled': disabled || loading,
       'ik-button-plain': plain,
       'ik-button__round': round,
+      'ik-button__ikun': ikun,
     },
   ]
 })

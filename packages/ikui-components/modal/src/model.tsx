@@ -39,7 +39,9 @@ export default defineComponent({
               <div class="ik-modal--body">{slots.default?.()}</div>
               <div class="ik-modal--footer">
                 <ik-button onClick={onCancle}>取 消</ik-button>
-                <ik-button type="primary">确 定</ik-button>
+                <ik-button type="primary" style={{ marginLeft: '12px' }}>
+                  确 定
+                </ik-button>
               </div>
             </div>
           </div>

@@ -1,8 +1,26 @@
 export default [
   {
     text: '指引',
-    link: '/guide/quickstart',
-    activeMatch: '/guide/',
+    // link: '/guide/quickstart',
+    // activeMatch: '/guide/',
+    items: [
+      {
+        text: '概览',
+        link: '/guide/overview',
+      },
+      {
+        text: '快速上手',
+        link: '/guide/quickstart',
+      },
+      {
+        text: '视觉与色彩',
+        link: '/guide/colors',
+      },
+      {
+        text: '动态主题',
+        link: '/guide/toggle-theme',
+      },
+    ],
   },
   {
     text: '组件',

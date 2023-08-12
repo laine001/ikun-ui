@@ -12,6 +12,10 @@ const computedCls = computed(() => {
     },
   ]
 })
+// console.log(prop.light)
+// if (prop.light.value) {
+//   document.documentElement.style.setProperty('--popper-theme-background-color-hover', '#fff')
+// }
 defineComponent({
   components: {
     Popper,

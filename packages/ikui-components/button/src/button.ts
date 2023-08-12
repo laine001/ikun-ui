@@ -34,6 +34,10 @@ export const buttonProps = {
     type: Boolean,
     default: false,
   },
+  ikun: {
+    type: Boolean,
+    default: false,
+  },
 } as const
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>

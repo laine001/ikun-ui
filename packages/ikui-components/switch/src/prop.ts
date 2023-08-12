@@ -1,4 +1,7 @@
 export const SwitchProps = {
+  defaultValue: {
+    type: Boolean,
+  },
   modelValue: {
     type: Boolean,
   },

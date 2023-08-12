@@ -1,0 +1,100 @@
+@import '../mixins/config.scss';
+@import '../mixins/transition.scss';
+
+.ik-tag {
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 4px;
+  padding: 0 6px;
+  color: #000000e0;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid #d9d9d9;
+
+  display: inline-flex;
+  align-items: center;
+
+  &.ik-tag--primary {
+    background-color: #6379f61c;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+
+    .ik-tag--close {
+      .ik-icon {
+        fill: var(--primary-color);
+      }
+    }
+  }
+  &.ik-tag--success {
+    background-color: #5aa4ae1c;
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+    .ik-tag--close {
+      .ik-icon {
+        fill: var(--success-color);
+      }
+    }
+  }
+  &.ik-tag--warning {
+    background-color: #f29a761c;
+    color: var(--warning-color);
+    border: 1px solid var(--warning-color);
+    .ik-tag--close {
+      .ik-icon {
+        fill: var(--warning-color);
+      }
+    }
+  }
+  &.ik-tag--danger {
+    background-color: #b13b2e1c;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+    .ik-tag--close {
+      .ik-icon {
+        fill: var(--danger-color);
+      }
+    }
+  }
+
+  .ik-tag--close {
+    cursor: pointer;
+    margin-left: 4px;
+  }
+
+  &.ik-tag--double {
+    padding: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    border: none;
+    height: 20px;
+    overflow: hidden;
+    user-select: none;
+    .ik-tag--inner__left,
+    .ik-tag--inner__right {
+      display: inline-flex;
+      background-color: var(--primary-color);
+      color: #fff;
+      height: 20px;
+    }
+    .ik-tag--inner__left {
+      padding: 0 5px;
+    }
+    .ik-tag--inner__right {
+      background-color: #6379f61c;
+      color: var(--primary-color);
+      padding: 0 5px;
+    }
+    &.ik-tag--ikun {
+      background-color: #000000e0;
+      .ik-tag--inner__left {
+        background-color: #000000e0;
+        color: #fff;
+        padding: 0 5px;
+      }
+      .ik-tag--inner__right {
+        background-color: #f7961c;
+        color: #000000e0;
+        padding: 0 5px;
+      }
+    }
+  }
+}

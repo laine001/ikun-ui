@@ -104,6 +104,10 @@ export default {
           text: '选项卡 Tabs',
           link: '/components/tab',
         },
+        {
+          text: '标签 Tag',
+          link: '/components/tag',
+        },
       ],
     },
     {
