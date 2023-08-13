@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+    <!-- Import style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-plus/dist/index.css" />
+    <!-- Import Vue 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <!-- Import component library -->
+    <script src="https://cdn.jsdelivr.net/npm/element-plus"></script>
 
-  <!-- Import style -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-plus/dist/index.css" />
-  <!-- Import Vue 3 -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
-  <!-- Import component library -->
-  <script src="https://cdn.jsdelivr.net/npm/element-plus"></script>
-
-  <!-- <script src="../dist/dist/index.umd.js"></script>
+    <!-- <script src="../dist/dist/index.umd.js"></script>
   <link rel="stylesheet" href="../dist/style/index.css"> -->
 
-  <script src="https://cdn.jsdelivr.net/npm/ikuiv@0.0.1-alpha.3/dist/index.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ikuiv@0.0.1-alpha.3/style/index.css">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/ikuiv@0.0.1-alpha.3/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ikuiv@0.0.1-alpha.3/style/index.css" />
+  </head>
 
-<body>
-  <div id="app">
-    <el-button>{{ message }}</el-button>
-    <ik-button type="primary">{{ message }}22</ik-button>
-  </div>
-  <script>
-    const { createApp, ref } = Vue
+  <body>
+    <div id="app">
+      <el-button>{{ message }}</el-button>
+      <ik-button type="primary">{{ message }}22</ik-button>
+    </div>
+    <script>
+      const { createApp, ref } = Vue
 
-    createApp({
-      setup() {
-        const message = ref('Hello vue!')
-        return {
-          message
-        }
-      }
-    }).use(ElementPlus).use(ikunui.default).mount('#app')
+      createApp({
+        setup() {
+          const message = ref('Hello vue!')
+          return {
+            message,
+          }
+        },
+      })
+        .use(ElementPlus)
+        .use(ikunui.default)
+        .mount('#app')
 
-    console.log(Vue, 'vue')
-    console.log(ElementPlus, ElementPlus.default, 'element-plus')
-    // import ikuiv from '../dist/index.es.js'
-    console.log(ikunui.default, 'ikuiv')
-  </script>
-  <!-- <script type="module">
+      console.log(Vue, 'vue')
+      console.log(ElementPlus, ElementPlus.default, 'element-plus')
+      // import ikuiv from '../dist/index.es.js'
+      console.log(ikunui.default, 'ikuiv')
+    </script>
+    <!-- <script type="module">
     import { createApp } from 'vue/dist/vue.esm-bundler.js'
     // import { Button } from '../dist/ikui.esm.js'
     import IkUI from '../dist/ikui.esm.js'
@@ -59,6 +61,5 @@
       .use(IkUI)
       .mount('#app')
   </script> -->
-</body>
-
+  </body>
 </html>
