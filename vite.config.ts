@@ -10,13 +10,18 @@ export default defineConfig({
     vue(),
     vueJsx(),
     setupNamePlugin(),
-    // dts({
-    //   // insertTypesEntry: true,
-    //   // cleanVueFileName: true,
-    //   // copyDtsFiles: true,
-    //   include: ['./packages/ikui-components'],
-    //   outputDir: ['dist/es', 'dist/lib'],
-    // }),
+    dts({
+      skipDiagnostics: true,
+      staticImport: true,
+      insertTypesEntry: true,
+      cleanVueFileName: true,
+      copyDtsFiles: true,
+      include: ['./packages/ikui-components'],
+      outputDir: ['./dist/lib', './dist/es'],
+      afterBuild: (): void => {
+        console.log('build complete')
+      },
+    }),
   ],
   build: {
     target: 'modules',
@@ -25,25 +30,62 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'packages/ikui-components/index.ts'),
       name: 'ikunui',
-      // fileName: () => `index.js`,
-      formats: ['es', 'cjs', 'umd', 'iife'],
+      // fileName: (format) => `index.${format}.js`,
+      // formats: ['esm', 'cjs', 'umd', 'es', 'iife'],
     },
     rollupOptions: {
-      external: ['vue'],
-      // output: [
-      //   {
-      //     format: 'es',
-      //     // entryFileNames: '[name].js',
-      //     preserveModules: true,
-      //     dir: 'dist/es',
-      //     // preserveModulesRoot: 'src'
-      //   },
-      //   {
-      //     format: 'cjs',
-      //     preserveModules: true,
-      //     dir: 'dist/lib',
-      //   },
-      // ],
+      external: ['vue', 'vue3-popper', '@vueuse/core', 'vanilla-tilt'],
+      output: [
+        {
+          format: 'umd',
+          name: 'ikunui',
+          exports: 'named',
+          sourcemap: false,
+          dir: 'dist/dist',
+          entryFileNames: 'index.umd.js',
+          chunkFileNames: '[name].js',
+          assetFileNames: '[name].[ext]',
+          manualChunks: undefined,
+          inlineDynamicImports: false,
+          globals: {
+            vue: 'Vue',
+          },
+        },
+        {
+          format: 'es',
+          exports: 'named',
+          dir: 'dist/es',
+          sourcemap: false,
+          entryFileNames: (chunkInfo): string => {
+            return `${chunkInfo.name.slice(0, chunkInfo.name.lastIndexOf('/') + 1)}index.js`
+          },
+          chunkFileNames: '[name].js',
+          assetFileNames: '[name].[ext]',
+          inlineDynamicImports: false,
+          manualChunks: undefined,
+          preserveModules: true,
+          generatedCode: {
+            symbols: true,
+          },
+        },
+        {
+          format: 'cjs',
+          exports: 'named',
+          dir: 'dist/lib',
+          sourcemap: false,
+          entryFileNames: (chunkInfo): string => {
+            return `${chunkInfo.name.slice(0, chunkInfo.name.lastIndexOf('/') + 1)}index.js`
+          },
+          chunkFileNames: '[name].js',
+          assetFileNames: '[name].[ext]',
+          inlineDynamicImports: false,
+          manualChunks: undefined,
+          preserveModules: true,
+          generatedCode: {
+            symbols: true,
+          },
+        },
+      ],
       // globals: {
       //   vue: 'Vue'
       // }

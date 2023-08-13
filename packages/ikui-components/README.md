@@ -1,7 +1,7 @@
-# ikui
+# ikun
 
 <p>
-  <img alt="logo" src="https://laine001.github.io/ik-ui/logo4.png" width="180" height="180" />
+  <img alt="logo" src="https://laine001.github.io/ikun-ui/logo4.png" width="180" height="180" />
 </p>
 
 <h1>
@@ -13,7 +13,7 @@
 </p>
 
 <p>
-  <img src="https://github.com/LAINE001/ik-ui/actions/workflows/pages.yml/badge.svg?branch=master" />
+  <img src="https://github.com/LAINE001/ikun-ui/actions/workflows/pages.yml/badge.svg?branch=master" />
 </p>
 
 ## Features
@@ -27,15 +27,15 @@
 Using `npm` to install:
 
 ```bash
-npm i ik-ui
+npm i ikun-ui
 ```
 
 Using `yarn` or `pnpm` to install:
 
 ```bash
-yarn add ik-ui
+yarn add ikun-ui
 
-pnpm add ik-ui
+pnpm add ikun-ui
 ```
 
 ## Quickstart
@@ -44,24 +44,24 @@ pnpm add ik-ui
 import { createApp } from 'vue'
 import App from './app.vue'
 
-import ikui from 'ik-ui'
-import 'ikui/lib/index.css'
+import ikun from 'ikun-ui'
+import 'ikun/lib/index.css'
 
-createApp(App).use(ikui).mount('#app')
+createApp(App).use(ikun).mount('#app')
 
 // or
 
-import { IkButton } from 'ik-ui'
+import { IkButton } from 'ikun-ui'
 app.use(IkButton)
 ```
 
-see more in [Quickstart](https://laine001.github.io/ik-ui)
+see more in [Quickstart](https://laine001.github.io/ikun-ui)
 
 ## Links
 
-- [Documentation](https://laine001.github.io/ik-ui)
-- [Timelines](https://laine001.github.io/ik-ui)
-- [more](https://laine001.github.io/ik-ui)
+- [Documentation](https://laine001.github.io/ikun-ui)
+- [Timelines](https://laine001.github.io/ikun-ui)
+- [more](https://laine001.github.io/ikun-ui)
 
 ## Join us
 
@@ -73,8 +73,8 @@ Hava an idea ? u can join us
 
 ## Contributors
 
-<a href="https://github.com/LAINE001/ik-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=laine001/ik-ui" width="50" />
+<a href="https://github.com/LAINE001/ikun-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=laine001/ikun-ui" width="50" />
 </a>
 
 ## Thanks
