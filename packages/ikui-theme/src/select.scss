@@ -15,9 +15,9 @@
 }
 
 .ik-select {
-  width: 260px;
+  width: 100%;
   position: relative;
-  margin-top: 14px;
+  // margin-top: 14px;
   .ik-select__inner {
     display: flex;
     justify-content: space-between;
@@ -32,19 +32,23 @@
     }
     &.select--focus {
       border-color: var(--primary-color);
+      .ik-icon {
+        transform: rotate(90deg);
+      }
     }
     .ik-select__input {
       line-height: 24px;
       font-size: 14px;
       cursor: pointer;
       user-select: none;
+      width: calc(100% - 20px);
     }
     .ik-icon {
+      transition: transform 0.22s;
       fill: var(--input-default-border-color);
     }
     .ik-select--clear {
       margin-top: 3px;
-      transform: rotate(90deg);
     }
   }
   .ik-select--options {

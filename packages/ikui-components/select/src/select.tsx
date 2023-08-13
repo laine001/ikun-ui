@@ -40,6 +40,12 @@ export default defineComponent({
       () => props.modelValue,
       (value) => emit('change', value)
     )
+    watch(
+      () => selectOptionVisible.value,
+      (val) => {
+        selectIsFocus.value = val
+      }
+    )
     const onInput = (e) => {
       if (typeof e.target.value === 'string' && e.target.value) {
         const ls = props.option.filter((item: string) => {

@@ -93,4 +93,4 @@ Learn from many excellent community projects
 
 ## LICENSE
 
-[MIT](https://github.com/LAINE001/ik-ui/blob/master/LICENSE)
+[MIT](https://github.com/LAINE001/ikun-ui/blob/master/LICENSE)

@@ -59,6 +59,15 @@
   <div class="color-box brand-color-l2"></div>
   <div class="color-box brand-color-l1"></div>
 </div>
+<!-- <div class="success-colors-box">
+  <div class="color-box success-color-l7"></div>
+  <div class="color-box success-color-l6"></div>
+  <div class="color-box success-color-l5"></div>
+  <div class="color-box success-color-l4"></div>
+  <div class="color-box success-color-l3"></div>
+  <div class="color-box success-color-l2"></div>
+  <div class="color-box success-color-l1"></div>
+</div> -->
 <div class="red-colors-box">
   <div class="color-box red-color-l7"></div>
   <div class="color-box red-color-l6"></div>
@@ -183,6 +192,56 @@
       }
     }
   }
+  .success-colors-box {
+    width: 120px;
+    height: 260px;
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+    .color-box {
+      height: 40px;
+      width: 100%;
+      transition: ease-in 0.24s;
+      &:hover {
+        width: 120%;
+      }
+      &.success-color-l7 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-7);
+      }
+      &.success-color-l6 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-6);
+      }
+      &.success-color-l5 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-5);
+      }
+      &.success-color-l4 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-4);
+      }
+      &.success-color-l3 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-3);
+      }
+      &.success-color-l2 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-2);
+      }
+      &.success-color-l1 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background: var(--success-color-lighter-1);
+      }
+    }
+  }
   .brand-colors-box {
     width: 120px;
     height: 260px;
@@ -193,7 +252,7 @@
       .color-box {
         height: 40px;
         width: 100%;
-        transition: all .2s;
+        transition: all 0.2s;
         &:hover {
           width: 120%;
         }

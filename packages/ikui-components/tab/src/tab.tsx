@@ -5,7 +5,7 @@ export default defineComponent({
   name: 'ik-tab',
   props,
   emits,
-  setup(props, { emit, slots, expose }) {
+  setup(props, { slots, expose }) {
     const labels = slots.default().map((item) => item.props.label)
     const currentIndex = ref(0)
     const activeName = ref(labels[currentIndex.value])
@@ -23,7 +23,7 @@ export default defineComponent({
       blockRef.value.style.left = currentNode.offsetLeft + 'px'
       blockRef.value.style.width = currentNode.offsetWidth + 'px'
     }
-    console.log(activeName.value, 'tabLabels')
+    // console.log(activeName.value, 'tabLabels')
     provide(tabCtxKey, {
       props,
       // currentIndex,
@@ -60,13 +60,14 @@ export default defineComponent({
       ]
     })
     return () => {
+      console.log(slots.default())
       const Content = (
         <div class={computedCls.value}>
           <div class="ik-tab--header" ref={headerRef}>
             <span class="header--active__block" ref={blockRef}></span>
             {renderHeader()}
           </div>
-          <div class="ik-tab--content">{slots.default()}</div>
+          {slots.default() && slots.default().children ? <div class="ik-tab--content">{slots.default()}</div> : null}
         </div>
       )
       return Content
