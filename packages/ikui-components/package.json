@@ -1,9 +1,8 @@
 {
   "name": "ikuiv",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.5",
   "description": "a simple ui components built on vue3 vite",
-  "main": "index.ts",
-  "module": "index.ts",
+  "main": "./es/index.js",
   "types": "index.d.ts",
   "author": "laine001",
   "license": "ISC",
@@ -17,9 +16,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./index.js"
+      "import": "./es/index.js"
     },
     "./*": "./*"
   },
-  "homepage": "https://github.com/LAINE001/ik-ui#readme"
+  "homepage": "https://github.com/LAINE001/ikun-ui#readme"
 }
