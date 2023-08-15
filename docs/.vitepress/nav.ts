@@ -1,5 +1,9 @@
 export default [
   {
+    text: '首页',
+    link: '/',
+  },
+  {
     text: '指引',
     // link: '/guide/quickstart',
     // activeMatch: '/guide/',

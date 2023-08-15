@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="colors-box">
-    <div class="title">
+    <div class="title shangeng">
       山梗
       <span class="detail">hex cd8025</span>
     </div>

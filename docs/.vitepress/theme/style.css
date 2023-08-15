@@ -172,3 +172,90 @@ html::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 } */
+
+.VPFeature,
+.pager-link {
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid var(--primary-color) !important; */
+}
+
+.VPFeature::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(/ikun-ui/ik-4.png);
+  background-size: cover;
+  /* backdrop-filter: blur(12px); */
+  opacity: 0.1;
+}
+
+.VPHomeFeatures .items .item:nth-child(2) .VPFeature::after {
+  background-image: url(/ikun-ui/ik-7.png);
+}
+
+.VPHomeFeatures .items .item:nth-child(3) .VPFeature::after {
+  background-image: url(/ikun-ui/ik-6.png);
+}
+.VPHomeFeatures .items .item:nth-child(4) .VPFeature::after {
+  background-image: url(/ikun-ui/ik-5.png);
+}
+
+.pager-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(/ikun-ui/ik-2.jpg);
+  background-size: contain;
+  overflow: hidden;
+
+  opacity: 0.1;
+}
+
+/* .vp-doc div[class*='language-'] + div[class*='language-'] {
+  background-image: url(/ikun-ui/ik-2.jpg);
+  opacity: 0.2;
+} */
+.qianyun,
+.shangeng {
+  position: relative;
+}
+.qianyun::before,
+.mushanzi::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-image: url(/ikun-ui/ik-2.jpg);
+  background-size: cover;
+  opacity: 0.1;
+}
+
+.mushanzi::before {
+  background-image: url(/ikun-ui/ik-3.jpg);
+}
+
+.language-vue {
+  position: relative;
+}
+.language-vue::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-image: url(/ikun-ui/ik-3.jpg);
+  background-size: contain;
+  opacity: 0.04;
+}
