@@ -16,10 +16,10 @@ export default {
           text: '视觉与色彩',
           link: '/guide/colors',
         },
-        {
-          text: '节点与规划',
-          link: '/guide/timeline',
-        },
+        // {
+        //   text: '节点与规划',
+        //   link: '/guide/timeline',
+        // },
         {
           text: '动态主题',
           link: '/guide/toggle-theme',

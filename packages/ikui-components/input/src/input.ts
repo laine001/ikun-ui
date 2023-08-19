@@ -10,6 +10,14 @@ export const InputProps = {
     type: String,
     default: (): string => '请输入',
   },
+  prefixIcon: {
+    type: String,
+    default: '',
+  },
+  suffixIcon: {
+    type: String,
+    default: '',
+  },
 }
 
 export const Emits = {

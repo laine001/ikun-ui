@@ -2,11 +2,6 @@
 
 支持主题切换，内部通过计算取得其色阶值
 
-<!-- <ik-button class="t-b1" @click="() => toggleTheme('#1677ff')"></ik-button>
-<ik-button class="t-b2" @click="() => toggleTheme('#673ab7')"></ik-button>
-<ik-button class="t-b3" @click="() => toggleTheme('#eb920e')"></ik-button>
-<ik-button class="t-b4" @click="() => toggleTheme('#7185f7')"></ik-button> -->
-
 <div class="t-c-box">
   <span class="t-b t-b1" @click="() => toggleTheme('#1677ff')">1</span>
   <span class="t-b t-b2" @click="() => toggleTheme('#673ab7')">2</span>
@@ -31,10 +26,12 @@
   </ik-checkbox-group>
   <br />
   <ik-tab type="segmented">
-  <ik-tab-item label="选项卡一"></ik-tab-item>
-  <ik-tab-item label="选项卡二"></ik-tab-item>
-  <ik-tab-item label="选项卡第三个"></ik-tab-item>
-</ik-tab>
+    <ik-tab-item label="选项卡一"></ik-tab-item>
+    <ik-tab-item label="选项卡二"></ik-tab-item>
+    <ik-tab-item label="选项卡第三个"></ik-tab-item>
+  </ik-tab>
+  <br />
+
   <div v-loading="true">
     雨霖铃<br />
     寒蝉凄切<br />

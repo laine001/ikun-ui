@@ -19,6 +19,7 @@
   cursor: pointer;
 
   position: relative;
+
   .ik-switch__dot {
     width: 16px;
     height: 16px;
@@ -29,6 +30,11 @@
     position: absolute;
     top: 2px;
   }
+  // &:active {
+  //   .ik-switch__dot {
+  //     width: 18px;
+  //   }
+  // }
   &.ik-switch__actived {
     background-color: var(--switch-bg-on-color);
     .ik-switch__dot {

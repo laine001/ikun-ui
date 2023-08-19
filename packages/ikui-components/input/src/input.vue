@@ -29,7 +29,6 @@ const computedCls = computed(() => {
   ]
 })
 const onClear = () => {
-  console.log('clear')
   emit('update:modelValue', '')
   inputRef.value.focus()
   inputRef.value.value = ''
@@ -43,7 +42,9 @@ const onBlur = () => {
 </script>
 <template>
   <div :class="computedCls">
-    <div v-if="false">前缀</div>
+    <div v-if="props.prefixIcon" class="before-inner">
+      <ik-icon :size="18" :name="prefixIcon" />
+    </div>
     <div class="ik-input__inner" tabindex="1">
       <input
         v-model="model"
@@ -56,8 +57,9 @@ const onBlur = () => {
         ref="inputRef"
       />
     </div>
-    <div v-if="hasClear && model" class="after-inner">
-      <ik-icon :size="18" name="delete-filling" @click="onClear" />
+    <div v-if="(hasClear && model) || props.suffixIcon" class="after-inner">
+      <ik-icon v-if="hasClear" :size="17" name="close" @click="onClear" />
+      <ik-icon v-if="props.suffixIcon" :size="17" :name="props.suffixIcon" />
     </div>
   </div>
 </template>

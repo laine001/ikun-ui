@@ -12,6 +12,7 @@
   z-index: 999;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -34,5 +35,14 @@
     padding: 14px;
     border-radius: var(--default-radius);
     background-color: #ffffff;
+  }
+
+  .ik-lock-time {
+    z-index: 996;
+    padding: 14px;
+
+    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 28px;
   }
 }

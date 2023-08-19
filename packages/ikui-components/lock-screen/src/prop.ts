@@ -3,4 +3,8 @@ export const lockScreenProps = {
     type: Boolean,
   },
   visible: Boolean,
-}
+  showTime: {
+    type: Boolean,
+    default: false,
+  },
+} as const

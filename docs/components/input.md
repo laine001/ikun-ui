@@ -40,3 +40,18 @@ const inputValue2 = ref('这里可直接清除')
   const inputValue1 = ref('')
   const inputValue2 = ref('这里可直接清除')
 </script>
+
+## 前缀和后缀
+
+::: demo
+
+```vue
+<template>
+  <ik-space direction="column">
+    <ik-input prefixIcon="user" />
+    <ik-input suffixIcon="chuizi-cpoy" />
+  </ik-space>
+</template>
+```
+
+:::

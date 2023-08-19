@@ -7,6 +7,7 @@ export default [
     text: '指引',
     // link: '/guide/quickstart',
     // activeMatch: '/guide/',
+    collapsed: false,
     items: [
       {
         text: '概览',

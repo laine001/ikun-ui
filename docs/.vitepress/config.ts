@@ -22,8 +22,10 @@ export default {
     // ['link', { rel: 'stylesheet', href: 'https://unpkg.com/nes.css/css/nes-core.min.css' }],
   ],
   themeConfig: {
+    logo: '/layer5.png',
     footer: {
-      copyright: '本文档暂仅供个人学习使用',
+      message: 'MIT Licensed',
+      copyright: '©ikun',
     },
     search: {
       provider: 'local',

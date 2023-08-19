@@ -1,5 +1,6 @@
 .VPSidebarItem .item {
   padding-left: 8px;
+  user-select: none;
 }
 .VPSidebarItem .is-active {
   transition: all 0.2s;
@@ -258,4 +259,22 @@ html::-webkit-scrollbar-thumb {
   background-image: url(/ikun-ui/ik-3.jpg);
   background-size: contain;
   opacity: 0.04;
+}
+
+/* .VPFooter {
+  display: none;
+} */
+.VPSidebar,
+.VPNavBar .title {
+  background-color: #fff !important;
+}
+
+.content-body,
+.VPLocalNav {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(6px);
+}
+
+.VPMenu {
+  padding: 8px 6px !important;
 }

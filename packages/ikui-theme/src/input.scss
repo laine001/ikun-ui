@@ -6,10 +6,12 @@
   align-items: center;
   border-radius: var(--default-radius);
   border: 1px solid #dde0e5;
-  &:hover {
-    border-color: var(--primary-color-hover);
-  }
+  transition: all 0.2;
+  // &:hover {
+  //   border-color: var(--primary-color-hover);
+  // }
   &.ik-input__focus {
+    transition: all 0.2;
     border-color: var(--primary-color);
     &.ik-input__hasClear {
       .ik-input__inner {
@@ -22,6 +24,7 @@
 
   .ik-input__inner {
     width: 100%;
+    transition: all 0.2;
     .ik-input {
       box-sizing: border-box;
       padding: 8px 12px 8px 12px;
@@ -29,7 +32,19 @@
       outline: none;
       width: 100%;
       border-radius: var(--default-radius);
+      // border: 1px solid #dde0e5;
+      // &:focus {
+      // border: 1px solid #dde0e5;
+      // }
     }
+  }
+  .before-inner {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    opacity: 0.8;
   }
   .after-inner {
     width: 20px;
