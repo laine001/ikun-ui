@@ -277,4 +277,5 @@ html::-webkit-scrollbar-thumb {
 
 .VPMenu {
   padding: 8px 6px !important;
+  border: none !important;
 }
