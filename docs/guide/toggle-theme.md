@@ -8,6 +8,7 @@
   <span class="t-b t-b3" @click="() => toggleTheme('#eb920e')">3</span>
   <span class="t-b t-b4" @click="() => toggleTheme('#7185f7')">4</span>
   <span class="t-b t-b5" @click="() => toggleTheme('#ff6723')">5</span>
+  <!-- <span class="t-b t-b6" @click="() => toggleTheme('#333333')">6</span> -->
 </div>
 
 <!-- <input type="color" /> -->
@@ -115,6 +116,9 @@ const toggleRadius = () => {
   }
   .t-b5 {
     background: #ff6723;
+  }
+  .t-b6 {
+    background: #333;
   }
 </style>
 

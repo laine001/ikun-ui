@@ -56,6 +56,10 @@ export default {
           text: '回到顶部 BackTop',
           link: '/components/backtop',
         },
+        {
+          text: '动画组件 Transition',
+          link: '/components/transition',
+        },
       ],
     },
     {
@@ -107,6 +111,10 @@ export default {
         {
           text: '标签 Tag',
           link: '/components/tag',
+        },
+        {
+          text: '折叠面板 Collapse',
+          link: '/components/collapse',
         },
       ],
     },

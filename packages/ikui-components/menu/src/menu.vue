@@ -1,5 +1,4 @@
 <script setup lang="ts" name="ik-menu">
-import { defineProps } from 'vue'
 import { menuProps } from './prop'
 import IkMenuItem from './menu-item.vue'
 import IkMenuSubmenu from './submenu.vue'

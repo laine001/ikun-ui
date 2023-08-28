@@ -1,5 +1,5 @@
 <script setup lang="ts" name="IkTooltip">
-import { defineComponent, defineProps, ref, computed } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import Popper from 'vue3-popper'
 import { props } from './tooltip'
 const prop = defineProps(props)

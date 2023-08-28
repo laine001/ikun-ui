@@ -1,5 +1,5 @@
 <script setup lang="ts" name="ik-menu-item">
-import { computed, CSSProperties, defineProps, getCurrentInstance } from 'vue'
+import { computed, CSSProperties, getCurrentInstance } from 'vue'
 import type { Router } from 'vue-router'
 import { menuItemProps } from '../../menu/src/prop'
 const props = defineProps(menuItemProps)
