@@ -268,10 +268,20 @@ html::-webkit-scrollbar-thumb {
 .VPNavBar .title {
   background-color: #fff !important;
 }
-
+.dark .VPSidebar {
+  background-color: var(--vp-sidebar-bg-color) !important;
+}
+.dark .VPNavBar .title {
+  background-color: transparent !important;
+}
 .content-body,
 .VPLocalNav {
   background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(6px);
+}
+.dark .content-body,
+.dark .VPLocalNav {
+  background-color: var(--vp-nav-bg-color) !important;
   backdrop-filter: blur(6px);
 }
 
