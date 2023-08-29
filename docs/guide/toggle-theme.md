@@ -3,11 +3,11 @@
 支持主题切换，内部通过计算取得其色阶值
 
 <div class="t-c-box">
-  <span class="t-b t-b1" @click="() => toggleTheme('#1677ff')">1</span>
-  <span class="t-b t-b2" @click="() => toggleTheme('#673ab7')">2</span>
-  <span class="t-b t-b3" @click="() => toggleTheme('#eb920e')">3</span>
-  <span class="t-b t-b4" @click="() => toggleTheme('#7185f7')">4</span>
-  <span class="t-b t-b5" @click="() => toggleTheme('#ff6723')">5</span>
+  <span class="t-b t-b1" @click="() => toggleTheme('#1677ff')">蓝</span>
+  <span class="t-b t-b2" @click="() => toggleTheme('#673ab7')">紫</span>
+  <span class="t-b t-b3" @click="() => toggleTheme('#eb920e')">黄</span>
+  <span class="t-b t-b4" @click="() => toggleTheme('#7185f7')">坤</span>
+  <span class="t-b t-b5" @click="() => toggleTheme('#ff6723')">橙</span>
   <!-- <span class="t-b t-b6" @click="() => toggleTheme('#333333')">6</span> -->
 </div>
 

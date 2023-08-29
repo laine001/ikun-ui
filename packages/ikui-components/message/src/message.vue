@@ -28,6 +28,7 @@ const bottom = computed(() => {
 const computedStyle: ComputedRef = computed<CSSProperties>(() => {
   return {
     top: `${offset.value}px`,
+    color: computedIconColor.value,
   }
 })
 
@@ -41,7 +42,7 @@ const computedIconColor: ComputedRef = computed(() => {
     case 'success':
       return '#5aa4ae'
     default:
-      return '#f29a76'
+      return '#333'
   }
 })
 
