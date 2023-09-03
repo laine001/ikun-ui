@@ -297,7 +297,7 @@ html::-webkit-scrollbar-thumb {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 12px;
-  background-color: #cac7c7;
+  background-color: #cccccc;
   width: 12px;
   height: 6px;
   border: 2px solid transparent;

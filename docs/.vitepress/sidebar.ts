@@ -120,6 +120,10 @@ export default {
           text: '折叠动画 Collapse',
           link: '/components/collapse-transition',
         },
+        {
+          text: '空状态 Empty',
+          link: '/components/empty',
+        },
       ],
     },
     {

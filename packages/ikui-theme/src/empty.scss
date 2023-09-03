@@ -1,0 +1,14 @@
+@import '../mixins/config.scss';
+
+.ik-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .ik-empty--img {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+    border-radius: var(--default-radius);
+  }
+}
