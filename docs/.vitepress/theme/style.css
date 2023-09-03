@@ -290,6 +290,32 @@ html::-webkit-scrollbar-thumb {
   border: none !important;
 }
 
-/* .VPNavBarTitle {
-  height: 62px;
-} */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 12px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #cac7c7;
+  width: 12px;
+  height: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb8b8;
+}
+.VPSidebar::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+  height: 10px;
+}
+.VPSidebar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #eee;
+  width: 0;
+  height: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
