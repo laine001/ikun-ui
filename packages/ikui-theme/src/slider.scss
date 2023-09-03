@@ -1,0 +1,65 @@
+@import '../mixins/config.scss';
+
+.ik-slider--wrapper {
+  height: 32px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  .ik-slider {
+    width: 100%;
+    height: 6px;
+    background-color: var(--default-color);
+    position: relative;
+    border-radius: var(--default-radius);
+
+    .ik-slider__dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid var(--primary-color);
+
+      transition: transform 0.22s;
+      transform: translateX(-2px);
+      transform-origin: center center;
+
+      position: absolute;
+      top: -7px;
+      left: 0;
+
+      cursor: grab;
+      &:hover {
+        transform: scale(1.2);
+        transform-origin: center center;
+      }
+      &.dragging {
+        cursor: grabbing !important;
+      }
+      &.ik-slider__dot--ikun {
+        top: -9px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        line-height: 18px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+
+        transition: transform 0.26s;
+      }
+    }
+    .ik-slider__bar {
+      width: 0%;
+      height: 100%;
+      border-radius: var(--default-radius);
+      background-color: var(--primary-color);
+    }
+    // .ik-slider__slideway {
+    //   width: 100%;
+    //   background-color: var(--default-color);
+    //   height: 6px;
+    //   border-radius: 14px;
+    // }
+  }
+}

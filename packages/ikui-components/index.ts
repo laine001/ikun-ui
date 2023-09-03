@@ -19,7 +19,7 @@ import IkMenu from './menu'
 import IkTag from './tag'
 import IkLockScreen from './lock-screen'
 import IkCollapseTransition from './collapse-transition'
-import IkCollapse from './collapse'
+import IkSlider from './slider'
 import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
@@ -51,7 +51,7 @@ export {
   IkLockScreen,
   IkTag,
   IkCollapseTransition,
-  IkCollapse,
+  IkSlider,
 }
 
 export * from './button'
@@ -81,7 +81,7 @@ export default {
     app.component(IkTabItem.name, IkTabItem)
     app.component(IkLockScreen.name, IkLockScreen)
     app.component(IkTag.name, IkTag)
-    app.component(IkCollapse.name, IkCollapse)
+    app.component(IkSlider.name, IkSlider)
     app.component(IkCollapseTransition.name, IkCollapseTransition)
     app.directive('loading', IkLoading)
     app.config.globalProperties.IkLoading = loadingService
