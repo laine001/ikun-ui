@@ -319,3 +319,6 @@ html::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   background-clip: content-box;
 }
+.VPSwitchAppearance {
+  border-color: #eee;
+}
