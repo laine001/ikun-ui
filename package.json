@@ -6,7 +6,7 @@
   "main": "index.js",
   "homepage": "https://laine001.github.io/ikun-ui/",
   "scripts": {
-    "dev": "vite",
+    "play": "vite",
     "build": "pnpm build:pkg && pnpm build:theme && pnpm gen",
     "build:pkg": "vite build",
     "build:theme": "vite build --config ./scripts/build-theme.config.ts",
@@ -24,6 +24,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@floating-ui/vue": "^1.0.2",
     "@mdit-vue/plugin-sfc": "^0.12.0",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
@@ -60,7 +61,7 @@
     "figlet": "^1.6.0",
     "husky": "^8.0.2",
     "i": "^0.3.7",
-    "ikuiv": "workspace:0.0.9-beta",
+    "ikuiv": "workspace:0.0.1-alpha.5",
     "inquirer": "^9.2.7",
     "npm": "^9.6.4",
     "prettier": "^2.7.1",

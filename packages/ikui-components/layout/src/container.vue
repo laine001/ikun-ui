@@ -14,7 +14,6 @@ const computedCls = computed(() => {
     },
   ]
 })
-console.log('container12321')
 </script>
 <template>
   <section :class="computedCls">
