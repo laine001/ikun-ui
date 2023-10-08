@@ -26,7 +26,7 @@ import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
-import { IkRipple } from './ripple'
+import IkRipple from './ripple'
 
 export {
   IkButton,
