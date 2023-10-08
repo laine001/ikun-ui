@@ -85,7 +85,7 @@
       <ik-icon name="main" />
     </ik-button>
 
-    <ik-button ikun></ik-button>
+    <ik-button ikun v-ripple></ik-button>
   </ik-space>
 </template>
 ```

@@ -13,8 +13,6 @@
     <div class="icon-demo-box"><ik-icon name="star-fill" color="#5aa4ae" /></div>
     <div class="icon-demo-box"><ik-icon name="star-fill" color="#f29a76" /></div>
     <div class="icon-demo-box"><ik-icon name="heart-fill" color="#b13b2e" /></div>
-    <div class="icon-demo-box"><ik-icon name="camera" color="#5c4f55" /></div>
-    <div class="icon-demo-box"><ik-icon name="camera" color="#a4abd6" /></div>
   </div>
 </template>
 ```
