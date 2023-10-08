@@ -26,6 +26,7 @@ import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
+import { IkRipple } from './ripple'
 
 export {
   IkButton,
@@ -90,6 +91,7 @@ export default {
     app.component(IkPopper.name, IkPopper)
     app.component(IkCollapseTransition.name, IkCollapseTransition)
     app.directive('loading', IkLoading)
+    app.directive('ripple', IkRipple)
     app.config.globalProperties.IkLoading = loadingService
     app.config.globalProperties.$message = message
   },
