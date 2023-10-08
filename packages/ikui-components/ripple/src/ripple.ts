@@ -1,6 +1,5 @@
 import { type Directive, type Plugin, type App, type DirectiveBinding } from 'vue'
-
-import './ripple.css'
+import type { RippleHTMLElement, RippleStyles, RippleOptions } from './interface'
 
 const context = {
   enableRipple: true,
@@ -17,25 +16,6 @@ function getStyle(element: RippleHTMLElement) {
 
 function getRect(element: RippleHTMLElement) {
   return element.getBoundingClientRect()
-}
-
-interface RippleStyles {
-  x: number
-  y: number
-  centerX: number
-  centerY: number
-  size: number
-}
-
-interface RippleOptions {
-  removeRipple: any
-  color?: string
-  disabled?: boolean
-  tasker?: number | null
-}
-
-interface RippleHTMLElement extends HTMLElement {
-  _ripple?: RippleOptions
 }
 
 const ANIMATION_DURATION = 250
@@ -140,7 +120,6 @@ function forbidRippleTask(this: RippleHTMLElement) {
 }
 
 function mounted(el: RippleHTMLElement, binding: DirectiveBinding<RippleOptions>) {
-  console.log('el-mounted', el)
   el._ripple = {
     tasker: null,
     ...(binding.value ?? {}),
@@ -149,14 +128,14 @@ function mounted(el: RippleHTMLElement, binding: DirectiveBinding<RippleOptions>
 
   el.addEventListener('mousedown', createRipple, { passive: true })
   el.addEventListener('mousemove', forbidRippleTask, { passive: true })
-  el.addEventListener('mousemove', removeRipple, { passive: true })
+  el.addEventListener('mouseup', removeRipple, { passive: true })
   document.addEventListener('mouseup', el._ripple.removeRipple, { passive: true })
 }
 
 function unmounted(el: RippleHTMLElement) {
   el.removeEventListener('mousedown', createRipple)
   el.removeEventListener('mousemove', forbidRippleTask)
-  el.removeEventListener('mousemove', removeRipple)
+  el.removeEventListener('mouseup', removeRipple)
   document.removeEventListener('mouseup', el._ripple!.removeRipple)
 }
 

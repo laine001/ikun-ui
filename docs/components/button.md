@@ -136,6 +136,24 @@
 
 :::
 
+## 水波纹效果按钮
+
+:::demo
+
+```vue
+<template>
+  <ik-space>
+    <ik-button v-ripple>按 钮</ik-button>
+    <ik-button type="primary" v-ripple>按 钮</ik-button>
+    <ik-button type="success" v-ripple>按 钮</ik-button>
+    <ik-button type="warning" v-ripple>按 钮</ik-button>
+    <ik-button type="danger" v-ripple>按 钮</ik-button>
+  </ik-space>
+</template>
+```
+
+:::
+
 ## Props
 
 | 参数    |    说明    |  类型   |                 可选值                 |    默认值 |

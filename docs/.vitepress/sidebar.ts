@@ -56,10 +56,10 @@ export default {
           text: '回到顶部 BackTop',
           link: '/components/backtop',
         },
-        // {
-        //   text: '动画组件 Transition',
-        //   link: '/components/transition',
-        // },
+        {
+          text: '水波纹 Ripple',
+          link: '/components/ripple',
+        },
       ],
     },
     {
