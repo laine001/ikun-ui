@@ -1,3 +1,1 @@
-const Ripple = {}
-
-export default Ripple
+export * from './src/ripple'
