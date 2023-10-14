@@ -121,6 +121,10 @@ export default {
           link: '/components/collapse-transition',
         },
         {
+          text: '日历 Calendar',
+          link: '/components/calendar',
+        },
+        {
           text: '空状态 Empty',
           link: '/components/empty',
         },
