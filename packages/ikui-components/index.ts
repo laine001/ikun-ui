@@ -27,6 +27,7 @@ import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 import IkRipple from './ripple'
+import IkCalendar from './calendar'
 
 export {
   IkButton,
@@ -57,6 +58,7 @@ export {
   IkSlider,
   IkEmpty,
   IkPopper,
+  IkCalendar,
 }
 
 export * from './button'
@@ -88,6 +90,7 @@ export default {
     app.component(IkTag.name, IkTag)
     app.component(IkSlider.name, IkSlider)
     app.component(IkEmpty.name, IkEmpty)
+    app.component(IkCalendar.name, IkCalendar)
     app.component(IkPopper.name, IkPopper)
     app.component(IkCollapseTransition.name, IkCollapseTransition)
     app.directive('loading', IkLoading)

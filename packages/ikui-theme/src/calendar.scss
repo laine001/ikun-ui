@@ -1,5 +1,95 @@
-@import '../mixins/config.scss';
 @import '../mixins/var.scss';
 
 .ik-calendar {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--default-radius);
+  position: relative;
+  .ik-calendar-action {
+    padding: 8px 30px 4px;
+    display: flex;
+    justify-content: space-between;
+    .ik-calendar__current-date {
+      .ik-calendar__date-info {
+        font-size: 17px;
+      }
+      .ik-calendar__week-info {
+        font-size: 12px;
+        margin-left: 4px;
+      }
+    }
+    .ik-calendar__opeation {
+      display: flex;
+      .ik-calendar__opeation-btn {
+        font-size: 12px;
+        color: #333;
+        padding: 1px 6px;
+        border-radius: 4px;
+        transition: all 0.22s;
+        &:hover {
+          background-color: var(--default-color);
+        }
+      }
+    }
+  }
+  .ik-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 13px;
+
+    .ik-calendar-header__weeks-item {
+      flex: 1;
+      // padding-left: 12px;
+      text-align: center;
+    }
+  }
+  .ik-calendar-content {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+
+    .ik-calendar-content__days-item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 8px 0;
+      border-radius: var(--default-radius);
+      cursor: pointer;
+      min-height: 80px;
+      transition: all 0.22s;
+
+      &.ik-calendar-content__days-today {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      &.ik-calendar__days-prev-month,
+      &.ik-calendar__days-next-month {
+        color: #c1bfbf;
+        .cal-lunar-day {
+          color: #c1bfbf;
+        }
+      }
+      &:hover {
+        &.ik-calendar__days-prev-month,
+        &.ik-calendar__days-next-month {
+          color: var(--primary-color-lighter-2);
+        }
+        color: var(--primary-color-lighter-2);
+      }
+      .cal-lunar-day {
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+  .ik-calendar-bgDate {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    font-size: 120px;
+    font-weight: 600;
+    color: #f6f6f6;
+    z-index: -1;
+  }
 }

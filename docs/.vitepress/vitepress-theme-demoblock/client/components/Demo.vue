@@ -202,6 +202,7 @@ export default {
   margin: 10px 0;
   border: solid 1px var(--demoblock-border);
   border-radius: 3px;
+  border-radius: var(--default-radius);
   transition: 0.2s;
 }
 
