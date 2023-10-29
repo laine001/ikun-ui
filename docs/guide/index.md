@@ -4,7 +4,7 @@
 
 ## 总览
 
-IKUNUI（ikun ui），个人兴趣爱好的产物，此库主要使用：
+IKUNUI（ikun ui），个人兴趣爱好的产物，当前请勿用于生产环境，此库：
 
 - 🐥 基于 TypeScript
 - ⚡ 基于 Vite
