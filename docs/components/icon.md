@@ -55,7 +55,6 @@ const list = [
   'files',
   'zhire',
   'switch',
-  'chuizi-copy',
 ]
 </script>
 <template>
