@@ -58,7 +58,7 @@
       <template #left>ikun</template>
       <template #right>hub</template>
     </ik-tag>
-  </div>
+  </ik-space>
 </template>
 ```
 

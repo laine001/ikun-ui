@@ -125,6 +125,10 @@ export default {
           link: '/components/calendar',
         },
         {
+          text: '轮播图 Carousel',
+          link: '/components/carousel',
+        },
+        {
           text: '空状态 Empty',
           link: '/components/empty',
         },
