@@ -73,10 +73,6 @@ see more in [Quickstart](https://laine001.github.io/ik-ui)
 
 Hava an idea ? u can join us
 
-<p>
-  <img src="" />
-</p>
-
 ## Contributors
 
 <a href="https://github.com/LAINE001/ikun-ui/graphs/contributors">
