@@ -9,7 +9,9 @@
 </h1>
 
 <p>
-  a simple ui components built on vue3
+  a simple ui components built on vue3 . 
+<br />
+docs see  <a href="https://laine001.github.io/ikun-ui/">IKUNUI</a>， 国内：https://laine001.gitee.io/ikun-ui/
 </p>
 
 <p>
@@ -70,10 +72,6 @@ see more in [Quickstart](https://laine001.github.io/ik-ui)
 ## Join us
 
 Hava an idea ? u can join us
-
-<p>
-  <img src="" />
-</p>
 
 ## Contributors
 
