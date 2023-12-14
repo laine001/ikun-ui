@@ -28,7 +28,7 @@ import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 import IkRipple from './ripple'
 import IkCalendar from './calendar'
-import IkCarousel from './carousel'
+import IkCarousel, { IkCarouselItem } from './carousel'
 
 export {
   IkButton,
@@ -61,6 +61,7 @@ export {
   IkPopper,
   IkCalendar,
   IkCarousel,
+  IkCarouselItem,
 }
 
 export * from './button'
@@ -94,6 +95,7 @@ export default {
     app.component(IkEmpty.name, IkEmpty)
     app.component(IkCalendar.name, IkCalendar)
     app.component(IkCarousel.name, IkCarousel)
+    app.component(IkCarouselItem.name, IkCarouselItem)
     app.component(IkPopper.name, IkPopper)
     app.component(IkCollapseTransition.name, IkCollapseTransition)
     app.directive('loading', IkLoading)

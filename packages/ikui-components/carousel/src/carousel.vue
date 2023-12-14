@@ -1,7 +1,12 @@
 <script lang="ts" setup name="IkCarousel">
-import { getCurrentInstance, ref } from 'vue'
+import { getCurrentInstance, ref, h, watch, provide, toRefs, onMounted } from 'vue'
+import IkCarouselItem from './carousel-item.vue'
 import type { ComponentInternalInstance } from 'vue'
 import type { actionType } from './prop'
+import { carouselContextKey, carouselProps } from './prop'
+
+const items = ref([])
+const root = ref<HTMLDivElement>()
 
 const inst = getCurrentInstance() as ComponentInternalInstance
 const LEN = inst.slots.default().length
@@ -9,9 +14,16 @@ const activeIndex = ref(0)
 // import { computed } from 'vue'
 // import { swiperProps } from './prop'
 
-// const props = defineProps(buttonProps)
+const props = defineProps(carouselProps)
 // const emits = defineEmits(['click'])
+// console.log(inst.slots.default(), 'inst')
+// const _vnode = h(inst.slots.default())
+// const _vnode2 = h(inst.slots.default()[0])
+// console.log(_vnode, inst.slots, 'v')
+// console.log(_vnode2, 'v2')
 
+// console.log(renderSlot(inst.slots, 'default'), 'hellos')
+// const t = render(_vnode, )
 const onToggleIndex = (action: actionType, i?: number) => {
   if (action === 'next') {
     if (activeIndex.value === LEN - 1) {
@@ -28,10 +40,40 @@ const onToggleIndex = (action: actionType, i?: number) => {
   } else if (action === 'assign') {
     activeIndex.value = i
   }
+  // console.log(items, 'items')
+  // items.value.forEach((item, index) => {
+  //   item.translateItem(index, activeIndex.value)
+  // })
+  // translateItem()
+  // console.log(activeIndex, 'activeIndex')
 }
+const addItem = (item) => {
+  items.value.push(item)
+}
+
+// onMounted(() => {
+//   items.value.forEach((item, index) => {
+//     item.translateItem(index, activeIndex.value)
+//   })
+// })
+
+watch(
+  () => activeIndex.value,
+  (current) => {
+    items.value.forEach((item, index) => {
+      item.translateItem(index, current)
+    })
+  }
+)
+
+provide(carouselContextKey, {
+  root,
+  items,
+  addItem,
+})
 </script>
 <template>
-  <div class="ik-carousel">
+  <div class="ik-carousel" ref="root">
     <span class="ik-carousel-action__left" @click="() => onToggleIndex('prev')"
       ><ik-icon color="#fff" name="arrow-left"
     /></span>
@@ -46,17 +88,21 @@ const onToggleIndex = (action: actionType, i?: number) => {
         @click="() => onToggleIndex('assign', i)"
       ></span>
     </div>
-
     <div class="ik-carousel-list">
-      <div
+      <slot />
+      <!-- <template v-for="(item, index) in LEN" :key="index">
+        <ik-carousel-item>
+          <slot />
+        </ik-carousel-item>
+      </template> -->
+      <!-- <div
         v-for="(item, index) in LEN"
         :key="index"
         :style="{ transform: `translate3d(${(index - activeIndex) * 100}%, 0, 0)` }"
         class="ik-carousel--item"
       >
         {{ item }}
-        <!-- <slot /> -->
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -107,16 +153,16 @@ const onToggleIndex = (action: actionType, i?: number) => {
 
       transition: all 0.38s;
       &:nth-child(1) {
-        background-color: var(--primary-color);
+        background-color: pink;
       }
       &:nth-child(2) {
-        background-color: pink;
+        background-color: rgb(229, 223, 186);
       }
       &:nth-child(3) {
         background-color: skyblue;
       }
       &:nth-child(4) {
-        background-color: oldlace;
+        background-color: rgb(233, 221, 198);
       }
     }
   }

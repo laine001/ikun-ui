@@ -125,7 +125,7 @@ export default {
           link: '/components/calendar',
         },
         {
-          text: '轮播图 Carousel',
+          text: '轮播 Carousel',
           link: '/components/carousel',
         },
         {
