@@ -38,16 +38,16 @@ import { ref } from 'vue'
 const showText = ref(false)
 </script>
 <template>
-<div>
-  <ik-switch v-model="showText"></ik-switch>
-  <br />
-  <ik-skeleton v-if="showText" active />
-  <div v-else>
-    <span>大家好<span>
-    <div>我是练习时长两年半的<div>
-    <span>🐥🏀<span>
+  <div>
+    <ik-switch v-model="showText"></ik-switch>
+    <br />
+    <ik-skeleton v-if="showText" active />
+    <div v-else>
+      <span>大家好</span>
+      <div>我是练习时长两年半的</div>
+      <span>🐥🏀</span>
+    </div>
   </div>
-</div>
 </template>
 ```
 
