@@ -1,0 +1,34 @@
+.ik-skeleton {
+  .ik-skeleton--item {
+    display: flex;
+    margin-bottom: 14px;
+    background-color: #ededed;
+    width: 100%;
+    height: 16px;
+    border-radius: var(--default-radius);
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 60%
+      )
+      #ededed;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    &:first-child {
+      width: 36%;
+    }
+    &:last-child {
+      width: 68%;
+    }
+    &.ik-skeleton--item__active {
+      animation: 1.4s skeleton_loading ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes skeleton_loading {
+  to {
+    background-position-x: -20%;
+  }
+}

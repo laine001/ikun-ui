@@ -154,6 +154,10 @@ export default {
           text: '锁屏 LockScreen',
           link: '/components/lockScreen',
         },
+        {
+          text: '骨架屏 Skeleton',
+          link: '/components/skeleton',
+        },
       ],
     },
   ],

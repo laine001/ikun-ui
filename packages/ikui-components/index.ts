@@ -21,13 +21,14 @@ import IkLockScreen from './lock-screen'
 import IkCollapseTransition from './collapse-transition'
 import IkSlider from './slider'
 import IkEmpty from './empty'
-import IkPopper from './popper'
+// import IkPopper from './popper'
 import { IkTabItem } from './tab'
 import { IkContainer, IkAside, IkMain, IkHeader } from './layout'
 import { message } from './message'
 import { IkLoading, loadingService } from './loading'
 import IkRipple from './ripple'
 import IkCalendar from './calendar'
+import IkSkeleton from './skeleton'
 import IkCarousel, { IkCarouselItem } from './carousel'
 
 export {
@@ -58,10 +59,11 @@ export {
   IkCollapseTransition,
   IkSlider,
   IkEmpty,
-  IkPopper,
+  // IkPopper,
   IkCalendar,
   IkCarousel,
   IkCarouselItem,
+  IkSkeleton,
 }
 
 export * from './button'
@@ -96,7 +98,8 @@ export default {
     app.component(IkCalendar.name, IkCalendar)
     app.component(IkCarousel.name, IkCarousel)
     app.component(IkCarouselItem.name, IkCarouselItem)
-    app.component(IkPopper.name, IkPopper)
+    // app.component(IkPopper.name, IkPopper)
+    app.component(IkSkeleton.name, IkSkeleton)
     app.component(IkCollapseTransition.name, IkCollapseTransition)
     app.directive('loading', IkLoading)
     app.directive('ripple', IkRipple)

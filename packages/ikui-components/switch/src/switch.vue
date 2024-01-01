@@ -5,6 +5,7 @@ const props = defineProps(SwitchProps)
 const emit = defineEmits(emits)
 const bool = ref<boolean>(props.modelValue)
 const switchRef = ref()
+console.log(bool, props.defaultValue, 'bool')
 bool.value = props.defaultValue ?? false
 const handleToggle = () => {
   bool.value = !bool.value
@@ -33,20 +34,6 @@ const setCssVar = () => {
 onMounted(() => {
   setCssVar()
 })
-// watch(
-//   () => props?.style,
-//   () => {
-//     console.log(switchRef.value, 'switchRef2')
-//     setCssVar()
-//   },
-//   { immediate: false }
-// )
-
-// const computedBgStyle = computed(() => {
-//   return {
-//     background: props.bgColor,
-//   }
-// })
 </script>
 <template>
   <div class="ik-switch__wrap" ref="switchRef">
