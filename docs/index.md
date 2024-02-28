@@ -14,13 +14,13 @@ hero:
     alt: IKUN-UI
   actions:
     - theme: brand
-      text: Get Start
+      text: ✨ Get Start
       link: /guide/
     # - theme: alt
     #   text: 为什么选IKUI
     #   link: /guide/why
     - theme: alt
-      text: View on Github
+      text: 👉 View on Github
       link: https://github.com/LAINE001/ikun-ui
 
 features:
