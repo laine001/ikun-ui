@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
+import Layout from './Layout.vue'
 import IkUI, { message } from 'ikuiv'
 import '@ikui/theme/index.scss'
 // import Demo from '../components/demo.vue'
@@ -11,7 +12,8 @@ import DemoBlock from '../vitepress-theme-demoblock/client/components/DemoBlock.
 import '../vitepress-theme-demoblock/theme/styles/index.css'
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
+  Layout,
   enhanceApp({ app }) {
     app.use(IkUI)
     app.config.globalProperties.$message = message
