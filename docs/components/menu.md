@@ -6,7 +6,64 @@
 
 支持直接传入字段渲染，默认根据 `children`字段渲染子菜单
 
-:::demo
+<script lang="ts" setup>
+const menuList = [
+  {
+    label: '菜单一',
+    key: '1',
+    icon: 'home',
+  },
+  {
+    label: '菜单二',
+    key: '2',
+    icon: 'user',
+    type: 'group',
+    isExpand: true,
+    children: [
+      {
+        label: '菜单二-1',
+        key: '2-1',
+      },
+      {
+        label: '菜单二-2',
+        key: '2-2',
+      },
+    ],
+  },
+  {
+    label: '菜单三',
+    key: '3',
+    icon: 'files',
+    children: [
+      {
+        label: '菜单三-1',
+        key: '3-1',
+      },
+      {
+        label: '菜单三-2',
+        key: '3-2',
+        children: [
+          {
+            label: '菜单三-2-1',
+            key: '3-2-1',
+          },
+        ],
+      },
+      {
+        label: '菜单三-3',
+        key: '3-3',
+      },
+      {
+        label: '菜单三-4',
+        key: '3-4',
+      },
+    ],
+  },
+]
+</script>
+<ik-menu :items="menuList" />
+
+::: details 点击展开
 
 ```vue
 <script lang="ts" setup>

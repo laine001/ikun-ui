@@ -10,7 +10,7 @@
   <ik-button type="primary">按钮三</ik-button>
 </ik-space>
 
-::: details 点击展开代码
+::: details 点击展开
 
 ```vue
 <template>
@@ -40,7 +40,7 @@
 <ik-button type="primary">按钮六</ik-button>
 </ik-space>
 
-::: details 点击展开代码
+::: details 点击展开
 
 ```vue
 <template>

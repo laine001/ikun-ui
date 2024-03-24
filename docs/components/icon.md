@@ -38,7 +38,30 @@
 
 ## 部分展示
 
-::: demo
+<script lang="ts" setup>
+
+const list = [
+'bell',
+'email',
+'main',
+'user',
+'likes',
+'search',
+'chart',
+'add',
+'kongtiao',
+'files',
+'zhire',
+'switch',
+]
+</script>
+  <div class="flex">
+    <template v-for="item in list">
+      <div class="icon-demo-box"><ik-icon :name="item" /></div>
+    </template>
+  </div>
+
+::: details 点击展开
 
 ```vue
 <script lang="ts" setup>

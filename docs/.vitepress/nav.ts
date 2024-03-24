@@ -50,7 +50,7 @@ export default [
       },
       {
         text: 'blog',
-        link: 'https://laine001.github.io/',
+        link: 'https://laine001.gitee.io/blog/daily/components-proj.html',
       },
       // {
       //   text: '酷酷鸭',

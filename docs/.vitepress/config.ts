@@ -32,6 +32,7 @@ export default {
     ],
     // ['link', { rel: 'stylesheet', href: 'https://unpkg.com/nes.css/css/nes-core.min.css' }],
   ],
+  cleanUrls: true,
   themeConfig: {
     logo: '/layer5.png',
     footer: {
@@ -72,7 +73,11 @@ export default {
   // },
   // async transformHtml(code, id, context) {},
   markdown: {
-    theme: 'material-theme-palenight',
+    // theme: 'github-light',
+    // themes: {
+    //   light: 'github-light',
+    //   dark: 'github-dark',
+    // },
     config: (md) => {
       // console.log(md, 'md')
       md.use(demoBlockPlugin)
