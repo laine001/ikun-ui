@@ -52,10 +52,10 @@ export default [
         text: 'blog',
         link: 'https://laine001.gitee.io/blog/daily/components-proj.html',
       },
-      // {
-      //   text: '酷酷鸭',
-      //   link: 'http://118.25.1.63/'
-      // }
+      {
+        text: '国内链接',
+        link: 'https://laine001.gitee.io/ikun-ui/',
+      },
     ],
   },
 ]
