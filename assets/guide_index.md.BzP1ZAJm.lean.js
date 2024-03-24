@@ -1,0 +1,1 @@
+import{_ as i,o as s,b as a,am as e}from"./chunks/framework.IGMpLL1P.js";const g=JSON.parse('{"title":"开始","description":"","frontmatter":{},"headers":[],"relativePath":"guide/index.md","filePath":"guide/index.md"}'),t={name:"guide/index.md"},n=e("",7),l=[n];function p(h,d,o,r,k,c){return s(),a("div",null,l)}const _=i(t,[["render",p]]);export{g as __pageData,_ as default};
