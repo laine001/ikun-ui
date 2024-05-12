@@ -57,6 +57,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
     "figlet": "^1.6.0",
+    "gitalk": "^1.8.0",
     "husky": "^8.0.2",
     "i": "^0.3.7",
     "ikuiv": "workspace:0.0.1-alpha.5",
