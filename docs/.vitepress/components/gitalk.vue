@@ -9,7 +9,7 @@ onMounted(() => {
     repo: 'blog-comment',
     owner: 'LAINE001',
     admin: ['LAINE001'],
-    id: location.pathname.split('/').pop().substring(0, 49),
+    id: location.pathname,
     labels: ['GitTalk'],
     proxy: 'https://vercel.prohibitorum.top/github_access_token',
     distractionFreeMode: false,
