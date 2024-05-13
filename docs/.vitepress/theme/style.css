@@ -12,6 +12,12 @@
   border-radius: 8px !important;
   border: none;
 }
+.VPButton.medium.brand {
+  color: #fff;
+}
+.VPButton.medium.brand:hover {
+  color: #fff;
+}
 .VPImage {
   max-width: 280px !important;
 }
