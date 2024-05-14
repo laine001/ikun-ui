@@ -12,7 +12,7 @@ onMounted(() => {
     id: location.pathname,
     labels: ['GitTalk'],
     proxy: 'https://mellifluous-bombolone-049a57.netlify.app/github_access_token',
-    distractionFreeMode: false,
+    distractionFreeMode: false
   }
   const gitalk = new Gitalk(config)
   gitalk.render('gitalk-container')
