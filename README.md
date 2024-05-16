@@ -11,7 +11,7 @@
 <p>
   a simple ui components built on vue3 . 
 <br />
-docs see  <a href="https://laine001.github.io/ikun-ui/">IKUNUI</a>， 国内：https://laine001.gitee.io/ikun-ui/
+docs see  <a href="https://laine001.github.io/ikun-ui/">IKUNUI</a>， 国内：https://laine001.gitee.io/ikun-ui/ 或：https://ikun-cool.netlify.app/
 </p>
 
 <p>
