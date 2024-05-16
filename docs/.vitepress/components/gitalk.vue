@@ -4,15 +4,15 @@ import Gitalk from 'gitalk'
 import 'gitalk/dist/gitalk.css'
 onMounted(() => {
   const config = {
-    clientID: '23159cfb3679d024812f',
-    clientSecret: '923ba2f1928e54f36b052c0bcbbf301d3eb893c8',
-    repo: 'blog-comment',
+    clientID: 'Ov23ctZEke7XDtFejl4v',
+    clientSecret: '9b7134983b52f94f312da9f7142ad64f7697fbb9',
+    repo: 'ikun-talk',
     owner: 'LAINE001',
     admin: ['LAINE001'],
     id: location.pathname,
     labels: ['GitTalk'],
-    proxy: 'https://vercel.prohibitorum.top/github_access_token',
-    distractionFreeMode: false,
+    proxy: 'https://mellifluous-bombolone-049a57.netlify.app/github_access_token',
+    distractionFreeMode: false
   }
   const gitalk = new Gitalk(config)
   gitalk.render('gitalk-container')
