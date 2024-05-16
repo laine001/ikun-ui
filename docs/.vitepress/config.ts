@@ -3,8 +3,16 @@ import { demoBlockPlugin } from './vitepress-theme-demoblock/node'
 import sidebar from './sidebar'
 import nav from './nav'
 
+const args = process.argv.slice(2)
+let env = ''
+args.forEach((arg) => {
+  if (arg.startsWith('--env=')) {
+    env = arg.split('=')[1]
+  }
+})
+
 export default {
-  base: '/ikun-ui/',
+  base: env === 'netlify' ? '/' : '/ikun-ui/',
   title: 'IKUN-UI',
   lang: 'en-US',
   description: '组件库',

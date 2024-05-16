@@ -12,6 +12,7 @@
     "build:theme": "vite build --config ./scripts/build-theme.config.ts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
+    "netlify:build": "vitepress build docs --env=netlify",
     "docs:serve": "vitepress serve docs",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "format": "prettier --write --cache .",
