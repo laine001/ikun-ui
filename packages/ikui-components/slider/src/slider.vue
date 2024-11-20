@@ -39,7 +39,7 @@ const setSliderSize = () => {
 
 const onDragStart = (event: MouseEvent) => {
   startPosition.value = event.clientX
-  oldValue.value = props.modelValue
+  oldValue.value = shouldPosition.value
   dragging.value = true
   console.log(startPosition.value, 'startPosition')
 }
