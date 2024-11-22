@@ -72,7 +72,7 @@ const onDragEnd = (e: MouseEvent) => {
 const dotComputedStyle: ComputedRef<CSSProperties> = computed(() => {
   const l = `${shouldPosition.value}%`
   return {
-    left: l,
+    left: props.ikun ? `${Number(shouldPosition.value) - 1}%` : l,
     transform: props.ikun ? `rotate(${shouldPosition.value * 36}deg)` : '',
   }
 })
