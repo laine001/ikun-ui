@@ -34,7 +34,7 @@
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
     "packages": "^0.0.8",
-    "sass": "^1.54.9",
+    "sass": "1.54.9",
     "vite": "^3.1.0",
     "vue": "3.4.21"
   },
