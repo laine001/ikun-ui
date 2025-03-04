@@ -76,7 +76,7 @@ Hava an idea ? u can join us
 ## Contributors
 
 <a href="https://github.com/LAINE001/ikun-ui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=laine001/ikun-ui" width="50" />
+  <img src="https://contrib.rocks/image?repo=laine001/ikun-ui" width="80" />
 </a>
 
 ## Thanks
