@@ -1,0 +1,1 @@
+import{_ as o,c as s,o as a,az as l}from"./chunks/framework.DRVToBcR.js";const p=JSON.parse('{"title":"色彩","description":"","frontmatter":{},"headers":[],"relativePath":"guide/colors.md","filePath":"guide/colors.md"}'),d={name:"guide/colors.md"},c=l("",8),i=[c];function e(r,t,v,n,b,x){return a(),s("div",null,i)}const _=o(d,[["render",e]]);export{p as __pageData,_ as default};
