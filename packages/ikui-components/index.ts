@@ -30,6 +30,7 @@ import IkRipple from './ripple'
 import IkCalendar from './calendar'
 import IkSkeleton from './skeleton'
 import IkCarousel, { IkCarouselItem } from './carousel'
+import IkTree, { IkTreeNode } from './tree'
 
 export {
   IkButton,
@@ -64,6 +65,8 @@ export {
   IkCarousel,
   IkCarouselItem,
   IkSkeleton,
+  IkTree,
+  IkTreeNode,
 }
 
 export * from './button'
@@ -101,6 +104,8 @@ export default {
     // app.component(IkPopper.name, IkPopper)
     app.component(IkSkeleton.name, IkSkeleton)
     app.component(IkCollapseTransition.name, IkCollapseTransition)
+    app.component(IkTree.name, IkTree)
+    app.component(IkTreeNode.name, IkTreeNode)
     app.directive('loading', IkLoading)
     app.directive('ripple', IkRipple)
     app.config.globalProperties.IkLoading = loadingService
