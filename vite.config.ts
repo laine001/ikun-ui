@@ -6,6 +6,9 @@ import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
 
 export default defineConfig({
+  define: {
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false',
+  },
   plugins: [
     vue(),
     vueJsx(),
