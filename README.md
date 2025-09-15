@@ -67,7 +67,7 @@ import { IkButton } from 'ikun-ui'
 app.use(IkButton)
 ```
 
-see more in [Quickstart](https://laine001.github.io/ik-ui)
+see more in [Quickstart](https://laine001.github.io/ikun-ui)
 
 ## Links
 
