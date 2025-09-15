@@ -9,10 +9,16 @@
 </h1>
 
 <p>
+  <a href="https://www.zdoc.app/zh/laine001/ikun-ui">中文</a>
+</p>
+
+<p>
   a simple ui components built on vue3 . 
 <br />
 docs see  <a href="https://laine001.github.io/ikun-ui/">IKUNUI</a>， 国内：https://laine001.gitee.io/ikun-ui/ or https://ikun-cool.netlify.app/
 </p>
+
+
 
 <p>
   <img src="https://github.com/LAINE001/ik-ui/actions/workflows/pages.yml/badge.svg?branch=master" />
