@@ -117,6 +117,10 @@ export default {
           link: '/components/tag',
         },
         {
+          text: '树 Tree',
+          link: '/components/tree',
+        },
+        {
           text: '折叠动画 Collapse',
           link: '/components/collapse-transition',
         },
