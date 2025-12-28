@@ -6,6 +6,7 @@
   "main": "index.js",
   "homepage": "https://laine001.github.io/ikun-ui/",
   "scripts": {
+    "kun": "vitepress dev docs",
     "play": "vite",
     "build": "pnpm build:pkg && pnpm build:theme && pnpm gen",
     "build:pkg": "vite build",
