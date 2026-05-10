@@ -14,8 +14,9 @@ args.forEach((arg) => {
 export default {
   base: env === 'netlify' ? '/' : '/ikun-ui/',
   title: 'IKUN-UI',
+  titleTemplate: 'IKUN-UI - A Vue 3 UI Component Library',
   lang: 'en-US',
-  description: '组件库',
+  description: 'IKUN-UI is a lightweight, customizable Vue 3 UI component library built with TypeScript and Vite. Features 28+ components including buttons, forms, modals, menus, and more. Fast, modern, and easy to use.',
   head: [
     ['link', { rel: 'icon', href: '/layer5.png', type: 'image/png' }],
     [
@@ -26,6 +27,43 @@ export default {
         type: 'image/png',
         sizes: '32x32',
       },
+    ],
+    // SEO Meta Tags
+    ['meta', { name: 'keywords', content: 'Vue 3 UI, component library, TypeScript, Vite, UI framework, Vue components, ikun-ui, ikuiv, frontend, web development' }],
+    ['meta', { name: 'author', content: 'laine001' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    // Open Graph / Facebook
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'IKUN-UI - A Vue 3 UI Component Library' }],
+    ['meta', { property: 'og:description', content: 'Lightweight, customizable Vue 3 UI component library built with TypeScript and Vite. 28+ ready-to-use components.' }],
+    ['meta', { property: 'og:image', content: 'https://laine001.github.io/ikun-ui/layer5.png' }],
+    ['meta', { property: 'og:url', content: 'https://laine001.github.io/ikun-ui/' }],
+    ['meta', { property: 'og:site_name', content: 'IKUN-UI' }],
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'IKUN-UI - A Vue 3 UI Component Library' }],
+    ['meta', { name: 'twitter:description', content: 'Lightweight, customizable Vue 3 UI component library built with TypeScript and Vite.' }],
+    ['meta', { name: 'twitter:image', content: 'https://laine001.github.io/ikun-ui/layer5.png' }],
+    // Canonical URL
+    ['link', { rel: 'canonical', href: 'https://laine001.github.io/ikun-ui/' }],
+    // JSON-LD Structured Data
+    [
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'IKUN-UI',
+        url: 'https://laine001.github.io/ikun-ui/',
+        description: 'A lightweight, customizable Vue 3 UI component library built with TypeScript and Vite',
+        author: {
+          '@type': 'Person',
+          name: 'laine001',
+          url: 'https://github.com/LAINE001',
+        },
+        license: 'https://opensource.org/licenses/MIT',
+        keywords: 'Vue 3 UI, component library, TypeScript, Vite, UI framework',
+      }),
     ],
     [
       'script',

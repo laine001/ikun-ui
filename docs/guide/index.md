@@ -1,19 +1,25 @@
-# 开始
+# Get Started with IKUN-UI
 
-<img width="80" style="margin-top: 40px" src="https://laine001.github.io/ikun-ui/ikun.gif" />
+<img width="80" style="margin-top: 40px" src="https://laine001.github.io/ikun-ui/ikun.gif" alt="IKUN-UI Animation" />
 
-## 总览
+## Overview
 
-IKUNUI（ikun ui），个人兴趣爱好的产物，当前请勿用于生产环境，此库：
+IKUN-UI (ikun ui) is a lightweight and modern Vue 3 UI component library built with TypeScript and Vite. It provides 28+ ready-to-use components to accelerate your web development workflow.
 
-- 🐥 基于 TypeScript
-- ⚡ 基于 Vite
-- 🏀 vue3
-- ✨ monorepo 风格仓库
+**Why choose IKUN-UI:**
+
+- 🐥 **TypeScript** - Full type support for better development experience
+- ⚡ **Vite Powered** - Lightning fast HMR and optimized builds
+- 🏀 **Vue 3 Native** - Built from the ground up for Vue 3 Composition API
+- ✨ **Monorepo** - Well-organized codebase with separate packages
+
+## Installation
 
 ```bash
 npm install ikun-ui
 ```
+
+## Quick Start
 
 ```js
 import ikun from 'ikun-ui'

@@ -1,4 +1,4 @@
-# IKUN-UI
+# IKUN-UI - Vue 3 Component Library
 
 <p>
   <img alt="logo" src="https://laine001.github.io/ikun-ui/layer5.png" width="180" height="180" />
@@ -9,13 +9,13 @@
 </h1>
 
 <p>
-  <a href="https://www.zdoc.app/zh/laine001/ikun-ui">中文</a>
+  <a href="https://www.zdoc.app/zh/laine001/ikun-ui">中文文档</a>
 </p>
 
 <p>
-  a simple ui components built on vue3 . 
+  A lightweight, customizable Vue 3 UI component library built with TypeScript and Vite. Provides 28+ ready-to-use components for modern web applications.
 <br />
-docs see  <a href="https://laine001.github.io/ikun-ui/">IKUNUI</a>， 国内：https://laine001.gitee.io/ikun-ui/ or https://ikun-cool.netlify.app/
+📖 Documentation: <a href="https://laine001.github.io/ikun-ui/">IKUN-UI Docs</a> | 🇨🇳 国内镜像: https://laine001.gitee.io/ikun-ui/ or https://ikun-cool.netlify.app/
 </p>
 
 <p>
