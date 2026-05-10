@@ -14,16 +14,9 @@ export default defineConfig({
     vueJsx(),
     setupNamePlugin(),
     dts({
-      skipDiagnostics: true,
-      staticImport: true,
+      outDir: 'dist/types',
       insertTypesEntry: true,
-      cleanVueFileName: true,
-      copyDtsFiles: true,
-      include: ['./packages/ikui-components'],
-      outputDir: ['./dist/lib', './dist/es'],
-      afterBuild: (): void => {
-        console.log('build complete')
-      },
+      rollupTypes: false,
     }),
   ],
   build: {

@@ -68,7 +68,7 @@
     "prettier": "^2.7.1",
     "typescript": "*",
     "vanilla-tilt": "^1.8.0",
-    "vite-plugin-dts": "^1.6.6",
+    "vite-plugin-dts": "^3.9.1",
     "vitepress": "^1.0.1",
     "vitest": "^0.29.8",
     "vue-router": "^4.2.2",
