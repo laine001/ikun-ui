@@ -6,8 +6,13 @@ export interface TreeNodeData {
   label: string
   children?: TreeNodeData[]
   disabled?: boolean
+  isLeaf?: boolean
   [key: string]: unknown
 }
+
+export type LoadNodeCallback = (data: TreeNodeData[]) => void
+
+export type LoadNode = (node: TreeNodeData, resolve: LoadNodeCallback) => void
 
 export const treeProps = {
   data: {
@@ -23,11 +28,13 @@ export const treeProps = {
       children?: string
       label?: string
       disabled?: string
+      isLeaf?: string
     }>,
     default: () => ({
       children: 'children',
       label: 'label',
       disabled: 'disabled',
+      isLeaf: 'isLeaf',
     }),
   },
   showCheckbox: {
@@ -45,6 +52,21 @@ export const treeProps = {
   checkOnClickNode: {
     type: Boolean,
     default: false,
+  },
+  lazy: {
+    type: Boolean,
+    default: false,
+  },
+  load: {
+    type: Function as PropType<LoadNode>,
+  },
+  filterNodeMethod: {
+    type: Function as PropType<(value: string, data: TreeNodeData) => boolean>,
+    default: null,
+  },
+  filterText: {
+    type: String,
+    default: '',
   },
 } as const
 
