@@ -5,5 +5,5 @@ import { withInstall } from '../_utils/withInstall'
 const IkTree = withInstall(Tree)
 const IkTreeNode = withInstall(TreeNode)
 export default IkTree
-export type { ButtonInstance, ButtonType } from './src/tree'
+export type { TreeInstance, TreeNodeData } from './src/tree'
 export { IkTreeNode }
