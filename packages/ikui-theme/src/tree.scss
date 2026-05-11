@@ -3,7 +3,7 @@
 
 .ik-tree {
   font-size: 14px;
-  color: var(--ik-text-color);
+  color: var(--select-inner-color);
   background-color: transparent;
   user-select: none;
 
@@ -22,18 +22,27 @@
   &__content {
     display: flex;
     align-items: center;
-    padding: 6px 8px;
+    padding: 6px 10px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    border-radius: var(--default-radius);
+    transition: all 0.26s;
 
     &:hover {
-      background-color: var(--ik-fill-color-light);
+      background-color: var(--default-color-lighter-1);
+      color: var(--primary-color);
+
+      .ik-tree-node__arrow {
+        fill: var(--primary-color);
+      }
     }
 
     &--selected {
-      background-color: var(--ik-color-primary-light-9);
-      color: var(--ik-color-primary);
+      background-color: var(--default-color);
+      color: var(--primary-color);
+
+      .ik-tree-node__arrow {
+        fill: var(--primary-color);
+      }
     }
 
     &--expandable {
@@ -45,32 +54,32 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.26s;
   }
 
   &__icon--leaf {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
   }
 
   &__arrow {
-    width: 12px;
-    height: 12px;
-    fill: currentColor;
-    transition: transform 0.2s;
+    width: 14px;
+    height: 14px;
+    fill: var(--input-default-border-color);
+    transition: transform 0.26s;
 
     &--collapsed {
       transform: rotate(-90deg);
     }
 
     &--loading {
-      animation: ik-tree-node-loading 1s linear infinite;
+      animation: ik-tree-node-loading 1.6s linear infinite;
     }
   }
 
@@ -86,37 +95,53 @@
   &__checkbox {
     margin-right: 8px;
     cursor: pointer;
+    accent-color: var(--primary-color);
   }
 
   &__label {
     flex: 1;
-    line-height: 1.5;
+    line-height: 24px;
   }
 
   &__children {
     list-style: none;
     margin: 0;
-    padding-left: 16px;
+    padding-left: 18px;
   }
 
   &--disabled {
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: not-allowed;
 
     .ik-tree-node__content {
       cursor: not-allowed;
+
+      &:hover {
+        background-color: transparent;
+        color: inherit;
+      }
     }
   }
 }
 
-.ik-tree-node-enter-active,
+.ik-tree-node-enter-active {
+  transition: all 0.26s ease-in-out;
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+}
+
 .ik-tree-node-leave-active {
-  transition: all 0.2s ease;
+  transition: all 0.26s ease-in-out;
   overflow: hidden;
   max-height: 1000px;
 }
 
-.ik-tree-node-enter-from,
+.ik-tree-node-enter-from {
+  max-height: 0;
+  opacity: 0;
+}
+
 .ik-tree-node-leave-to {
   max-height: 0;
   opacity: 0;

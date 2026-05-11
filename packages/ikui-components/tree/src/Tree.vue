@@ -54,6 +54,7 @@ const checkedKeys = ref<(string | number)[]>([])
 const indeterminateKeys = ref<(string | number)[]>([])
 
 const filteredData = computed(() => {
+  if (!props.data || !Array.isArray(props.data)) return []
   if (!props.filterNodeMethod) return props.data
   return filterTreeData(props.data)
 })
@@ -63,7 +64,7 @@ function filterTreeData(data: TreeNodeData[]): TreeNodeData[] {
     const matchesFilter = props.filterNodeMethod!(props.filterText || '', node)
     const children = node[nodeProps.value.children]
     const filteredChildren = children && Array.isArray(children) ? filterTreeData(children as TreeNodeData[]) : []
-    
+
     if (matchesFilter || filteredChildren.length > 0) {
       result.push({
         ...node,
@@ -76,7 +77,9 @@ function filterTreeData(data: TreeNodeData[]): TreeNodeData[] {
 
 function updateIndeterminateState() {
   indeterminateKeys.value = []
-  calculateIndeterminate(props.data)
+  if (props.data && Array.isArray(props.data)) {
+    calculateIndeterminate(props.data)
+  }
 }
 
 function calculateIndeterminate(data: TreeNodeData[]) {
@@ -85,10 +88,10 @@ function calculateIndeterminate(data: TreeNodeData[]) {
     const children = node[nodeProps.value.children]
     if (children && Array.isArray(children) && children.length > 0) {
       calculateIndeterminate(children as TreeNodeData[])
-      
+
       const childKeys = getAllChildKeys(children as TreeNodeData[])
       const checkedCount = childKeys.filter((k) => checkedKeys.value.includes(k)).length
-      
+
       if (checkedCount > 0 && checkedCount < childKeys.length) {
         if (!indeterminateKeys.value.includes(key)) {
           indeterminateKeys.value.push(key)
@@ -127,7 +130,7 @@ function onSelect(node: TreeNodeData) {
 
 function onCheck(node: TreeNodeData, checked: boolean) {
   const key = node[nodeProps.value.id || 'id']
-  
+
   if (checked) {
     if (!checkedKeys.value.includes(key)) {
       checkedKeys.value.push(key)
@@ -146,7 +149,7 @@ function onCheck(node: TreeNodeData, checked: boolean) {
       checkAllChildren(children as TreeNodeData[], false)
     }
   }
-  
+
   updateIndeterminateState()
   emit('node-check', node, checked)
 }
@@ -184,6 +187,7 @@ defineExpose({
   getCheckedKeys: () => checkedKeys.value,
   getCheckedNodes: () => {
     const nodes: TreeNodeData[] = []
+    if (!props.data || !Array.isArray(props.data)) return nodes
     const collectChecked = (data: TreeNodeData[]) => {
       data.forEach((node) => {
         const key = node[nodeProps.value.id || 'id']
@@ -232,7 +236,11 @@ function findNodeByKey(data: TreeNodeData[], key: string | number): TreeNodeData
   return null
 }
 
-watch(() => props.currentNodeKey, () => {
-  updateIndeterminateState()
-}, { immediate: true })
+watch(
+  () => props.currentNodeKey,
+  () => {
+    updateIndeterminateState()
+  },
+  { immediate: true }
+)
 </script>

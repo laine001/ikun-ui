@@ -63,8 +63,8 @@ export function genInlineComponentText(id: any, template: string, script: string
   if (compiled.errors && compiled.errors.length) {
     console.error(
       `\n  Error compiling template:\n${pad(compiled.source)}\n` +
-        compiled.errors.map((e) => `  - ${e}`).join('\n') +
-        '\n'
+      compiled.errors.map((e) => `  - ${e}`).join('\n') +
+      '\n'
     )
   }
   let demoComponentContent = `
@@ -74,12 +74,17 @@ export function genInlineComponentText(id: any, template: string, script: string
   script = script.trim()
   if (script) {
     script = script
-      .replace(/export\s+default/, 'const democomponentExport =')
-      .replace(/import ({.*}) from 'vue'/g, (s, s1) => `const ${s1} = Vue`)
-      .replace(
-        /const ({ defineComponent as _defineComponent }) = Vue/g,
-        'const { defineComponent: _defineComponent } = Vue'
-      )
+      .replace(/import\s+{([^}]+)}\s+from\s+['"]vue['"]/g, (s, s1) => {
+        const imports = s1.split(',').map((item: string) => {
+          const parts = item.trim().split(/\s+as\s+/)
+          if (parts.length === 2) {
+            return `${parts[0].trim()}: ${parts[1].trim()}`
+          }
+          return item.trim()
+        })
+        return `const { ${imports.join(', ')} } = Vue`
+      })
+      .replace(/export\s+default\s*\{([\s\S]*)\}/m, 'const democomponentExport = {$1}')
 
     // 因为 vue 函数组件需要把 import 转换为 require，这里可附加一些其他的转换。
     if (options?.scriptReplaces) {
