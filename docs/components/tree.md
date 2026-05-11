@@ -8,7 +8,6 @@ Tree component for displaying hierarchical data with expand/collapse, selection,
 
 ## Basic Usage
 
-
 :::demo
 <ik-tree :data="basicData" />
 
@@ -49,7 +48,6 @@ const basicData = ref([
 ## Default Expand All
 
 Use `default-expand-all` to expand all nodes by default.
-
 
 :::demo
 
@@ -190,9 +188,9 @@ Use scoped slots to customize node rendering.
 
 :::demo
 <ik-tree :data="basicData">
-  <template #default="{ node }">
-    <span style="color: #1890ff">📍 {{ node.label }}</span>
-  </template>
+<template #default="{ node }">
+<span style="color: #1890ff">📍 {{ node.label }}</span>
+</template>
 </ik-tree>
 
 ```vue
@@ -233,7 +231,6 @@ const basicData = ref([
 
 :::
 
-
 ## Props
 
 | Parameter            | Description                                                | Type               | Default                                                                            |
@@ -270,7 +267,6 @@ const basicData = ref([
 | filter              | Filter tree nodes by value       | `(value: string)`              |
 | getHalfCheckedKeys  | Get keys of half-checked nodes   | -                              |
 | getHalfCheckedNodes | Get half-checked nodes           | -                              |
-
 
 <script setup lang="ts">
 const basicData = [

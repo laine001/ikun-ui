@@ -63,8 +63,8 @@ export function genInlineComponentText(id: any, template: string, script: string
   if (compiled.errors && compiled.errors.length) {
     console.error(
       `\n  Error compiling template:\n${pad(compiled.source)}\n` +
-      compiled.errors.map((e) => `  - ${e}`).join('\n') +
-      '\n'
+        compiled.errors.map((e) => `  - ${e}`).join('\n') +
+        '\n'
     )
   }
   let demoComponentContent = `
