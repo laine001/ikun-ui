@@ -24,6 +24,7 @@ const val = ref(10)
 ## 属性配置
 
 可开启`ikun`属性
+
 :::demo
 
 ```vue
