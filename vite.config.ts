@@ -21,7 +21,7 @@ export default defineConfig({
     // }
   ],
   build: {
-    target: 'modules',
+    target: 'es2020',
     minify: true,
     reportCompressedSize: true,
     // outDir: resolve(__dirname, 'dist/es'),
