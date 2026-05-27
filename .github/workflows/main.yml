@@ -6,20 +6,23 @@ on:
     branches: [master]
 jobs:
   UnitTest:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
         with:
-          version: 7.2.1
+          version: 9.15.4
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
       - name: Install modules
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Run Test
         run: pnpm run coverage
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           files: ./coverage/coverage-final.json,./coverage/index.html,./coverage/clover.html
           token: ${{ secrets.CODECOV_TOKEN }}
