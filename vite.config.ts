@@ -13,11 +13,12 @@ export default defineConfig({
     vue(),
     vueJsx(),
     setupNamePlugin(),
-    dts({
-      outDir: 'dist/types',
-      insertTypesEntry: true,
-      rollupTypes: false,
-    }),
+    dts(),
+    //   {
+    //   outDir: ['dist/types'],
+    //   insertTypesEntry: true,
+    //   rollupTypes: false,
+    // }
   ],
   build: {
     target: 'modules',

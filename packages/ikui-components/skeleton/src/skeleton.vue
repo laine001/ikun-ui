@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkSkeleton">
+<script lang="ts" setup>
+defineOptions({ name: 'IkSkeleton' })
 import { computed } from 'vue'
 import { skeletonProps } from './prop'
 const prop = defineProps(skeletonProps)

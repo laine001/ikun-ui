@@ -36,7 +36,6 @@ function computeRippleStyles(element: RippleHTMLElement, event: MouseEvent): Rip
 
   const radius: number = Math.sqrt(clientWidth ** 2 + clientHeight ** 2) / 2
   const size: number = radius * 2
-  console.log(event, 'event')
 
   const localX: number = event.clientX - left
   const localY: number = event.clientY - top

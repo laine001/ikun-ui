@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkButton">
+<script lang="ts" setup>
+defineOptions({ name: 'IkButton' })
 import { computed } from 'vue'
 import { buttonProps } from './button'
 

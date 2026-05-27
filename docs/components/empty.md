@@ -4,7 +4,7 @@
 
 ## 基础用法
 
-::: demo
+:::demo
 
 ```vue
 <template>
@@ -18,7 +18,7 @@
 
 通过设置`image`设置自定义图片
 
-::: demo
+:::demo
 
 ```vue
 <template>
@@ -33,7 +33,7 @@
 ## 底部内容
 
 可使用默认插槽在底部插入内容
-::: demo
+:::demo
 
 ```vue
 <template>

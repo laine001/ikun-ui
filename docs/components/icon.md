@@ -4,7 +4,7 @@
 
 ## 不同颜色
 
-::: demo
+:::demo
 
 ```vue
 <template>
@@ -21,7 +21,7 @@
 
 ## 不同大小
 
-::: demo
+:::demo
 
 ```vue
 <template>
@@ -38,30 +38,7 @@
 
 ## 部分展示
 
-<script lang="ts" setup>
-
-const list = [
-'bell',
-'email',
-'main',
-'user',
-'likes',
-'search',
-'chart',
-'add',
-'kongtiao',
-'files',
-'zhire',
-'switch',
-]
-</script>
-  <div class="flex">
-    <template v-for="item in list">
-      <div class="icon-demo-box"><ik-icon :name="item" /></div>
-    </template>
-  </div>
-
-::: details 点击展开
+:::demo
 
 ```vue
 <script lang="ts" setup>
@@ -80,6 +57,7 @@ const list = [
   'switch',
 ]
 </script>
+
 <template>
   <div class="flex">
     <template v-for="item in list">

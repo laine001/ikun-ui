@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkCheckbox">
+<script lang="ts" setup>
+defineOptions({ name: 'IkCheckbox' })
 import { computed, inject, getCurrentInstance, ref } from 'vue'
 import type { Ref, ComponentInternalInstance, WritableComputedRef } from 'vue'
 

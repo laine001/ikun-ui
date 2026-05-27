@@ -1,7 +1,7 @@
-import { demoBlockPlugin } from './vitepress-theme-demoblock/node'
-// import { demoblock as demoBlockPlugin } from './plugins/blockPlugin'
+import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 import sidebar from './sidebar'
 import nav from './nav'
+import { resolve } from 'path'
 
 const args = process.argv.slice(2)
 let env = ''
@@ -18,6 +18,21 @@ export default {
   lang: 'en-US',
   description:
     'IKUN-UI is a lightweight, customizable Vue 3 UI component library built with TypeScript and Vite. Features 28+ components including buttons, forms, modals, menus, and more. Fast, modern, and easy to use.',
+  vite: {
+    plugins: [demoblockVitePlugin()],
+    ssr: {
+      noExternal: ['vitepress-theme-demoblock'],
+    },
+    resolve: {
+      alias: {
+        ikuiv: resolve(__dirname, '../../packages/ikui-components/index.ts'),
+      },
+    },
+    optimizeDeps: {
+      exclude: ['ikuiv'],
+      include: ['vitepress-theme-demoblock'],
+    },
+  },
   head: [
     ['link', { rel: 'icon', href: '/layer5.png', type: 'image/png' }],
     [
@@ -160,26 +175,7 @@ export default {
     //   dark: 'github-dark',
     // },
     config: (md) => {
-      // console.log(md, 'md')
-      md.use(demoBlockPlugin)
-      // md.use(demoblock)
-      // demoblock(md)
-      // , {
-      //   customClass: 'demoblock-custom',
-      //   cssPreprocessor: 'scss',
-      //   // customStyleTagName: 'style lang="less"',
-      //   scriptImports: ["import * as ElementPlus from 'element-plus'"],
-      //   scriptReplaces: [
-      //     {
-      //       searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
-      //       replaceValue: 'const { defineComponent: _defineComponent } = Vue',
-      //     },
-      //     { searchValue: /import ({.*}) from 'element-plus'/g, replaceValue: (s, s1) => `const ${s1} = ElementPlus` },
-      //   ],
-      //   styleReplaces: [
-      //     { searchValue: '@import "docs/styles/index.css";', replaceValue: '@import "@docs/styles/index.css";' },
-      //   ],
-      // }
+      md.use(demoblockPlugin)
     },
   },
 }

@@ -4,7 +4,7 @@
 
 ## 基础使用
 
-::: demo
+:::demo
 
 ```vue
 <template>
@@ -17,7 +17,8 @@
 ## 基础配置
 
 `showLunar`配置显示农历，显示当前月份
-::: demo
+
+:::demo
 
 ```vue
 <template>

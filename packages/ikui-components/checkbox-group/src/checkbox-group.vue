@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkCheckboxGroup">
+<script lang="ts" setup>
+defineOptions({ name: 'IkCheckboxGroup' })
 import { nextTick, provide, reactive, toRefs } from 'vue'
 import { checkboxGroupProps, checkboxGroupEmits, checkboxGroupCtxKey } from './checkbox-group'
 import { CheckboxLabelType } from './interface'

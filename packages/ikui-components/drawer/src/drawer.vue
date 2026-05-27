@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkDrawer">
+<script lang="ts" setup>
+defineOptions({ name: 'IkDrawer' })
 import { computed } from 'vue'
 import { drawerProps } from './drawer'
 const props = defineProps(drawerProps)

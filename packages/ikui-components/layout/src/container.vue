@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkContainer">
+<script lang="ts" setup>
+defineOptions({ name: 'IkContainer' })
 import { computed } from 'vue'
 export type ContainerDirection = 'ver' | 'hor'
 

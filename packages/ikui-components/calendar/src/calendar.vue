@@ -1,4 +1,5 @@
-<script lang="ts" setup name="ik-calendar">
+<script lang="ts" setup>
+defineOptions({ name: 'IkCalendar' })
 import { ref, watch, onMounted, computed } from 'vue'
 import { props } from './props'
 import type { CalendarItemType, CalendarOperateDate } from './props'

@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkInput">
+<script lang="ts" setup>
+defineOptions({ name: 'IkInput' })
 import { computed, ref, WritableComputedRef } from 'vue'
 import { InputProps, Emits } from './input'
 const props = defineProps(InputProps)

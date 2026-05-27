@@ -41,7 +41,7 @@
 .pager-link:hover .title {
   color: var(--primary-color) !important;
 }
-.custom-block {
+.detail.custom-block {
   border-radius: var(--default-radius);
 }
 .flex {
@@ -327,4 +327,13 @@ html::-webkit-scrollbar-thumb {
 }
 .VPSwitchAppearance {
   border-color: #eee !important;
+}
+
+.demoblock {
+  border-radius: 8px !important;
+}
+
+.demoblock-control {
+  border-bottom-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
 }

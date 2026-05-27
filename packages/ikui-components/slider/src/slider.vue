@@ -1,5 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-empty-function -->
-<script lang="ts" setup name="IkSlider">
+<script lang="ts" setup>
+defineOptions({ name: 'IkSlider' })
 import { computed, ComputedRef, CSSProperties, ref, shallowRef } from 'vue'
 import { sliderProps, Emits } from './prop'
 const props = defineProps(sliderProps)

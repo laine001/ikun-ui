@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkAside">
+<script lang="ts" setup>
+defineOptions({ name: 'IkAside' })
 console.log('IkAside')
 </script>
 <template>

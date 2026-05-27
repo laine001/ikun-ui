@@ -2,8 +2,9 @@
   "name": "ikuiv",
   "version": "0.0.1-alpha.5",
   "description": "a simple ui components built on vue3 vite",
-  "main": "./index.js",
-  "types": "index.d.ts",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "types": "./index.d.ts",
   "author": "laine001",
   "license": "ISC",
   "keywords": [
@@ -16,7 +17,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./index.js"
+      "import": "./index.ts",
+      "require": "./index.ts",
+      "types": "./index.d.ts"
     },
     "./*": "./*"
   },

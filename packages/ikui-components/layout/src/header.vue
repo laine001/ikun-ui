@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkHeader">
+<script lang="ts" setup>
+defineOptions({ name: 'IkHeader' })
 console.log('IkHeader')
 </script>
 <template>

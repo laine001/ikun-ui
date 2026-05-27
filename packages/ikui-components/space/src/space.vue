@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkSpace">
+<script lang="ts" setup>
+defineOptions({ name: 'IkSpace' })
 // import { getCurrentInstance } from 'vue'
 import { computed, renderSlot, useSlots } from 'vue'
 import { spaceProps } from './prop'
@@ -6,11 +7,11 @@ import { spaceProps } from './prop'
 // console.log(_ins)
 const props = defineProps(spaceProps)
 const slots = useSlots()
-console.log(slots.default(), 'slots')
+// console.log(slots.default(), 'slots')
 // const emits = defineEmits(['click'])
 // const childNodes = _ins.vnode.children?.default()
 const children = renderSlot(slots, 'default')
-console.log(slots.default(), children)
+// console.log(slots.default(), children)
 const gapSize = computed(() => {
   switch (props.size) {
     case 'small':

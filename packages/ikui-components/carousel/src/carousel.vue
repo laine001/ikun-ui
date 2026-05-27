@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkCarousel">
+<script lang="ts" setup>
+defineOptions({ name: 'IkCarousel' })
 import { getCurrentInstance, ref, h, watch, provide, toRefs, onMounted } from 'vue'
 import IkCarouselItem from './carousel-item.vue'
 import type { ComponentInternalInstance } from 'vue'

@@ -28,7 +28,8 @@
   </div>
 </template>
 
-<script setup lang="ts" name="IkTree">
+<script setup lang="ts">
+defineOptions({ name: 'IkTree' })
 import { ref, computed, watch } from 'vue'
 import TreeNode from './TreeNode.vue'
 import { treeProps, type TreeNodeData } from './tree'
@@ -93,8 +94,9 @@ function calculateIndeterminate(data: TreeNodeData[]) {
       const checkedCount = childKeys.filter((k) => checkedKeys.value.includes(k)).length
 
       if (checkedCount > 0 && checkedCount < childKeys.length) {
-        if (!indeterminateKeys.value.includes(key)) {
-          indeterminateKeys.value.push(key)
+        const keyStr = key as string | number
+        if (!indeterminateKeys.value.includes(keyStr)) {
+          indeterminateKeys.value.push(key as string | number)
         }
       } else {
         const index = indeterminateKeys.value.indexOf(key)

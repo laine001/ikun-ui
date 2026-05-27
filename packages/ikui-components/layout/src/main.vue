@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkMain">
+<script lang="ts" setup>
+defineOptions({ name: 'IkMain' })
 console.log('IkAside')
 </script>
 <template>

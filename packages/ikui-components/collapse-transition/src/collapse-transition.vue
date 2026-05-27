@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkCollapseTransition">
+<script lang="ts" setup>
+defineOptions({ name: 'IkCollapseTransition' })
 import type { RendererElement } from 'vue'
 
 const on = {

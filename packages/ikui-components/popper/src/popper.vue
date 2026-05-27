@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkPopper">
+<script lang="ts" setup>
+defineOptions({ name: 'IkPopper' })
 import { ref, onMounted, computed, onUnmounted, useSlots } from 'vue'
 import { autoUpdate, computePosition, offset, flip, arrow, hide } from '@floating-ui/vue'
 import type { Placement } from '@floating-ui/vue'

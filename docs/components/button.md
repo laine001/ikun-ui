@@ -85,12 +85,19 @@
       <ik-icon name="main" />
     </ik-button>
 
-    <ik-button ikun v-ripple></ik-button>
+    <ik-button ikun v-ripple @click="handleClick"></ik-button>
   </ik-space>
 </template>
-```
+<script setup lang="ts">
+import { ref } from 'vue'
 
+const handleClick = () => {
+  console.log('click')
+}
+</script>
+```
 :::
+
 
 ## 不同大小
 

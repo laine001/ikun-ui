@@ -1,4 +1,5 @@
-<script lang="ts" setup name="mask">
+<script lang="ts" setup>
+defineOptions({ name: 'IkLoadingMask' })
 import { computed, inject } from 'vue'
 
 const fullscreen = inject('fullscreen')

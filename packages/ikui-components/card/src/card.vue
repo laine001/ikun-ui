@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkCard">
+<script lang="ts" setup>
+defineOptions({ name: 'IkCard' })
 import { computed, onMounted } from 'vue'
 import { cardProps } from './card'
 import vanillaTilt from 'vanilla-tilt'

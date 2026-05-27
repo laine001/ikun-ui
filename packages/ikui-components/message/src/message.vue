@@ -1,4 +1,5 @@
-<script lang="ts" setup name="IkMessage">
+<script lang="ts" setup>
+defineOptions({ name: 'IkMessage' })
 import IkIcon from '../../icon'
 import { ref, onMounted, computed, ComputedRef, CSSProperties } from 'vue'
 import { messageProps, messageEmits, messageIconNameList } from './message'
