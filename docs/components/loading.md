@@ -35,8 +35,8 @@ const toggleLoading = () => {
 
 ```vue
 <template>
-<ik-button @click="toggleLoading2" type="primary">切换全屏loading</ik-button>
-<div v-loading.fullscreen="loading2"></div>
+  <ik-button @click="toggleLoading2" type="primary">切换全屏loading</ik-button>
+  <div v-loading.fullscreen="loading2"></div>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -45,7 +45,7 @@ const toggleLoading2 = () => {
   loading2.value = true
   setTimeout(() => {
     loading2.value = false
-  }, 2000);
+  }, 2000)
 }
 </script>
 ```

@@ -5,6 +5,9 @@ module.exports = {
     node: true,
     'vue/setup-compiler-macros': true,
   },
+  globals: {
+    defineOptions: 'readonly',
+  },
   extends: [
     'eslint:recommended',
     'plugin:vue/vue3-essential',
